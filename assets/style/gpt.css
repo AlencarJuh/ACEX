@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =========================
    RESET
 ========================= */
@@ -291,3 +292,298 @@ form p a:hover {
         padding: 30px 13px 18px;
     }
 }
+=======
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    height: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+nav > a {
+    color: #07529a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav ul li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #07529a;
+}
+
+
+/* Botão/ícone do usuário */
+
+nav > button {
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid #222;
+    border-radius: 50%;
+    background-color: #fff;
+
+    position: relative;
+    cursor: pointer;
+}
+
+/* cabeça */
+nav > button::before {
+    content: "";
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+
+    background-color: #222;
+
+    top: 4px;
+    left: 6.5px;
+}
+
+/* corpo */
+nav > button::after {
+    content: "";
+    position: absolute;
+
+    width: 13px;
+    height: 7px;
+    border-radius: 8px 8px 4px 4px;
+
+    background-color: #222;
+
+    bottom: 3px;
+    left: 3.5px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    width: 425px;
+    max-width: calc(100% - 30px);
+
+    margin: 30px auto 50px;
+
+    padding: 38px 13px 18px;
+
+    background-color: #0b3869;
+
+    border-radius: 0 0 12px 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+form label {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    height: 32px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #105399;
+
+    color: #fff;
+    font-size: 17px;
+
+    padding: 0 10px;
+
+    outline: none;
+
+    margin-bottom: 19px;
+}
+
+form input:focus {
+    background-color: #155da5;
+    box-shadow: 0 0 0 2px rgba(94, 240, 230, 0.6);
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+form button {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #5cece5;
+
+    color: #073767;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                transform 0.1s ease;
+}
+
+form button:hover {
+    background-color: #48ddd6;
+}
+
+form button:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    margin: 4px 0 15px;
+
+    accent-color: #5cece5;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEXTO DOS TERMOS
+========================= */
+
+form p {
+    color: #fff;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin-top: 0;
+}
+
+form p a {
+    color: #5cece5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 18px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    nav > a {
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    header {
+        height: auto;
+    }
+
+    nav {
+        padding: 12px 15px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    form {
+        margin-top: 20px;
+        padding: 30px 13px 18px;
+    }
+}
+>>>>>>> c51471d (teste)

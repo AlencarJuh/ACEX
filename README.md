@@ -6,7 +6,7 @@
 * [3 Objetivos](#3-objetivos)
 * [4 Justificativa](#4-justificativa)
 * [5 Metodologias](#5-metodologia)
-* [6 Tecnologias utilizadas](#6-tecnologias-utilizadas)
+* [6 Técnologias utilizadas](#6-tecnologias-utilizadas)
 * [7 Resultados esperados](#7-resultados-esperados)
 * [Conclusão](#conclusão)
 
