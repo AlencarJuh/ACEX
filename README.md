@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/31752764/README.md)
 # Desenvolvimento de um site para divulgação de voluntários para o ensino em populações de difícil acesso
 
 ## Sumário
