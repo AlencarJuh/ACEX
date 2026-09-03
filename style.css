@@ -22,7 +22,7 @@ body *{
     
     /* Formatação geral dos textos*/
     font-family: Montserrat;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
 
     /*Formatação geral de imagens*/
@@ -34,7 +34,7 @@ body *{
 }
 
 /*Formatação de títulos*/
-h1{
+.titulo{
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
     font-weight: bold;
@@ -47,6 +47,10 @@ h2{
     font-weight: bold;
 }
 
+a{
+    color: #24282c;
+}
+
 /*Formatação da barra de navegação*/
 nav {
     flex-direction: row;
@@ -57,6 +61,10 @@ nav {
 
     background-color: #ffffff;
     
+    *{
+        color: #24282c;
+    }
+
     #logo{
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
@@ -67,7 +75,7 @@ nav {
     ul{
         flex-direction: row;
         gap: 1rem;
-
+        
         align-items: center;
     }
 }
@@ -79,6 +87,17 @@ section{
 
 .inicio{
     background-color: #f8f8f8;
+
+    button{
+        background-color: #65fff2;
+        border-style: none;
+        border-radius: 10px;
+        height: 2rem;
+        width: 20rem;
+        font-weight: bold;
+        color: #24282c;
+        justify-content: center;
+    }
 }
 
 .sobre{
@@ -117,12 +136,11 @@ footer{
     padding: 0.75rem 3rem;
 
     *{
-        font-size: 0.9rem;
         color: #ffffff;
     }
-
+    
     h4{
         font-family: 'Times New Roman', Times, serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
