@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Deslize suave*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Formatação para todos os elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    display: flex   ;
+    flex-direction: column;
+
+    
+    /* Formatação geral dos textos*/
+    font-family: Montserrat;
+    font-size: 1rem;
+    text-decoration: none;
+
+    /*Formatação geral de imagens*/
+    /*PROVISÓRIO*/
+    img{
+        height: 5rem;
+        width:fit-content;
+    }
+}
+
+/*Formatação de títulos*/
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #07448a;
+}
+
+h2{
+    font-family: "Georgia";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*Formatação da barra de navegação*/
+nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+
+    background-color: #ffffff;
+    
+    #logo{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #07448a;
+    }
+    
+    ul{
+        flex-direction: row;
+        gap: 1rem;
+
+        align-items: center;
+    }
+}
+
+/*Formatação das sessões da página*/
+section{
+    padding: 1.5rem 3rem;
+}
+
+.inicio{
+    background-color: #f8f8f8;
+}
+
+.sobre{
+    background-color: #07448a;
+    color: #ffffff;
+    
+}
+
+.metodos{
+    background-color: #f8f8f8;
+    
+}
+
+.relatos{
+    background-color: #24282c;
+    color: #ffffff;
+    
+    h2{
+        color: #65fff2;
+    }
+    
+}
+
+.aulas{
+    background-color: #f8f8f8;
+    
+}
+.contatos{
+    background-color: #f8f8f8;
+    
+}
+
+/*Rodapé*/
+footer{
+    background-color: #07448a;
+    padding: 0.75rem 3rem;
+
+    *{
+        font-size: 0.9rem;
+        color: #ffffff;
+    }
+
+    h4{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+}
