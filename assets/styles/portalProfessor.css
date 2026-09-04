@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Deslize suave*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Formatação para todos os elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    display: flex;
+    flex-direction: column;
+
+    /* Formatação geral dos textos*/
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    color: #ffffff;
+
+}
+
+nav{
+    background-color: #042d5c;
+}
+
+section{
+    background-color: #24282c;
+    color: #ffffff;
+}

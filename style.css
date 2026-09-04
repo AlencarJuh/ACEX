@@ -16,10 +16,9 @@ html{
 }
 
 body *{
-    display: flex   ;
+    display: flex ;
     flex-direction: column;
 
-    
     /* Formatação geral dos textos*/
     font-family: Montserrat;
     font-size: 1.2rem;
@@ -146,8 +145,9 @@ section{
     }
     
     img{
-        height: max-content;
-        width: min-auto;
+        height: 35rem;
+        width: auto;
+        border-radius: 15px;
         
         align-self: center;
         justify-self: center;
