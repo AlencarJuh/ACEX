@@ -51,6 +51,10 @@ a{
     color: #24282c;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 /*Formatação da barra de navegação*/
 nav {
     flex-direction: row;
@@ -71,6 +75,10 @@ nav {
         font-size: 1.5rem;
         color: #07448a;
     }
+
+    #logo:hover{
+        text-decoration: none;
+    }
     
     ul{
         flex-direction: row;
@@ -82,64 +90,257 @@ nav {
 
 /*Formatação das sessões da página*/
 section{
-    padding: 1.5rem 3rem;
+    padding: 2.5rem 6rem;
 }
 
+/*Formatação da sessão "Início"*/
 .inicio{
     background-color: #f8f8f8;
-
+    flex-direction: row;
+    justify-content: space-around;
+    
+    .texto{
+        gap: 2rem;
+        width: 45vw;
+    }
+    
+    .possui-conta{
+        flex-direction: row;
+        gap: 0.3rem;
+        justify-content: center;
+    }
+    
     button{
         background-color: #65fff2;
         border-style: none;
         border-radius: 10px;
-        height: 2rem;
-        width: 20rem;
+        padding: 1rem;
+        
+        height: 2.5rem;
+        width: max-content;
+        
         font-weight: bold;
         color: #24282c;
         justify-content: center;
+        align-self: center;
+        
+        box-shadow: 5px 5px 2rem rgba(36, 40, 44, 0.5);
+        transition: transform 0.3s ease;
+    }
+    
+    button:hover{
+        transform: scale(1.1);
+    }
+    
+    img{
+        height: max-content;
+        width: min-auto;
+        
+        align-self: center;
+        justify-self: center;
     }
 }
 
+/*Formatação da sessão "Sobre"*/
 .sobre{
     background-color: #07448a;
     color: #ffffff;
     
+    display: grid;
+    grid-template-areas: 
+        "texto imagem1"
+        "texto imagem2"
+        "texto imagem3"
+        ;
+    row-gap: 1rem;
+    
+    .texto{
+        width: 45vw;
+        grid-area: texto;
+        gap: 2rem;
+    }
+    
+    .imagem1-sobre{
+        grid-area: imagem1;
+    }
+
+    .imagem2-sobre{
+        grid-area: imagem2;
+    }
+
+    .imagem3-sobre{
+        grid-area: imagem3;
+    }
 }
 
+/*Formatação da sessão "Métodos"*/
 .metodos{
     background-color: #f8f8f8;
+    align-items: center;
+    gap: 2rem;
     
+    div{
+        background-color: #07448a;
+        padding: 2.5rem;
+        border-radius: 15px;
+        color: #ffffff;
+
+        display: grid;
+        grid-template-areas: 
+            "titulo imagem"
+            "texto imagem";
+        grid-template-columns: 40vw 1fr;
+        column-gap: 1rem;
+
+        h3{
+            grid-area: titulo;
+        }
+        
+        p{
+            grid-area: texto;
+            
+        }
+        
+        img{
+            grid-area: imagem;
+            align-self: center;
+        }
+    }
 }
 
+/*Formatação da sessão "relatos"*/
 .relatos{
     background-color: #24282c;
     color: #ffffff;
-    
+    gap: 1rem;
+
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo"
+        "texto texto"
+        "div div"
+        "div div"
+        ;
+    justify-items: center;
+
     h2{
+        grid-area: titulo;
         color: #65fff2;
+    }
+
+    p{
+        grid-area: texto;
+    }
+
+    div{
+        padding: 1rem;
+        background-color: #f8f8f8;
+        color: #24282c;
+        border-radius: 15px;
+
+        display: grid;
+        grid-template-areas: 
+            "imagem nome"
+            "imagem cargo"
+            "texto texto"
+            ;
+        grid-template-columns: min-content 1fr;
+        gap: 1rem;
+        
+        img{
+            grid-area: imagem;
+            border-radius: 100%;
+        }
+
+        .nome{
+            grid-area: nome;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .cargo{
+            grid-area: cargo;
+        }
+
+        .relato{
+            grid-area: texto;
+        }
+
     }
     
 }
 
+/*Formatação da sessão "Aulas"*/
 .aulas{
     background-color: #f8f8f8;
+
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo"
+        "texto texto"
+        "imagem portugues"
+        "imagem matematica"
+        ;
+    gap: 1rem;
+    place-items: center;
+
+    h2{
+        grid-area: titulo;
+
+    }
+
+    p{
+        grid-area: texto;
+
+    }
+
+    div{
+        background-color: #07448a;
+        border-radius: 15px;
+        padding: 1rem;
+        gap: 0.5rem;
+
+        color: #ffffff;
+        text-align:center;
+
+        width: 35vw;
+    }
+
+    .portugues{
+        grid-area: portugues;
+    }
+    
+    .matematica{
+        grid-area: matematica;
+        
+    }
+
+    img{
+        grid-area: imagem;
+        height: max-content;
+        width: max-content;
+    }
+
     
 }
+
+/*Formatação da sessão "Contatos"*/
 .contatos{
     background-color: #f8f8f8;
     
 }
 
 /*Rodapé*/
+/*!!!!!!!Consertar depois*/
 footer{
     background-color: #07448a;
     padding: 0.75rem 3rem;
 
     display: grid;
     grid-template-areas: 
-    "logo links contatos"
-    "direitos direitos direitos"
-    ;
+        "logo links contatos"
+        "direitos direitos direitos";
+    grid-template-columns: 1fr 1fr 1fr;
 
     *{
         color: #ffffff;
@@ -148,5 +349,22 @@ footer{
     h4{
         font-family: 'Times New Roman', Times, serif;
         font-size: 1.2rem;
+    }
+
+    .logo-footer{
+        grid-area: logo;
+    }
+
+    .links-rapidos-footer{
+        grid-area: links;
+    }
+
+    .contatos-footer{
+        grid-area: contatos;
+    }
+    
+    p{
+        grid-area: direitos;
+        
     }
 }
