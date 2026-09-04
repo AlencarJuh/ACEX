@@ -86,6 +86,19 @@ nav {
         
         align-items: center;
     }
+
+    .cadastrar{
+        background-color: #65fff2;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .cadastrar:hover{
+        text-decoration: none;
+        transform: scale(1.1);
+    }
 }
 
 /*Formatação das sessões da página*/
@@ -328,6 +341,154 @@ section{
 .contatos{
     background-color: #f8f8f8;
     
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo"
+        "texto texto"
+        "youtube instagram"
+        "youtube whatsapp"
+        "youtube email"
+        ;
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+
+    h3{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+    }
+    
+    h2{
+        grid-area: titulo;
+
+    }
+
+    p{
+        grid-area: texto;
+    }
+    
+    .youtube, .instagram, .whatsapp, .email{
+        padding: 1rem;
+        border-radius: 15px;
+        background-color: #24282c;
+        color: #65fff2;
+        gap: 1rem;
+        align-items: center;
+        width: 40vw;
+
+        div{
+            padding: 1rem;
+            color: #ffffff;
+            background-color: #2d3144;
+            border-radius: 15px;
+            width: 100%;
+            align-items: center;
+
+            button{
+                padding: 0.5rem;
+                border-style: none;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+                font-weight: bold;
+                height: max-content;
+                width: max-content;
+            }
+        }
+    }
+
+    .youtube{
+        grid-area: youtube;
+
+        div{
+            gap: 1rem;
+        }
+        .canal-youtube{
+            display: grid;
+            grid-template-areas: 
+                "imagem canal botao"
+                "imagem inscritos botao";
+                gap: 1rem;
+            grid-template-columns: min-content auto auto;    
+            
+                img{
+                    grid-area: imagem;
+                    border-radius: 100%;
+                }
+                
+                b{
+                    grid-area: canal;
+                    
+                }
+                
+                p{
+                    grid-area: inscritos;
+                    
+                }
+                
+                button{
+                    grid-area: botao;
+                    
+                }
+            }
+        }
+        
+        .instagram, .whatsapp{
+            .numero{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            div{
+                display: grid;
+                grid-template-areas: 
+                    "imagem user botao"
+                    "imagem seguidores botao";
+                gap: 1rem;
+                grid-template-columns: min-content auto auto;    
+
+                img{
+                    grid-area: imagem;
+                    border-radius: 100%;
+                }
+                
+                b{
+                    grid-area: user;
+                    
+                }
+                
+                p{
+                    grid-area: seguidores;
+                    
+                }
+                
+                button{
+                    grid-area: botao;
+                    
+                }
+
+        }
+        
+    }
+
+    .instagram{
+        grid-area: instagram;
+    }
+    
+    .whatsapp{
+        grid-area: whatsapp;
+        
+    }
+    
+    .email{
+        grid-area: email;
+
+        div{
+            gap: 1rem;
+        }
+        
+    }
 }
 
 /*Rodapé*/
@@ -341,6 +502,8 @@ footer{
         "logo links contatos"
         "direitos direitos direitos";
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 1rem;
 
     *{
         color: #ffffff;
