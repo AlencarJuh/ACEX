@@ -4,9 +4,9 @@
 }
 
 /*Deslize suave*/
-html{
+/* html{
     scroll-behavior: smooth;
-}
+} */
 
 /*Formatação para todos os elementos*/
 *{
@@ -23,13 +23,6 @@ body *{
     font-family: Montserrat;
     font-size: 1.2rem;
     text-decoration: none;
-
-    /*Formatação geral de imagens*/
-    /*PROVISÓRIO*/
-    img{
-        height: 5rem;
-        width:fit-content;
-    }
 }
 
 /*Formatação de títulos*/
@@ -54,6 +47,14 @@ a:hover {
     text-decoration: underline;
 }
 
+button{
+transition: transform 0.3s ease;
+}
+    
+button:hover{
+    transform: scale(1.1);
+}
+
 /*Formatação da barra de navegação*/
 nav {
     flex-direction: row;
@@ -68,10 +69,11 @@ nav {
         color: #24282c;
     }
 
+    /*Logo na barra de navegação*/
     #logo{
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #07448a;
     }
 
@@ -79,14 +81,16 @@ nav {
         text-decoration: none;
     }
     
+    /*Lista de links da barra de navegação*/
     ul{
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.25rem;
         
         align-items: center;
     }
 
-    .cadastrar{
+    /*Botão "Cadastrar" da barra de navegação*/
+    #cadastrar{
         background-color: #65fff2;
         font-weight: bold;
         padding: 0.5rem;
@@ -94,7 +98,7 @@ nav {
         transition: transform 0.3s ease;
     }
 
-    .cadastrar:hover{
+    #cadastrar:hover{
         text-decoration: none;
         transform: scale(1.1);
     }
@@ -110,18 +114,15 @@ section{
     background-color: #f8f8f8;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     
-    .texto{
+    /*Parte de texto da sessão "Início"*/
+    .inicio-texto{
         gap: 2rem;
         width: 45vw;
     }
     
-    .possui-conta{
-        flex-direction: row;
-        gap: 0.3rem;
-        justify-content: center;
-    }
-    
+    /*Botão "Faça parte da nossa equipe"*/
     button{
         background-color: #65fff2;
         border-style: none;
@@ -137,13 +138,20 @@ section{
         align-self: center;
         
         box-shadow: 5px 5px 2rem rgba(36, 40, 44, 0.5);
-        transition: transform 0.3s ease;
     }
     
-    button:hover{
-        transform: scale(1.1);
+    /*Parte de "Possui conta? Entrar"*/
+    .possui-conta{
+        flex-direction: row;
+        gap: 0.3rem;
+        justify-content: center;
+
+        a{
+            font-weight: bold;
+        }
     }
-    
+
+    /*Imagem da sessão "Início"*/
     img{
         height: 35rem;
         width: auto;
@@ -159,30 +167,25 @@ section{
     background-color: #07448a;
     color: #ffffff;
     
-    display: grid;
-    grid-template-areas: 
-        "texto imagem1"
-        "texto imagem2"
-        "texto imagem3"
-        ;
-    row-gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
     
-    .texto{
-        width: 45vw;
-        grid-area: texto;
+    /*Parte de texto da sessão "Sobre"*/
+    .sobre-texto{
+        width: 40vw;
         gap: 2rem;
     }
     
-    .imagem1-sobre{
-        grid-area: imagem1;
+    /*Imagens da sessão "Sobre"*/
+    .sobre-imagens{
+        justify-content: space-between;
     }
 
-    .imagem2-sobre{
-        grid-area: imagem2;
-    }
-
-    .imagem3-sobre{
-        grid-area: imagem3;
+    img{
+        border-radius: 15px;
+        width: 20vw;
+        height: auto;
     }
 }
 
@@ -192,31 +195,35 @@ section{
     align-items: center;
     gap: 2rem;
     
+    /*Containers*/
     div{
         background-color: #07448a;
-        padding: 2.5rem;
+        padding: 1.5rem;
         border-radius: 15px;
         color: #ffffff;
 
         display: grid;
         grid-template-areas: 
-            "titulo imagem"
-            "texto imagem";
-        grid-template-columns: 40vw 1fr;
-        column-gap: 1rem;
+        "titulo imagem"
+        "texto imagem";
+        grid-template-columns: 40vw auto;
+        gap: 1rem;
 
+        /*Elementos dentro dos containers*/
         h3{
             grid-area: titulo;
         }
         
         p{
             grid-area: texto;
-            
         }
         
         img{
             grid-area: imagem;
             align-self: center;
+            height: 10rem;
+            width: auto;
+            border-radius: 10px;
         }
     }
 }
@@ -225,285 +232,248 @@ section{
 .relatos{
     background-color: #24282c;
     color: #ffffff;
-    gap: 1rem;
-
-    display: grid;
-    grid-template-areas: 
-        "titulo titulo"
-        "texto texto"
-        "div div"
-        "div div"
-        ;
-    justify-items: center;
+    gap: 2rem;
+    align-items: center;
 
     h2{
         grid-area: titulo;
         color: #65fff2;
     }
 
-    p{
-        grid-area: texto;
-    }
-
-    div{
-        padding: 1rem;
-        background-color: #f8f8f8;
-        color: #24282c;
-        border-radius: 15px;
-
+    /*Container que agrupa os relatos*/
+    .relatos-container{
         display: grid;
-        grid-template-areas: 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;
+
+        /*Containers dos relatos*/
+        div{
+            padding: 1rem;
+            background-color: #f8f8f8;
+            color: #24282c;
+            border-radius: 15px;
+
+            display: grid;
+            grid-template-areas: 
             "imagem nome"
             "imagem cargo"
-            "texto texto"
-            ;
-        grid-template-columns: min-content 1fr;
-        gap: 1rem;
-        
-        img{
-            grid-area: imagem;
-            border-radius: 100%;
-        }
+            "texto texto";
+            grid-template-columns: min-content 1fr;
+            gap: 0.7rem;
+            
+            img{
+                grid-area: imagem;
+                border-radius: 100%;
+                border: 3px outset #65fff2;
+                height: 4rem;
+            }
 
-        .nome{
-            grid-area: nome;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+            .nome{
+                grid-area: nome;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                align-self: flex-end;
+            }
 
-        .cargo{
-            grid-area: cargo;
-        }
+            .cargo{
+                grid-area: cargo;
+            }
 
-        .relato{
-            grid-area: texto;
-        }
+            .relato{
+                grid-area: texto;
+            }
 
+        }
     }
-    
 }
 
 /*Formatação da sessão "Aulas"*/
 .aulas{
     background-color: #f8f8f8;
-
     align-items: center;
-    display: grid;
-    grid-template-areas: 
-        "titulo titulo"
-        "texto texto"
+    gap: 2rem;
+
+    /*Container que agrupa imagem e aulas*/
+    .aulas-container{
+        display: grid;
+        grid-template-areas: 
         "imagem portugues"
-        "imagem matematica"
-        ;
-    gap: 1rem;
-    place-items: center;
+        "imagem matematica";
+        gap: 1rem;
+        place-items: center;
 
-    h2{
-        grid-area: titulo;
+        /*Container das aulas*/
+        div{
+            background-color: #07448a;
+            border-radius: 15px;
+            padding: 1rem;
+            gap: 0.5rem;
 
-    }
+            color: #ffffff;
+            text-align:center;
 
-    p{
-        grid-area: texto;
+            width: 30vw;
+        }
 
-    }
-
-    div{
-        background-color: #07448a;
-        border-radius: 15px;
-        padding: 1rem;
-        gap: 0.5rem;
-
-        color: #ffffff;
-        text-align:center;
-
-        width: 35vw;
-    }
-
-    .portugues{
-        grid-area: portugues;
-    }
-    
-    .matematica{
-        grid-area: matematica;
+        .portugues{
+            grid-area: portugues;
+        }
         
-    }
+        .matematica{
+            grid-area: matematica;
+            
+        }
 
-    img{
-        grid-area: imagem;
-        height: max-content;
-        width: max-content;
+        img{
+            grid-area: imagem;
+            border-radius: 15px;
+            height: 18rem;
+        }
     }
-
-    
 }
 
 /*Formatação da sessão "Contatos"*/
 .contatos{
     background-color: #f8f8f8;
+    gap: 2rem;
+    align-items: center;
     
-    display: grid;
-    grid-template-areas: 
-        "titulo titulo"
-        "texto texto"
+    /*Container que agrupa os outros containers de contatos*/
+    .contatos-container{
+        display: grid;
+        grid-template-areas: 
         "youtube instagram"
         "youtube whatsapp"
-        "youtube email"
-        ;
-    gap: 1rem;
-    justify-items: center;
-    justify-content: center;
-
-    h3{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 1.2rem;
-    }
-    
-    h2{
-        grid-area: titulo;
-
-    }
-
-    p{
-        grid-area: texto;
-    }
-    
-    .youtube, .instagram, .whatsapp, .email{
-        padding: 1rem;
-        border-radius: 15px;
-        background-color: #24282c;
-        color: #65fff2;
+        "youtube email";
         gap: 1rem;
+        
+        h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/*Containers dos contatos*/
+.youtube, .instagram, .whatsapp, .email{
+    background-color: #24282c;
+    border-radius: 15px;
+    padding: 1rem;
+    
+    width: 40vw;
+    
+    color: #65fff2;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+    /*Container dentro dos containers de contatos*/
+    div{
+        background-color: #2d3144;
+        border-radius: 15px;
+        padding: 1rem;
+        
+        width: 100%;
+        
+        color: #ffffff;
         align-items: center;
-        width: 40vw;
 
-        div{
-            padding: 1rem;
-            color: #ffffff;
-            background-color: #2d3144;
-            border-radius: 15px;
-            width: 100%;
-            align-items: center;
-
-            button{
-                padding: 0.5rem;
-                border-style: none;
-                border-radius: 10px;
-                background-color: #f8f8f8;
-                font-weight: bold;
-                height: max-content;
-                width: max-content;
-            }
-        }
-    }
-
-    .youtube{
-        grid-area: youtube;
-
-        div{
-            gap: 1rem;
-        }
-        .canal-youtube{
-            display: grid;
-            grid-template-areas: 
-                "imagem canal botao"
-                "imagem inscritos botao";
-                gap: 1rem;
-            grid-template-columns: min-content auto auto;    
+        button{
+            background-color: #f8f8f8;
+            border-style: none;
+            border-radius: 10px;
+            padding: 0.5rem;
             
-                img{
-                    grid-area: imagem;
-                    border-radius: 100%;
-                }
-                
-                b{
-                    grid-area: canal;
-                    
-                }
-                
-                p{
-                    grid-area: inscritos;
-                    
-                }
-                
-                button{
-                    grid-area: botao;
-                    
-                }
-            }
+            font-weight: bold;
+            font-size: 1.3rem;
+            
+            height: max-content;
+            width: max-content;
+            justify-content: center;
         }
-        
-        .instagram, .whatsapp{
-            .numero{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
 
-            div{
-                display: grid;
-                grid-template-areas: 
-                    "imagem user botao"
-                    "imagem seguidores botao";
-                gap: 1rem;
-                grid-template-columns: min-content auto auto;    
-
-                img{
-                    grid-area: imagem;
-                    border-radius: 100%;
-                }
-                
-                b{
-                    grid-area: user;
-                    
-                }
-                
-                p{
-                    grid-area: seguidores;
-                    
-                }
-                
-                button{
-                    grid-area: botao;
-                    
-                }
-
+        img{
+            border-radius: 100%;
+            height: 4rem;
         }
-        
     }
+}
 
-    .instagram{
-        grid-area: instagram;
+.youtube{
+    grid-area: youtube;
+
+    .videos{
+        gap: 1rem;
+
+        iframe{
+            border-radius: 10px;
+            width: 100%;
+        }
     }
-    
-    .whatsapp{
-        grid-area: whatsapp;
-        
+}
+
+.instagram{
+    grid-area: instagram;
+}
+
+.whatsapp{
+    grid-area: whatsapp;
+
+    .numero{
+        display: grid;
+        grid-template-columns: min-content auto auto;
+        column-gap: 1rem;
+        justify-content: space-around;
+    }
+}
+
+.email{
+    grid-area: email;
+
+    div{
+        gap: 1rem;
+    }
+}
+
+/*Container do canal do YouTube, perfil do instragram e canal do WhatsApp*/
+.perfil{
+    display: grid;
+    grid-template-areas: 
+    "imagem user botao"
+    "imagem seguidores botao";
+    grid-template-columns: min-content auto auto;
+    column-gap: 1rem;
+    justify-content: space-around;
+
+    img{
+        grid-area: imagem;
     }
     
-    .email{
-        grid-area: email;
-
-        div{
-            gap: 1rem;
-        }
-        
+    b{
+        grid-area: user;
+    }
+    
+    p{
+        grid-area: seguidores;
+    }
+    
+    button{
+        grid-area: botao;
     }
 }
 
 /*Rodapé*/
-/*!!!!!!!Consertar depois*/
 footer{
     background-color: #07448a;
-    padding: 0.75rem 3rem;
+    padding: 1rem 3rem;
 
     display: grid;
     grid-template-areas: 
         "logo links contatos"
         "direitos direitos direitos";
     grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1.5rem;
     justify-items: center;
-    row-gap: 1rem;
 
     *{
         color: #ffffff;
@@ -516,6 +486,7 @@ footer{
 
     .logo-footer{
         grid-area: logo;
+        align-self: center;
     }
 
     .links-rapidos-footer{
@@ -528,6 +499,5 @@ footer{
     
     p{
         grid-area: direitos;
-        
     }
 }
