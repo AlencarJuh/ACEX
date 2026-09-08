@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Rolagem de página suave*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Formatação para todos os elementos*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    /* Formatação geral dos textos*/
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f8f8f8;
+}
+
+/*Barro de navegação*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+
+    * {
+        color: #24282c;
+    }
+
+    /*Logo na barra de navegação*/
+    #logo{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: #07448a;
+    }
+
+    /*Lista de links da barra de navegação*/
+    ul{
+        list-style: none;
+        
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    
+    /*Botão "Entrar" da barra de navegação*/
+    #entrar{
+        display: flex;
+        border: 1px solid #24282c;
+        border-radius: 10px;
+        padding: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    #entrar:hover{
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+fieldset{
+    display: block;
+    background-color: #042d5c;
+    padding: 1rem;
+    color: #ffffff;
+    
+    legend{
+        display: block; 
+        float: left;
+    }
+
+    p a{
+        color: #ffffff;
+    }
+    
+    input{
+        display: flex;
+        background-color: #07448a;
+        border-style: none;
+        border-radius: 10px;
+        height: 2rem;
+    }
+    
+    button{
+        display: flex;
+        background-color: #65fff2;
+        border-style: none;
+        border-radius: 10px;
+        font-weight: bold;
+        
+    }
+}

@@ -10,27 +10,28 @@
 </head>
 
 <body>
-
-    <!-- Barra de navegação -->
-    <nav>
-        <a href="index.html" id="logo">FSAberCampo</a>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#metodos">Método</a></li>
-            <li><a href="#aulas">Aulas</a></li>
-            <li><a href="#contatos">Contato</a></li>
-        </ul>
-        <ul>
-            <li><a href="">Entrar</a></li>
-            <li><a href="" id="cadastrar">Cadastrar</a></li>
-        </ul>
-    </nav>
+    <header>
+        <!-- Barra de navegação -->
+        <nav>
+            <a href="index.html" id="logo">FSAberCampo</a>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#metodos">Método</a></li>
+                <li><a href="#aulas">Aulas</a></li>
+                <li><a href="#contatos">Contato</a></li>
+            </ul>
+            <ul>
+                <li><a href="" id="entrar">Entrar</a></li>
+                <li><a href="assets/pages/cadastro.html" id="cadastrar">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <!-- Início -->
         <section class="inicio" id="inicio">
-            
+
             <!--Parte textual + botão "Faça parte da nossa equipe!" + link "Já possui conta? Entrar"-->
             <div class="inicio-texto">
                 <h1 class="titulo">FSAberCampo</h1>
@@ -40,11 +41,12 @@
                 </p>
                 <p>Por meio da tecnologia, buscamos superar barreiras e democratizar o acesso ao conhecimento.</p>
                 <p><b>Junte-se a nós e faça parte dessa transformação.</b></p>
-                <button>Faça parte da nossa equipe!</button>
+                <button><a href="assets/pages/cadastro.html">Faça parte da nossa equipe!</a></button>
                 <p class="possui-conta">Já possui uma conta?<a href="">Entrar</a></p>
             </div>
 
-            <img src="assets/images/educacao rural.jpg" alt="Imagem de uma menina usando um vestido vermelho segurando um livro laranja em um campo.">
+            <img src="assets/images/educacao rural.jpg"
+                alt="Imagem de uma menina usando um vestido vermelho segurando um livro laranja em um campo.">
         </section>
 
         <!-- Sobre -->
@@ -53,47 +55,59 @@
             <!--Parte textual-->
             <div class="sobre-texto">
                 <h2>Sobre</h2>
-                <p>Somos uma iniciativa que acredita que a educação deve ser acessível a todos, independentemente de onde vivem.</p>
-                <p>Nosso objetivo é ampliar o acesso ao ensino de Matemática e Português, oferecendo conteúdos claros, atividades e apoio para facilitar o aprendizado.</p>
-                <p>Também buscamos aproximar voluntários de estudantes e incentivar a sociedade a participar da construção de uma educação mais justa e igualitária.</p>
+                <p>Somos uma iniciativa que acredita que a educação deve ser acessível a todos, independentemente de
+                    onde vivem.</p>
+                <p>Nosso objetivo é ampliar o acesso ao ensino de Matemática e Português, oferecendo conteúdos claros,
+                    atividades e apoio para facilitar o aprendizado.</p>
+                <p>Também buscamos aproximar voluntários de estudantes e incentivar a sociedade a participar da
+                    construção de uma educação mais justa e igualitária.</p>
             </div>
 
             <!--Parte de imagens-->
             <div class="sobre-imagens">
                 <img src="assets/images/estudando.jpg" alt="Imagem de crianças estudando.">
-                <img src="assets/images/ensinando.jpg" alt="Imagem de duas pessoas estudando utilizando folhas de papel, lápis e canetas. Há também dois notebooks próximos das folhas de papel.">
+                <img src="assets/images/ensinando.jpg"
+                    alt="Imagem de duas pessoas estudando utilizando folhas de papel, lápis e canetas. Há também dois notebooks próximos das folhas de papel.">
             </div>
 
         </section>
-        
+
         <!-- Métodos -->
         <section class="metodos" id="metodos">
             <h2>Métodos</h2>
-            <p>Conheça nossa forma de ensino, baseada em conteúdos adaptados, atividades práticas e acompanhamento dos voluntários.</p>
-            
+            <p>Conheça nossa forma de ensino, baseada em conteúdos adaptados, atividades práticas e acompanhamento dos
+                voluntários.</p>
+
             <div>
                 <h3>1. Aprenda no seu ritmo</h3>
-                <p>Conteúdos adaptados ao nível e às dificuldades de cada aluno, seguindo uma alfabetização passo a passo e respeitando o ritmo de aprendizagem.</p>
+                <p>Conteúdos adaptados ao nível e às dificuldades de cada aluno, seguindo uma alfabetização passo a
+                    passo e respeitando o ritmo de aprendizagem.</p>
                 <img src="assets/images/livros2.jpg" alt="Imagem de livros abertos empilhados." class="imagem1-sobre">
             </div>
-            
+
             <div>
                 <h3>2. Aprenda com a prática</h3>
-                <p>Utilizamos situações reais do cotidiano para ensinar Matemática e Português, tornando o aprendizado mais simples, útil e fácil de compreender.</p>
-                <img src="assets/images/matematica.png" alt="Imagem de materiais matemáticos e outros materiais de papelaria. Na foto há uma régua, um transferidor, um compasso, canetas, folhas de papel, e um goniômetro." class="imagem2-sobre">
+                <p>Utilizamos situações reais do cotidiano para ensinar Matemática e Português, tornando o aprendizado
+                    mais simples, útil e fácil de compreender.</p>
+                <img src="assets/images/matematica.png"
+                    alt="Imagem de materiais matemáticos e outros materiais de papelaria. Na foto há uma régua, um transferidor, um compasso, canetas, folhas de papel, e um goniômetro."
+                    class="imagem2-sobre">
             </div>
-            
+
             <div>
                 <h3>3. Aprenda com apoio</h3>
-                <p>Voluntários acompanham os estudantes, tirando dúvidas e incentivando o aprendizado por meio de desafios, pequenas conquistas e atividades interativas.</p>
-                <img src="assets/images/sala de aula.jpg" alt="Imagem de vários alunos em uma sala de aula." class="imagem3-sobre">
+                <p>Voluntários acompanham os estudantes, tirando dúvidas e incentivando o aprendizado por meio de
+                    desafios, pequenas conquistas e atividades interativas.</p>
+                <img src="assets/images/sala de aula.jpg" alt="Imagem de vários alunos em uma sala de aula."
+                    class="imagem3-sobre">
             </div>
         </section>
 
         <!-- Relatos -->
         <section class="relatos" id="relatos">
             <h2>Relatos</h2>
-            <p>Confira experiências e depoimentos de alunos e voluntários sobre a participação no projeto e o impacto na aprendizagem.</p>
+            <p>Confira experiências e depoimentos de alunos e voluntários sobre a participação no projeto e o impacto na
+                aprendizagem.</p>
 
             <!--Container que agrupa outros containers de relatos-->
             <div class="relatos-container">
@@ -101,28 +115,32 @@
                     <img src="assets/images/relato1.jpg" alt="Foto de perfil fictícia de 'Ana Beatriz Souza'">
                     <b class="nome">Ana Beatriz Souza</b>
                     <p class="cargo">Aluna</p>
-                    <p class="relato">“As aulas de Matemática me ajudaram a entender melhor os conteúdos e aprender de uma forma mais simples e divertida.”</p>
+                    <p class="relato">“As aulas de Matemática me ajudaram a entender melhor os conteúdos e aprender de
+                        uma forma mais simples e divertida.”</p>
                 </div>
 
                 <div>
                     <img src="assets/images/relato2.jpg" alt="Foto de perfil fictícia de 'Lucas Henrique Oliveira'">
                     <b class="nome">Lucas Henrique Oliveira</b>
                     <p class="cargo">Aluno</p>
-                    <p class="relato">“A plataforma facilitou meu acesso às atividades e pude aprender no meu ritmo, contando sempre com o apoio dos voluntários.”</p>
+                    <p class="relato">“A plataforma facilitou meu acesso às atividades e pude aprender no meu ritmo,
+                        contando sempre com o apoio dos voluntários.”</p>
                 </div>
 
                 <div>
                     <img src="assets/images/relato3.jpg" alt="Foto de perfil fictícia de 'Mariana Alves Santos'">
                     <b class="nome">Mariana Alves Santos</b>
                     <p class="cargo">Professora</p>
-                    <p class="relato">“Participar do projeto tem sido uma experiência muito gratificante. A plataforma facilita o acompanhamento dos alunos e das atividades.”</p>
+                    <p class="relato">“Participar do projeto tem sido uma experiência muito gratificante. A plataforma
+                        facilita o acompanhamento dos alunos e das atividades.”</p>
                 </div>
 
                 <div>
                     <img src="assets/images/relato4.jpg" alt="Foto de perfil fictícia de 'Rafael Martins Costa'">
                     <b class="nome">Rafael Martins Costa</b>
                     <p class="cargo">Professor</p>
-                    <p class="relato">“Com a plataforma, consigo organizar melhor minhas aulas e acompanhar o progresso dos estudantes, contribuindo para o aprendizado deles.”</p>
+                    <p class="relato">“Com a plataforma, consigo organizar melhor minhas aulas e acompanhar o progresso
+                        dos estudantes, contribuindo para o aprendizado deles.”</p>
                 </div>
             </div>
         </section>
@@ -130,19 +148,23 @@
         <!-- Aulas -->
         <section class="aulas" id="aulas">
             <h2>Aulas</h2>
-            <p>Acesse conteúdos e atividades de Português e Matemática preparados para apoiar o aprendizado dos estudantes.</p>
-            
+            <p>Acesse conteúdos e atividades de Português e Matemática preparados para apoiar o aprendizado dos
+                estudantes.</p>
+
             <div class="aulas-container">
-                <img src="assets/images/sala de aula 2.jpg" alt="Imagem de um menino de moletom preto em uma sala de aula junto de outras crianças.">
-                
+                <img src="assets/images/sala de aula 2.jpg"
+                    alt="Imagem de um menino de moletom preto em uma sala de aula junto de outras crianças.">
+
                 <div class="portugues">
                     <h3>Língua Portuguesa</h3>
-                    <p>Conteúdos e atividades para desenvolver a leitura, a escrita e a compreensão da língua portuguesa.</p>
+                    <p>Conteúdos e atividades para desenvolver a leitura, a escrita e a compreensão da língua
+                        portuguesa.</p>
                 </div>
 
                 <div class="matematica">
                     <h3>Matemática</h3>
-                    <p>Conteúdos e atividades para desenvolver o raciocínio lógico e facilitar a compreensão da matemática.</p>
+                    <p>Conteúdos e atividades para desenvolver o raciocínio lógico e facilitar a compreensão da
+                        matemática.</p>
                 </div>
             </div>
         </section>
@@ -153,59 +175,67 @@
             <p>Entre em contato conosco!</p>
 
             <div class="contatos-container">
-            <div class="youtube">
-                <h3>Youtube</h3>
+                <div class="youtube">
+                    <h3>Youtube</h3>
 
-                <div class="perfil">
-                    <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                    <b>FSAberCampo</b>
-                    <p>1,1 mi de inscritos</p>
-                    <button>Inscreva-se</button>
-                </div>
-                
-                <!--Vídeos do Canal-->
-                <div class="videos">
-                    <!--Vídeo 1-->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4Indeupd6cc?si=iCFzP56ypJzCaoqG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    
-                    <!--Vídeo 2-->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dHgW9zHmW-E?si=5zW76Vh_MMWGjo1S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-            
-            <div class="instagram">
-                <h3>Instagram</h3>
-                <div class="perfil">
-                    <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                    <b>@fsabercampo</b>
-                    <p>90,6 mil de seguidores</p>
-                    <button>Seguir</button>
-                    
-                </div>
-            </div>
-            
-            <div class="whatsapp">
-                <h3>WhatsApp</h3>
-                <div class="perfil">
-                    <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                    <b>Canal FSAber</b>
-                    <p>90,6 mil de seguidores</p>
-                    <button>Seguir</button>
-                </div>
-                <div class="numero">
-                    <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                    <p>(11) 9999-99999</p>
-                    <button>Conversar</button>
-                </div>
-            </div>
+                    <div class="perfil">
+                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
+                        <b>FSAberCampo</b>
+                        <p>1,1 mi de inscritos</p>
+                        <button>Inscreva-se</button>
+                    </div>
 
-            <div class="email">
-                <h3>Email</h3>
-                <div>
-                    <p>fsaber.campo@contato.com</p>
-                    <button>Enviar um Email</button>
+                    <!--Vídeos do Canal-->
+                    <div class="videos">
+                        <!--Vídeo 1-->
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4Indeupd6cc?si=iCFzP56ypJzCaoqG"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <!--Vídeo 2-->
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/dHgW9zHmW-E?si=5zW76Vh_MMWGjo1S"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </div>
+
+                <div class="instagram">
+                    <h3>Instagram</h3>
+                    <div class="perfil">
+                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
+                        <b>@fsabercampo</b>
+                        <p>90,6 mil de seguidores</p>
+                        <button>Seguir</button>
+
+                    </div>
+                </div>
+
+                <div class="whatsapp">
+                    <h3>WhatsApp</h3>
+                    <div class="perfil">
+                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
+                        <b>Canal FSAber</b>
+                        <p>90,6 mil de seguidores</p>
+                        <button>Seguir</button>
+                    </div>
+                    <div class="numero">
+                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
+                        <p>(11) 9999-99999</p>
+                        <button>Conversar</button>
+                    </div>
+                </div>
+
+                <div class="email">
+                    <h3>Email</h3>
+                    <div>
+                        <p>fsaber.campo@contato.com</p>
+                        <button>Enviar um Email</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -242,4 +272,5 @@
         <p>© 2026 FSAberCampo. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

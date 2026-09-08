@@ -3,20 +3,20 @@
     src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
-/*Deslize suave*/
-/* html{
+/*Rolagem de página suave*/
+html {
     scroll-behavior: smooth;
-} */
+}
 
 /*Formatação para todos os elementos*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body *{
-    display: flex ;
+body * {
+    display: flex;
     flex-direction: column;
 
     /* Formatação geral dos textos*/
@@ -26,20 +26,20 @@ body *{
 }
 
 /*Formatação de títulos*/
-.titulo{
+.titulo {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
     font-weight: bold;
     color: #07448a;
 }
 
-h2{
+h2 {
     font-family: "Georgia";
     font-size: 2rem;
     font-weight: bold;
 }
 
-a{
+a {
     color: #24282c;
 }
 
@@ -47,11 +47,11 @@ a:hover {
     text-decoration: underline;
 }
 
-button{
-transition: transform 0.3s ease;
+button {
+    transition: transform 0.3s ease;
 }
-    
-button:hover{
+
+button:hover {
     transform: scale(1.1);
 }
 
@@ -64,33 +64,41 @@ nav {
     padding: 0.5rem 1rem;
 
     background-color: #ffffff;
-    
-    *{
+
+    * {
         color: #24282c;
     }
 
     /*Logo na barra de navegação*/
-    #logo{
+    #logo {
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
         font-size: 1.8rem;
         color: #07448a;
     }
 
-    #logo:hover{
+    #logo:hover {
         text-decoration: none;
     }
-    
+
     /*Lista de links da barra de navegação*/
-    ul{
+    ul {
         flex-direction: row;
         gap: 1.25rem;
-        
+
         align-items: center;
     }
 
+    /*Botão "Entrar" da barra de navegação*/
+    #entrar{
+        border: 1px solid #24282c;
+        border-radius: 10px;
+        padding: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
     /*Botão "Cadastrar" da barra de navegação*/
-    #cadastrar{
+    #cadastrar {
         background-color: #65fff2;
         font-weight: bold;
         padding: 0.5rem;
@@ -98,91 +106,91 @@ nav {
         transition: transform 0.3s ease;
     }
 
-    #cadastrar:hover{
+    #cadastrar:hover, #entrar:hover {
         text-decoration: none;
         transform: scale(1.1);
     }
 }
 
 /*Formatação das sessões da página*/
-section{
+section {
     padding: 2.5rem 6rem;
 }
 
 /*Formatação da sessão "Início"*/
-.inicio{
+.inicio {
     background-color: #f8f8f8;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+
     /*Parte de texto da sessão "Início"*/
-    .inicio-texto{
+    .inicio-texto {
         gap: 2rem;
         width: 45vw;
     }
-    
+
     /*Botão "Faça parte da nossa equipe"*/
-    button{
+    button {
         background-color: #65fff2;
         border-style: none;
         border-radius: 10px;
         padding: 1rem;
-        
+
         height: 2.5rem;
         width: max-content;
-        
+
         font-weight: bold;
         color: #24282c;
         justify-content: center;
         align-self: center;
-        
+
         box-shadow: 5px 5px 2rem rgba(36, 40, 44, 0.5);
     }
-    
+
     /*Parte de "Possui conta? Entrar"*/
-    .possui-conta{
+    .possui-conta {
         flex-direction: row;
         gap: 0.3rem;
         justify-content: center;
 
-        a{
+        a {
             font-weight: bold;
         }
     }
 
     /*Imagem da sessão "Início"*/
-    img{
+    img {
         height: 35rem;
         width: auto;
         border-radius: 15px;
-        
+
         align-self: center;
         justify-self: center;
     }
 }
 
 /*Formatação da sessão "Sobre"*/
-.sobre{
+.sobre {
     background-color: #07448a;
     color: #ffffff;
-    
+
     flex-direction: row;
     justify-content: center;
     gap: 3rem;
-    
+
     /*Parte de texto da sessão "Sobre"*/
-    .sobre-texto{
+    .sobre-texto {
         width: 40vw;
         gap: 2rem;
     }
-    
+
     /*Imagens da sessão "Sobre"*/
-    .sobre-imagens{
+    .sobre-imagens {
         justify-content: space-between;
     }
 
-    img{
+    img {
         border-radius: 15px;
         width: 20vw;
         height: auto;
@@ -190,35 +198,35 @@ section{
 }
 
 /*Formatação da sessão "Métodos"*/
-.metodos{
+.metodos {
     background-color: #f8f8f8;
     align-items: center;
     gap: 2rem;
-    
+
     /*Containers*/
-    div{
+    div {
         background-color: #07448a;
         padding: 1.5rem;
         border-radius: 15px;
         color: #ffffff;
 
         display: grid;
-        grid-template-areas: 
-        "titulo imagem"
-        "texto imagem";
+        grid-template-areas:
+            "titulo imagem"
+            "texto imagem";
         grid-template-columns: 40vw auto;
         gap: 1rem;
 
         /*Elementos dentro dos containers*/
-        h3{
+        h3 {
             grid-area: titulo;
         }
-        
-        p{
+
+        p {
             grid-area: texto;
         }
-        
-        img{
+
+        img {
             grid-area: imagem;
             align-self: center;
             height: 10rem;
@@ -229,57 +237,57 @@ section{
 }
 
 /*Formatação da sessão "relatos"*/
-.relatos{
+.relatos {
     background-color: #24282c;
     color: #ffffff;
     gap: 2rem;
     align-items: center;
 
-    h2{
+    h2 {
         grid-area: titulo;
         color: #65fff2;
     }
 
     /*Container que agrupa os relatos*/
-    .relatos-container{
+    .relatos-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
         gap: 1rem;
 
         /*Containers dos relatos*/
-        div{
+        div {
             padding: 1rem;
             background-color: #f8f8f8;
             color: #24282c;
             border-radius: 15px;
 
             display: grid;
-            grid-template-areas: 
-            "imagem nome"
-            "imagem cargo"
-            "texto texto";
+            grid-template-areas:
+                "imagem nome"
+                "imagem cargo"
+                "texto texto";
             grid-template-columns: min-content 1fr;
             gap: 0.7rem;
-            
-            img{
+
+            img {
                 grid-area: imagem;
                 border-radius: 100%;
                 border: 3px outset #65fff2;
                 height: 4rem;
             }
 
-            .nome{
+            .nome {
                 grid-area: nome;
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 align-self: flex-end;
             }
 
-            .cargo{
+            .cargo {
                 grid-area: cargo;
             }
 
-            .relato{
+            .relato {
                 grid-area: texto;
             }
 
@@ -288,43 +296,43 @@ section{
 }
 
 /*Formatação da sessão "Aulas"*/
-.aulas{
+.aulas {
     background-color: #f8f8f8;
     align-items: center;
     gap: 2rem;
 
     /*Container que agrupa imagem e aulas*/
-    .aulas-container{
+    .aulas-container {
         display: grid;
-        grid-template-areas: 
-        "imagem portugues"
-        "imagem matematica";
+        grid-template-areas:
+            "imagem portugues"
+            "imagem matematica";
         gap: 1rem;
         place-items: center;
 
         /*Container das aulas*/
-        div{
+        div {
             background-color: #07448a;
             border-radius: 15px;
             padding: 1rem;
             gap: 0.5rem;
 
             color: #ffffff;
-            text-align:center;
+            text-align: center;
 
             width: 30vw;
         }
 
-        .portugues{
+        .portugues {
             grid-area: portugues;
         }
-        
-        .matematica{
+
+        .matematica {
             grid-area: matematica;
-            
+
         }
 
-        img{
+        img {
             grid-area: imagem;
             border-radius: 15px;
             height: 18rem;
@@ -333,21 +341,21 @@ section{
 }
 
 /*Formatação da sessão "Contatos"*/
-.contatos{
+.contatos {
     background-color: #f8f8f8;
     gap: 2rem;
     align-items: center;
-    
+
     /*Container que agrupa os outros containers de contatos*/
-    .contatos-container{
+    .contatos-container {
         display: grid;
-        grid-template-areas: 
-        "youtube instagram"
-        "youtube whatsapp"
-        "youtube email";
+        grid-template-areas:
+            "youtube instagram"
+            "youtube whatsapp"
+            "youtube email";
         gap: 1rem;
-        
-        h3{
+
+        h3 {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.2rem;
         }
@@ -355,71 +363,74 @@ section{
 }
 
 /*Containers dos contatos*/
-.youtube, .instagram, .whatsapp, .email{
+.youtube,
+.instagram,
+.whatsapp,
+.email {
     background-color: #24282c;
     border-radius: 15px;
     padding: 1rem;
-    
+
     width: 40vw;
-    
+
     color: #65fff2;
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    
+
     /*Container dentro dos containers de contatos*/
-    div{
+    div {
         background-color: #2d3144;
         border-radius: 15px;
         padding: 1rem;
-        
+
         width: 100%;
-        
+
         color: #ffffff;
         align-items: center;
 
-        button{
+        button {
             background-color: #f8f8f8;
             border-style: none;
             border-radius: 10px;
             padding: 0.5rem;
-            
+
             font-weight: bold;
             font-size: 1.3rem;
-            
+
             height: max-content;
             width: max-content;
             justify-content: center;
         }
 
-        img{
+        img {
             border-radius: 100%;
             height: 4rem;
         }
     }
 }
 
-.youtube{
+.youtube {
     grid-area: youtube;
 
-    .videos{
+    .videos {
         gap: 1rem;
 
-        iframe{
+        iframe {
             border-radius: 10px;
             width: 100%;
         }
     }
 }
 
-.instagram{
+.instagram {
     grid-area: instagram;
 }
 
-.whatsapp{
+.whatsapp {
     grid-area: whatsapp;
 
-    .numero{
+    .numero {
         display: grid;
         grid-template-columns: min-content auto auto;
         column-gap: 1rem;
@@ -427,77 +438,77 @@ section{
     }
 }
 
-.email{
+.email {
     grid-area: email;
 
-    div{
+    div {
         gap: 1rem;
     }
 }
 
 /*Container do canal do YouTube, perfil do instragram e canal do WhatsApp*/
-.perfil{
+.perfil {
     display: grid;
-    grid-template-areas: 
-    "imagem user botao"
-    "imagem seguidores botao";
+    grid-template-areas:
+        "imagem user botao"
+        "imagem seguidores botao";
     grid-template-columns: min-content auto auto;
     column-gap: 1rem;
     justify-content: space-around;
 
-    img{
+    img {
         grid-area: imagem;
     }
-    
-    b{
+
+    b {
         grid-area: user;
     }
-    
-    p{
+
+    p {
         grid-area: seguidores;
     }
-    
-    button{
+
+    button {
         grid-area: botao;
     }
 }
 
 /*Rodapé*/
-footer{
+footer {
     background-color: #07448a;
     padding: 1rem 3rem;
 
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "logo links contatos"
         "direitos direitos direitos";
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1.5rem;
     justify-items: center;
 
-    *{
+    * {
         color: #ffffff;
     }
 
-    h4{
+    h4 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 1.2rem;
     }
 
-    .logo-footer{
+    .logo-footer {
         grid-area: logo;
         align-self: center;
     }
 
-    .links-rapidos-footer{
+    .links-rapidos-footer {
         grid-area: links;
     }
 
-    .contatos-footer{
+    .contatos-footer {
         grid-area: contatos;
     }
-    
-    p{
+
+    p {
         grid-area: direitos;
     }
 }

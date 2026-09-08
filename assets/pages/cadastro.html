@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSAberCampo | Cadastro</title>
+    <link rel="stylesheet" href="../styles/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html" id="logo">FSAberCampo</a>
+            <ul>
+                <li><a href="">Início</a></li>
+                <li><a href="">Contatos</a></li>
+            </ul>
+            <ul>
+                <li><a href="" id="entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<form action="">
+
+    <!--Escolha de usuário-->
+    <fieldset class="tipo-usuario">
+        <legend>Tipo de usuário</legend>
+
+        <label>
+            Sou aluno
+            <input type="radio" name="tipo-usuario" value="tipo-aluno">
+        </label>
+
+        <label>
+            Sou professor
+            <input type="radio" name="tipo-usuario" value="tipo-usuario">
+        </label>
+
+        <button>Confirmar</button>
+    </fieldset>
+
+    <!--Cadastro do aluno-->
+    <section>
+
+        <!--Etapa 1: Dados pessoais-->
+        <fieldset class="">
+            <legend>Dados pessoais</legend>
+
+            <h2>Cadastro - Aluno</h2>
+
+            <label for="">Nome Completo</label>
+            <input type="text">
+
+            <label for="">Email</label>
+            <input type="email">
+
+            <label for="">Celular</label>
+            <input type="tel">
+
+            <label for="">Nível de formação</label>
+            <select id="" name="">
+                <option value="">Selecione</option>
+                <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+                <option value="fundamental-completo">Ensino Fundamental Completo</option>
+                <option value="medio-incompleto">Ensino Médio Incompleto</option>
+                <option value="medio-completo">Ensino Médio Completo</option>
+                <option value="superior-incompleto">Ensino Superior Incompleto</option>
+                <option value="superior-completo">Ensino Superior Completo</option>
+            </select>
+
+            <button id="voltar">Voltar</button>
+            <button id="avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 2: Endereço-->
+        <fieldset class="">
+            <legend>Endereço</legend>
+
+            <h2>Cadastro - Aluno</h2>
+
+            <label for="">País</label>
+            <select id="" name="">
+                <option value="">Selecione</option>
+                <option value="brasil">Brasil</option>
+            </select>
+
+            <label for="">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <label for="">Cidade</label>
+            <input type="text">
+
+            <label for="">Rua</label>
+            <input type="text">
+
+            <label for="">N°</label>
+            <input type="text">
+
+            <label for="">Bloco</label>
+            <input type="text">
+
+            <label for="">Apartamento</label>
+            <input type="text">
+
+            <label for="">N/A</label>
+            <input type="checkbox">
+
+            <button id="voltar">Voltar</button>
+            <button id="avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 3: Criar seha-->
+        <fieldset class="">
+            <legend>Criar senha</legend>
+            
+            <h2>Cadastro - Aluno</h2>
+
+            <label for="">Senha</label>
+            <input type="password">
+
+            <label for="">Confirmar senha</label>
+            <input type="password">
+
+            <input type="checkbox">
+            <p>Li e concordo com os <a href="">Termos de uso</a> e <a href="">Política de privacidade</a>.</p>
+
+            <button id="voltar">Voltar</button>
+            <button>Cadastrar</button>
+        </fieldset>
+    </section>
+
+    <!--Cadastro do professor-->
+    <section>
+
+        <!--Etapa 1: Dados pessoais-->
+        <fieldset>
+            <legend>Dados pessoais</legend>
+    
+            <h2>Cadastro - Professor</h2>
+
+            <label for="">Nome Completo</label>
+            <input type="text">
+
+            <label for="">Email</label>
+            <input type="email">
+
+            <label for="">Celular</label>
+            <input type="tel">
+
+            <button id="voltar">Voltar</button>
+            <button id="avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 2: Formação acadêmica-->
+        <fieldset>
+            <legend>Etapa 2: Formação acadêmica</legend>
+            
+            <h2>Cadastro - Professor</h2>
+
+            <label for="">Nível de formação</label>
+            <input type="text">
+
+            <label for="">Universidade</label>
+            <input type="text">
+
+            <label for="">Curso</label>
+            <input type="text">
+
+            <label for="">Código de validação (?)</label>
+            <input type="text">
+
+            <button>Adicionar curso</button>
+            <button id="voltar">Voltar</button>
+            <button id="avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 3: Endereço-->
+        <fieldset class="">
+            <legend>Endereço</legend>
+
+            <h2>Cadastro - Professor</h2>
+
+            <label for="">País</label>
+            <select id="" name="">
+                <option value="">Selecione</option>
+                <option value="brasil">Brasil</option>
+            </select>
+
+            <label for="">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <label for="">Cidade</label>
+            <input type="text">
+
+            <label for="">Rua</label>
+            <input type="text">
+
+            <label for="">N°</label>
+            <input type="text">
+
+            <label for="">Bloco</label>
+            <input type="text">
+
+            <label for="">Apartamento</label>
+            <input type="text">
+
+            <label for="">N/A</label>
+            <input type="checkbox">
+
+            <button id="voltar">Voltar</button>
+            <button id="avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 4: Criar seha-->
+        <fieldset class="">
+            <legend>Criar senha</legend>
+        
+            <h2>Cadastro - Professor</h2>
+
+            <label for="">Senha</label>
+            <input type="password">
+
+            <label for="">Confirmar senha</label>
+            <input type="password">
+
+            <input type="checkbox">
+            <p>Li e concordo com os <a href="">Termos de uso</a> e <a href="">Política de privacidade</a>.</p>
+
+            <button id="voltar">Voltar</button>
+            <button>Cadastrar</button>
+        </fieldset>
+    </section>
+</form>
+</body>
+</html>
