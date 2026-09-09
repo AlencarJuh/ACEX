@@ -29,6 +29,13 @@ body{
     background-color: #f8f8f8;
 }
 
+h2 {
+    font-family: "Georgia";
+    font-size: 2rem;
+    font-weight: bold;
+    color: #042d5c;
+}
+
 /*Barro de navegação*/
 nav{
     display: flex;
@@ -82,11 +89,17 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
 }
 
 fieldset{
     display: block;
+    width: 40vw;
     background-color: #042d5c;
+    border-radius: 15px;
+    border-style: none;
     padding: 1rem;
     color: #ffffff;
     
@@ -114,5 +127,53 @@ fieldset{
         border-radius: 10px;
         font-weight: bold;
         
+    }
+}
+
+.tipo-usuario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 25vw;
+    text-align: center;
+
+    legend{
+        grid-column: span 2;
+
+    }
+
+    label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        background-color: #07448a;
+        border-radius: 10px;
+        padding: 1rem;
+        gap: 1rem;
+
+        img{
+            height: auto;
+            width: 30%;
+        }
+
+        input{
+            display: none;
+        }
+
+    }
+
+    label:has(input:checked){
+        border: 1px solid #65fff2;
+        box-shadow: 0 0 0.5rem #65fff2;
+        transform: scale(1.1);
+
+    }
+
+    button {
+        grid-column: span 2;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
     }
 }
