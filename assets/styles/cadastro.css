@@ -95,8 +95,9 @@ form{
 }
 
 fieldset{
-    display: block;
-    width: 40vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 30vw;
     background-color: #042d5c;
     border-radius: 15px;
     border-style: none;
@@ -104,8 +105,7 @@ fieldset{
     color: #ffffff;
     
     legend{
-        display: block; 
-        float: left;
+        display: none; 
     }
 
     p a{
@@ -176,4 +176,30 @@ fieldset{
         align-items: center;
         height: 2.5rem;
     }
+}
+
+.dados-pessoais,
+.endereco,
+.formacao-academica,
+.criar-senha {
+
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+
+    *{
+        grid-column: span 2;
+    }
+
+    button{
+        display: flex;
+        grid-column: span 1;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input, select{
+        margin-bottom: 0.75rem;
+    }
+
 }
