@@ -36,6 +36,11 @@ h2 {
     color: #042d5c;
 }
 
+h3{
+    font-family: "Georgia";
+    font-size: 1.75rem;
+}
+
 /*Barro de navegação*/
 nav{
     display: flex;
@@ -85,6 +90,12 @@ nav{
     }
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -107,17 +118,36 @@ fieldset{
     legend{
         display: none; 
     }
-
+    
     p a{
         color: #ffffff;
     }
     
+    h3{
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
     input{
         display: flex;
         background-color: #07448a;
         border-style: none;
         border-radius: 10px;
         height: 2rem;
+    }
+    
+    select{
+        background-color: #07448a;
+        border-style: none;
+        border-radius: 10px;
+        height: 2rem;
+        color: #ffffff;
+
+    }
+
+    select:focus{
+        border: 1px solid #65fff2;
     }
     
     button{
@@ -185,6 +215,7 @@ fieldset{
 
     display: grid;
     grid-template-columns: 1fr 9fr;
+    column-gap: 0.5rem;
 
     *{
         grid-column: span 2;
