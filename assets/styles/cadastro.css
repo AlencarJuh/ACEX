@@ -15,6 +15,7 @@ html {
     box-sizing: border-box;
 }
 
+/*Formatação de todos os elementos do corpo da página*/
 body * {
     /* Formatação geral dos textos*/
     font-family: Montserrat;
@@ -22,6 +23,7 @@ body * {
     text-decoration: none;
 }
 
+/*Formatação do corpo da página*/
 body {
     display: flex;
     flex-direction: column;
@@ -29,6 +31,7 @@ body {
     background-color: #f8f8f8;
 }
 
+/*Formatação dos títulos h2*/
 h2 {
     font-family: "Georgia";
     font-size: 2rem;
@@ -36,19 +39,31 @@ h2 {
     color: #042d5c;
 }
 
+/*Formatação dos títulos h3*/
 h3 {
     font-family: "Georgia";
     font-size: 1.75rem;
 }
 
+/*Formatação do inputs checkbox ao serem clicados*/
+input[type="checkbox"]:focus {
+    border-style: none;
+    box-shadow: none;
+}
+
 /*Barro de navegação*/
 nav {
     display: flex;
+    flex-direction: row;
+    position:fixed;
+    
     justify-content: space-between;
     align-items: center;
 
-    background-color: #ffffff;
+    width: 100%;
     padding: 0.5rem 1rem;
+
+    background-color: #ffffff;
 
     * {
         color: #24282c;
@@ -76,17 +91,25 @@ nav {
     }
 
     /*Botão "Entrar" da barra de navegação*/
-    #entrar {
-        display: flex;
+    #nav-entrar{
         border: 1px solid #24282c;
         border-radius: 10px;
         padding: 0.5rem;
         transition: transform 0.3s ease;
     }
 
-    #entrar:hover {
-        transform: scale(1.1);
+    /*Botão "Cadastrar" da barra de navegação*/
+    #nav-cadastrar {
+        background-color: #65fff2;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    #nav-cadastrar:hover, #nav-entrar:hover {
         text-decoration: none;
+        transform: scale(1.1);
     }
 }
 
@@ -97,6 +120,7 @@ form {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin: 15vh auto;
 
 }
 
@@ -134,8 +158,17 @@ fieldset {
 
     }
 
-    p a {
+    p{
         color: #ffffff;
+    }
+
+    a{
+        color: #65fff2;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+        text-decoration: underline;
     }
 
     h3 {
@@ -303,6 +336,11 @@ fieldset {
     .adicionar-curso {
         background-color: transparent;
         margin: 0px;
+        
+        justify-self: center;
+        align-self: center;
+        
+        width: fit-content;
 
         color: #65fff2;
         font-weight: normal;
@@ -325,4 +363,16 @@ fieldset {
 
     .botao-voltar {grid-column: span 1;}
     .botao-cadastrar {grid-column: span 1;}
+}
+
+.login{
+
+    legend{
+        display: none;
+    }
+
+    p{
+        align-self: center;
+        justify-self: center;
+    }
 }

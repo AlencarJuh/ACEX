@@ -57,10 +57,13 @@ button:hover {
 
 /*Formatação da barra de navegação*/
 nav {
+    position:fixed;
     flex-direction: row;
+    
     justify-content: space-between;
     align-items: center;
 
+    width: 100%;
     padding: 0.5rem 1rem;
 
     background-color: #ffffff;
@@ -90,7 +93,7 @@ nav {
     }
 
     /*Botão "Entrar" da barra de navegação*/
-    #entrar{
+    #nav-entrar{
         border: 1px solid #24282c;
         border-radius: 10px;
         padding: 0.5rem;
@@ -98,7 +101,7 @@ nav {
     }
 
     /*Botão "Cadastrar" da barra de navegação*/
-    #cadastrar {
+    #nav-cadastrar {
         background-color: #65fff2;
         font-weight: bold;
         padding: 0.5rem;
@@ -106,7 +109,7 @@ nav {
         transition: transform 0.3s ease;
     }
 
-    #cadastrar:hover, #entrar:hover {
+    #nav-cadastrar:hover, #nav-entrar:hover {
         text-decoration: none;
         transform: scale(1.1);
     }
