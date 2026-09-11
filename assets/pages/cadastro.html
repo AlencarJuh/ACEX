@@ -23,35 +23,34 @@
     </header>
 
 
-<form action="">
+    <form action="">
 
-    <h2>Cadastro - Aluno</h2>
+        <h2>Cadastro</h2>
 
-    <!--Escolha de usuário-->
-    <fieldset class="tipo-usuario">
-        <legend><h3>Selecione um tipo de usuário</h3></legend>
+        <!--Escolha de usuário-->
+        <fieldset class="tipo-usuario">
+            <legend>Selecione um tipo de usuário</legend>
+            <h3>Selecione um tipo de usuário</h3>
 
-        <label>
-            <img src="../icons/tipo-aluno.png" alt="">
-            Sou aluno
-            <input type="radio" name="tipo-usuario" value="tipo-aluno">
-        </label>
-        
-        <label>
-            <img src="../icons/tipo-professor.png" alt="">
-            Sou professor
-            <input type="radio" name="tipo-usuario" value="tipo-usuario">
-        </label>
+            <label>
+                <img src="../icons/tipo-aluno.png" alt="">
+                Sou aluno
+                <input type="radio" name="tipo-usuario" value="tipo-aluno">
+            </label>
 
-        <button>Confirmar</button>
-    </fieldset>
+            <label>
+                <img src="../icons/tipo-professor.png" alt="">
+                Sou professor
+                <input type="radio" name="tipo-usuario" value="tipo-usuario">
+            </label>
 
-    <!--Cadastro do aluno-->
-    <section>
+            <button>Confirmar</button>
+        </fieldset>
 
+        <!--Cadastro-->
         <!--Etapa 1: Dados pessoais-->
         <fieldset class="dados-pessoais">
-            <legend>Dados pessoais</legend>
+            <legend>Etapa 1: Dados pessoais</legend>
 
             <h3>Dados pessoais</h3>
 
@@ -63,6 +62,81 @@
 
             <label for="">Celular</label>
             <input type="tel">
+
+            <button class="botao-voltar" aria-label="Voltar">←</button>
+            <button class="botao-avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 2: Endereço-->
+        <fieldset class="endereco">
+            <legend>Etapa 2: Endereço</legend>
+
+            <h3>Endereço</h3>
+
+            <label for="select-pais">País</label>
+            <select id="select-pais" name="pais">
+                <option value="">Selecione</option>
+                <option value="brasil">Brasil</option>
+            </select>
+
+            <label for="">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <label for="">Cidade</label>
+            <input type="text">
+
+            <label for="input-rua" id="label-rua">Rua</label>
+            <label for="input-casa" id="label-casa">N°</label>
+
+            <input type="text" id="input-rua">
+            <input type="text" id="input-casa">
+
+            <label for="input-bloco" id="label-bloco">Bloco</label>
+            <label for="input-apartamento" id="label-apartamento">Apt.</label>
+            <label for="input-na" id="label-na">N/A</label>
+
+            <input type="text" id="input-bloco">
+            <input type="text" id="input-apartamento">
+            <input type="checkbox" id="input-na">
+
+            <button class="botao-voltar" aria-label="Voltar">←</button>
+            <button class="botao-avancar">Avançar</button>
+        </fieldset>
+
+        <!--Etapa 2: Formação acadêmica-->
+        <fieldset class="formacao-academica">
+            <legend>Etapa 2: Formação acadêmica</legend>
+
+            <h3>Formação acadêmica</h3>
 
             <label for="">Nível de formação</label>
             <select id="" name="">
@@ -75,127 +149,6 @@
                 <option value="superior-completo">Ensino Superior Completo</option>
             </select>
 
-            <button id="voltar">Voltar</button>
-            <button id="avancar">Avançar</button>
-        </fieldset>
-
-        <!--Etapa 2: Endereço-->
-        <fieldset class="endereco">
-            <legend>Endereço</legend>
-
-            <h3>Endereço</h3>
-
-            <label for="">País</label>
-            <select id="" name="">
-                <option value="">Selecione</option>
-                <option value="brasil">Brasil</option>
-            </select>
-
-            <label for="">Estado</label>
-            <select id="estado" name="estado">
-                <option value="">Selecione um estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select>
-
-            <label for="">Cidade</label>
-            <input type="text">
-
-            <label for="">Rua</label>
-            <input type="text">
-
-            <label for="">N°</label>
-            <input type="text">
-
-            <label for="">Bloco</label>
-            <input type="text">
-
-            <label for="">Apartamento</label>
-            <input type="text">
-
-            <label for="">N/A</label>
-            <input type="checkbox">
-
-            <button id="voltar">Voltar</button>
-            <button id="avancar">Avançar</button>
-        </fieldset>
-
-        <!--Etapa 3: Criar seha-->
-        <fieldset class="criar-senha">
-            <legend>Criar senha</legend>
-
-            <h3>Criar senha</h3>
-            
-            <label for="">Senha</label>
-            <input type="password">
-
-            <label for="">Confirmar senha</label>
-            <input type="password">
-
-            <input type="checkbox">
-            <p>Li e concordo com os <a href="">Termos de uso</a> e <a href="">Política de privacidade</a>.</p>
-
-            <button id="voltar">Voltar</button>
-            <button>Cadastrar</button>
-        </fieldset>
-    </section>
-
-    <!--Cadastro do professor-->
-    <section>
-
-        <!--Etapa 1: Dados pessoais-->
-        <fieldset class="dados-pessoais">
-            <legend>Dados pessoais</legend>
-
-            <h3>Dados pessoais</h3>
-    
-            <label for="">Nome Completo</label>
-            <input type="text">
-
-            <label for="">Email</label>
-            <input type="email">
-
-            <label for="">Celular</label>
-            <input type="tel">
-
-            <button id="voltar">Voltar</button>
-            <button id="avancar">Avançar</button>
-        </fieldset>
-
-        <!--Etapa 2: Formação acadêmica-->
-        <fieldset class="formacao-academica">
-            <legend>Formação acadêmica</legend>
-
-            <h3>Formação acadêmica</h3>
-            
-            <label for="">Nível de formação</label>
-            <input type="text">
-
             <label for="">Universidade</label>
             <input type="text">
 
@@ -205,83 +158,19 @@
             <label for="">Código de validação (?)</label>
             <input type="text">
 
-            <button>Adicionar curso</button>
-            <button id="voltar">Voltar</button>
-            <button id="avancar">Avançar</button>
+            <button class="adicionar-curso">+ Adicionar curso</button>
+
+            <button class="botao-voltar" aria-label="Voltar">←</button>
+            <button class="botao-avancar">Avançar</button>
+
         </fieldset>
 
-        <!--Etapa 3: Endereço-->
-        <fieldset class="endereco">
-            <legend>Endereço</legend>
-
-            <h3>Endereço</h3>
-
-            <label for="">País</label>
-            <select id="" name="">
-                <option value="">Selecione</option>
-                <option value="brasil">Brasil</option>
-            </select>
-
-            <label for="">Estado</label>
-            <select id="estado" name="estado">
-                <option value="">Selecione um estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select>
-
-            <label for="">Cidade</label>
-            <input type="text">
-
-            <label for="">Rua</label>
-            <input type="text">
-
-            <label for="">N°</label>
-            <input type="text">
-
-            <label for="">Bloco</label>
-            <input type="text">
-
-            <label for="">Apartamento</label>
-            <input type="text">
-
-            <label for="">N/A</label>
-            <input type="checkbox">
-
-            <button id="voltar">Voltar</button>
-            <button id="avancar">Avançar</button>
-        </fieldset>
-
-        <!--Etapa 4: Criar seha-->
+        <!--Etapa 3: Criar seha-->
         <fieldset class="criar-senha">
-            <legend>Criar senha</legend>
+            <legend>Etapa 3: Criar senha</legend>
 
             <h3>Criar senha</h3>
-        
+
             <label for="">Senha</label>
             <input type="password">
 
@@ -291,10 +180,11 @@
             <input type="checkbox">
             <p>Li e concordo com os <a href="">Termos de uso</a> e <a href="">Política de privacidade</a>.</p>
 
-            <button id="voltar">Voltar</button>
-            <button>Cadastrar</button>
+            <button class="botao-voltar" aria-label="Voltar">←</button>
+            <button class="botao-cadastrar">Cadastrar</button>
         </fieldset>
-    </section>
-</form>
+
+    </form>
 </body>
+
 </html>

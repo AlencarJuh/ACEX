@@ -22,7 +22,7 @@ body * {
     text-decoration: none;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 
@@ -36,17 +36,17 @@ h2 {
     color: #042d5c;
 }
 
-h3{
+h3 {
     font-family: "Georgia";
     font-size: 1.75rem;
 }
 
 /*Barro de navegação*/
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     background-color: #ffffff;
     padding: 0.5rem 1rem;
 
@@ -55,7 +55,7 @@ nav{
     }
 
     /*Logo na barra de navegação*/
-    #logo{
+    #logo {
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
         font-size: 1.8rem;
@@ -63,20 +63,20 @@ nav{
     }
 
     /*Lista de links da barra de navegação*/
-    ul{
+    ul {
         list-style: none;
-        
+
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
-        
-        a:hover{
+
+        a:hover {
             text-decoration: underline;
         }
     }
-    
+
     /*Botão "Entrar" da barra de navegação*/
-    #entrar{
+    #entrar {
         display: flex;
         border: 1px solid #24282c;
         border-radius: 10px;
@@ -84,19 +84,14 @@ nav{
         transition: transform 0.3s ease;
     }
 
-    #entrar:hover{
+    #entrar:hover {
         transform: scale(1.1);
         text-decoration: none;
     }
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-form{
+/*Formatação da parte do formulário*/
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,132 +100,229 @@ form{
 
 }
 
-fieldset{
+/*Formatação padrão dos fieldsets dentro do formulário*/
+fieldset {
     display: grid;
-    grid-template-columns: auto auto;
+    gap: 0.5rem;
     width: 30vw;
+
     background-color: #042d5c;
     border-radius: 15px;
     border-style: none;
     padding: 1rem;
+
     color: #ffffff;
-    
-    legend{
-        display: none; 
+
+    /*Formatação das legendas dos fieldsets*/
+    legend {
+        display: flex;
+        float: left;
+
+        position: relative;
+        top: -1rem;
+
+        justify-content: center;
+        align-items: center;
+
+        background-color: #65fff2;
+        border-radius: 0px 0px 15px 15px;
+        padding: 0.4rem 0px;
+
+        color: #042d5c;
+        font-size: 1rem;
+        font-weight: bold;
+
     }
-    
-    p a{
+
+    p a {
         color: #ffffff;
     }
-    
-    h3{
+
+    h3 {
         justify-self: center;
         align-self: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
-    input{
-        display: flex;
-        background-color: #07448a;
-        border-style: none;
-        border-radius: 10px;
-        height: 2rem;
+    label {
+        font-weight: 550;
     }
-    
-    select{
+
+    input {
+        display: flex;
+
         background-color: #07448a;
         border-style: none;
-        border-radius: 10px;
-        height: 2rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+
+        outline: none;
+
         color: #ffffff;
 
+        margin-bottom: 0.5rem;
+        height: 2rem;
     }
 
-    select:focus{
-        border: 1px solid #65fff2;
-    }
-    
-    button{
-        display: flex;
-        background-color: #65fff2;
-        border-style: none;
-        border-radius: 10px;
-        font-weight: bold;
-        
-    }
-}
-
-.tipo-usuario{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: 25vw;
-    text-align: center;
-
-    legend{
-        grid-column: span 2;
-
-    }
-
-    label{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        background-color: #07448a;
-        border-radius: 10px;
-        padding: 1rem;
-        gap: 1rem;
-
-        img{
-            height: auto;
-            width: 30%;
-        }
-
-        input{
-            display: none;
-        }
-
-    }
-
-    label:has(input:checked){
+    input:focus {
         border: 1px solid #65fff2;
         box-shadow: 0 0 0.5rem #65fff2;
-        transform: scale(1.1);
+    }
 
+    select {
+        background-color: #07448a;
+        border-style: none;
+        border-radius: 5px;
+
+        outline: none;
+
+        margin-bottom: 0.5rem;
+        height: 2rem;
+
+        color: #ffffff;
+    }
+
+    select:focus,
+    select:checked {
+        border: 1px solid #65fff2;
+        box-shadow: 0 0 0.5rem #65fff2;
     }
 
     button {
-        grid-column: span 2;
+        display: flex;
         justify-content: center;
         align-items: center;
+
+        background-color: #65fff2;
+        border-style: none;
+        border-radius: 5px;
+
+        margin-top: 1rem;
+
         height: 2.5rem;
+
+        font-weight: bold;
+
+        transition: transform 0.3s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .botao-voltar {
+        font-size: 2rem;
     }
 }
 
-.dados-pessoais,
-.endereco,
-.formacao-academica,
-.criar-senha {
+/*Formulário para escolher o tipo de usuário*/
+.tipo-usuario {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-    column-gap: 0.5rem;
-
-    *{
-        grid-column: span 2;
+    legend,
+    input {
+        display: none;
     }
 
-    button{
+    h3 {grid-column: span 2;}
+
+    label {
         display: flex;
-        grid-column: span 1;
-        height: 2.5rem;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+
         justify-content: center;
         align-items: center;
+
+        background-color: #07448a;
+        border-radius: 10px;
+
+        img {
+            height: auto;
+            width: 30%;
+        }
     }
 
-    input, select{
-        margin-bottom: 0.75rem;
+    label:hover {
+        border: 1px solid #65fff2;
+        transform: scale(1.05);
+
     }
 
+    label:has(input:checked) {
+        border: 1px solid #65fff2;
+        box-shadow: 0 0 0.5rem #65fff2;
+        transform: scale(1.05);
+    }
+
+    button {grid-column: span 2;}
+}
+
+/*Formatação do campo de dados pessoais*/
+.dados-pessoais {
+    /* display: grid; */
+    grid-template-columns: 2.5rem 9fr;
+
+    * {grid-column: span 2;}
+    button {grid-column: span 1;}
+
+}
+
+/*Formatação do campo de endereço*/
+.endereco {
+    /* display: grid; */
+    grid-template-columns: 2.5rem 1fr 1fr 4rem;
+
+    * {grid-column: span 4;}
+
+    #label-rua {grid-column: span 3;}
+    #input-rua {grid-column: span 3;}
+    #label-casa {grid-column: span 1;}
+    #input-casa {grid-column: span 1;}
+    #label-bloco {grid-column: span 2;}
+    #input-bloco {grid-column: span 2;}
+    #label-apartamento {grid-column: span 1;}
+    #input-apartamento {grid-column: span 1;}
+    #label-na {grid-column: span 1;}
+    #input-na { grid-column: span 1;}
+
+    .botao-voltar {grid-column: span 1;}
+    .botao-avancar {grid-column: span 3;}
+}
+
+/*Formatação do campo de formação acadêmica*/
+.formacao-academica {
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+
+    * {grid-column: span 2;}
+
+    .adicionar-curso {
+        background-color: transparent;
+        margin: 0px;
+
+        color: #65fff2;
+        font-weight: normal;
+    }
+
+    .botao-voltar {grid-column: span 1;}
+    .botao-avancar {grid-column: span 1;}
+}
+
+/*Formatação do campo de criar senha*/
+.criar-senha {
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+    justify-content: center;
+    align-items: center;
+
+    * {grid-column: span 2;}
+    input[type="checkbox"] {grid-column: span 1;}
+    p {grid-column: span 1;}
+
+    .botao-voltar {grid-column: span 1;}
+    .botao-cadastrar {grid-column: span 1;}
 }
