@@ -1,0 +1,452 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   BARRA SUPERIOR
+   ===================================================== */
+
+nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #06386d;
+
+    z-index: 100;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+#logo {
+    width: 220px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 55px;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   PESQUISA
+   ===================================================== */
+
+nav > input[type="search"] {
+    width: 45px;
+    height: 38px;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-size: 0;
+
+    flex-shrink: 0;
+
+    /* Lupa */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Ccircle cx='10.5' cy='10.5' r='7'/%3E%3Cline x1='16' y1='16' x2='22' y2='22'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* =====================================================
+   LISTA DOS BOTÕES
+   ===================================================== */
+
+nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    margin-left: auto;
+
+    height: 38px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 0;
+}
+
+
+/* =====================================================
+   CADA ITEM DA LISTA
+   ===================================================== */
+
+nav ul li {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+
+nav ul li button {
+    width: 45px;
+    height: 38px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: #ffffff;
+
+    font-size: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   ÍCONE DE NOTIFICAÇÕES
+   ===================================================== */
+
+nav ul li:nth-child(1) button::before {
+    content: "♟";
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   ÍCONE DE CONFIGURAÇÕES
+   ===================================================== */
+
+nav ul li:nth-child(2) button::before {
+    content: "⚙";
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   ÍCONE DE PERFIL
+   ===================================================== */
+
+nav ul li:nth-child(3) button::before {
+    content: "♟";
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   MENU LATERAL
+   ===================================================== */
+
+aside {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 49px;
+    height: 100vh;
+
+    background-color: #07529a;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 200;
+}
+
+
+/* =====================================================
+   BOTÃO HAMBURGUER
+   ===================================================== */
+
+aside button {
+    width: 49px;
+    height: 38px;
+
+    border: none;
+
+    background-color: #07529a;
+
+    color: #ffffff;
+
+    font-size: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside button::before {
+    content: "☰";
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   LINKS DO MENU
+   ===================================================== */
+
+aside a {
+    width: 49px;
+    height: 61px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 0;
+
+    text-decoration: none;
+}
+
+
+/* Início */
+
+aside a:nth-of-type(1)::before {
+    content: "⌂";
+    font-size: 28px;
+}
+
+
+/* Gerenciar alunos */
+
+aside a:nth-of-type(2)::before {
+    content: "♟";
+    font-size: 25px;
+}
+
+
+/* Área de atividades */
+
+aside a:nth-of-type(3)::before {
+    content: "▱";
+    font-size: 29px;
+}
+
+
+/* Calendário */
+
+aside a:nth-of-type(4)::before {
+    content: "▣";
+    font-size: 27px;
+}
+
+
+/* Fórum */
+
+aside a:nth-of-type(5)::before {
+    content: "☷";
+    font-size: 28px;
+}
+
+
+/* =====================================================
+   TELA INICIAL
+   ===================================================== */
+
+.tela-inicial {
+    position: absolute;
+
+    top: 38px;
+    left: 49px;
+
+    width: calc(100vw - 49px);
+    height: calc(100vh - 38px);
+
+    padding: 16px 6px 5px 13px;
+
+    display: grid;
+
+    /*
+        3 COLUNAS
+
+        esquerda | centro | direita
+    */
+
+    grid-template-columns: 1.25fr 1fr 0.72fr;
+
+
+    /*
+        4 LINHAS
+    */
+
+    grid-template-rows:
+        68px
+        137px
+        128px
+        1fr;
+
+
+    /*
+        POSIÇÃO DOS CARDS
+    */
+
+    grid-template-areas:
+
+        "saudacao saudacao calendario"
+
+        "total-alunos area-atividades calendario"
+
+        "alunos-chat biblioteca-conteudos calendario"
+
+        "alunos-chat biblioteca-atividades eventos-proximos";
+
+
+    gap: 8px;
+
+    background-color: #ffffff;
+}
+
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+section {
+    background-color: #24282c;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+
+/* =====================================================
+   TEXTO DOS CARDS
+   ===================================================== */
+
+section p {
+    color: #ffffff;
+
+    font-family: Montserrat, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   ÁREAS DO GRID
+   ===================================================== */
+
+.saudacao {
+    grid-area: saudacao;
+}
+
+.total-alunos {
+    grid-area: total-alunos;
+}
+
+.area-atividades {
+    grid-area: area-atividades;
+}
+
+.alunos-e-chat {
+    grid-area: alunos-chat;
+}
+
+.biblioteca-conteudos {
+    grid-area: biblioteca-conteudos;
+}
+
+.biblioteca-atividades {
+    grid-area: biblioteca-atividades;
+}
+
+.calendario {
+    grid-area: calendario;
+}
+
+.eventos-proximos {
+    grid-area: eventos-proximos;
+}
