@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // TELA INICIAL
 
-    // Inicialmente mostra somente
-    // a escolha do tipo de usuário
+    // Inicialmente mostra somente a escolha do tipo de usuário
     mostrarEtapa(0);
 
     // CONFIRMAR TIPO DE USUÁRIO
