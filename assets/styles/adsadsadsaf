@@ -1,0 +1,100 @@
+
+    
+   nav{ 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: #06386d;
+
+    #logo {
+        width: 220px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+
+        padding-left: 55px;
+
+        color: #ffffff;
+
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 19px;
+        font-weight: bold;
+
+        text-decoration: none;
+
+        flex-shrink: 0;
+    }
+
+    /*Input de pesquisa*/
+    input[type="search"] {
+        width: 45px;
+        height: 38px;
+
+        border: none;
+        outline: none;
+
+        background-color: transparent;
+
+        color: white;
+
+        font-size: 0;
+
+        flex-shrink: 0;
+
+        /* Lupa */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Ccircle cx='10.5' cy='10.5' r='7'/%3E%3Cline x1='16' y1='16' x2='22' y2='22'/%3E%3C/svg%3E");
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /*LISTA DOS BOTÕES*/
+    ul {
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        margin-left: auto;
+
+        height: 38px;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 0;
+
+        /*CADA ITEM DA LISTA*/
+        li {
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /*BOTÕES*/
+            button {
+                width: 45px;
+                height: 38px;
+
+                border: none;
+
+                background-color: transparent;
+
+                color: #ffffff;
+
+                font-size: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+            }
+        }
+    }
+}
