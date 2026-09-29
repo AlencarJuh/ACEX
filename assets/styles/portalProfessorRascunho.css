@@ -3,7 +3,6 @@
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-
 /* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
@@ -15,23 +14,30 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: #f8f8f8;
 }
 
-body {
-    font-family: Montserrat, sans-serif;
-    background-color: #f8f8f8;
+body *{
+    /*Formatação geral dos textos*/
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 /* BARRA SUPERIOR*/
 nav {
     display: flex;
     flex-direction: row;
+    
     position: relative;
     left: 3.5rem;
-
-    align-items: center;
-    justify-content: space-between;
     padding: 0.5rem 2rem;
+
+    width: calc(100vw - 3.5rem);
+
+    align-content: center;
+    justify-content: space-between;
+    
 
     background-color: #042d5c;
 
@@ -50,106 +56,66 @@ nav {
 
     input{
         height: 1.5rem;
+        width: 30rem;
     }
 
     ul{
         display: flex;
         flex-direction: row;
         list-style: none;
-
+        gap: 1rem;
     }
-
 }
 
 /*MENU LATERAL*/
 aside {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 3.5rem;
-    height: 100vh;
-
-    background-color: #07529a;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    z-index: 200;
-}
-
-/*BOTÃO HAMBURGUER*/
-aside button {
-    width: 49px;
-    height: 38px;
-
-    border: none;
-
+    gap: 2rem;
+    padding: 0.5rem 0;
+    
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    
+    width: 3.5rem;
+    height: 100vh;
+    
     background-color: #07529a;
+    
+    z-index: 200;
+    
+    img{
+        width: 1.5rem;
+        height: auto;
+    }
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
 
-    color: #ffffff;
+        color: #ffffff;
 
-    font-size: 0;
+        font-size: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        text-decoration: none;
+    }
+    
+    a p{
+        display: none;
+    }
 
-aside button::before {
-    content: "☰";
-
-    color: #ffffff;
-
-    font-size: 23px;
-}
-
-/*LINKS DO MENU*/
-aside a {
-    width: 49px;
-    height: 61px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #ffffff;
-
-    font-size: 0;
-
-    text-decoration: none;
-}
-
-/* Início */
-aside a:nth-of-type(1)::before {
-    content: "⌂";
-    font-size: 28px;
-}
-
-/* Gerenciar alunos */
-aside a:nth-of-type(2)::before {
-    content: "♟";
-    font-size: 25px;
-}
-
-/* Área de atividades */
-aside a:nth-of-type(3)::before {
-    content: "▱";
-    font-size: 29px;
-}
-
-/* Calendário */
-aside a:nth-of-type(4)::before {
-    content: "▣";
-    font-size: 27px;
-}
-
-/* Fórum */
-aside a:nth-of-type(5)::before {
-    content: "☷";
-    font-size: 28px;
+    button {
+        color: #ffffff;
+        border: none;
+        background-color: transparent;
+    }
 }
 
 /*TELA INICIAL*/
@@ -178,15 +144,11 @@ aside a:nth-of-type(5)::before {
 
     /*POSIÇÃO DOS CARDS*/
     grid-template-areas:
-
         "saudacao saudacao calendario"
-
         "total-alunos area-atividades calendario"
-
         "alunos-chat biblioteca-conteudos calendario"
-
-        "alunos-chat biblioteca-atividades eventos-proximos";
-
+        "alunos-chat biblioteca-atividades eventos-proximos"
+        ;
 
     gap: 8px;
 
