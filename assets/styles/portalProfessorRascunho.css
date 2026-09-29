@@ -4,10 +4,7 @@
 }
 
 
-/* =====================================================
-   CONFIGURAÇÕES GERAIS
-   ===================================================== */
-
+/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -26,11 +23,7 @@ body {
     background-color: #ffffff;
 }
 
-
-/* =====================================================
-   BARRA SUPERIOR
-   ===================================================== */
-
+/* BARRA SUPERIOR*/
 nav {
     position: fixed;
 
@@ -48,11 +41,7 @@ nav {
     z-index: 100;
 }
 
-
-/* =====================================================
-   LOGO
-   ===================================================== */
-
+/* LOGO*/
 #logo {
     width: 220px;
     height: 38px;
@@ -73,11 +62,7 @@ nav {
     flex-shrink: 0;
 }
 
-
-/* =====================================================
-   PESQUISA
-   ===================================================== */
-
+/* PESQUISA*/
 nav > input[type="search"] {
     width: 45px;
     height: 38px;
@@ -100,11 +85,7 @@ nav > input[type="search"] {
     background-position: center;
 }
 
-
-/* =====================================================
-   LISTA DOS BOTÕES
-   ===================================================== */
-
+/*LISTA DOS BOTÕES*/
 nav ul {
     list-style: none;
 
@@ -123,11 +104,7 @@ nav ul {
     gap: 0;
 }
 
-
-/* =====================================================
-   CADA ITEM DA LISTA
-   ===================================================== */
-
+/*CADA ITEM DA LISTA*/
 nav ul li {
     height: 38px;
 
@@ -136,11 +113,7 @@ nav ul li {
     justify-content: center;
 }
 
-
-/* =====================================================
-   BOTÕES
-   ===================================================== */
-
+/*BOTÕES*/
 nav ul li button {
     width: 45px;
     height: 38px;
@@ -160,11 +133,7 @@ nav ul li button {
     cursor: pointer;
 }
 
-
-/* =====================================================
-   ÍCONE DE NOTIFICAÇÕES
-   ===================================================== */
-
+/*ÍCONE DE NOTIFICAÇÕES*/
 nav ul li:nth-child(1) button::before {
     content: "♟";
 
@@ -175,11 +144,7 @@ nav ul li:nth-child(1) button::before {
     transform: rotate(180deg);
 }
 
-
-/* =====================================================
-   ÍCONE DE CONFIGURAÇÕES
-   ===================================================== */
-
+/*ÍCONE DE CONFIGURAÇÕES*/
 nav ul li:nth-child(2) button::before {
     content: "⚙";
 
@@ -188,11 +153,7 @@ nav ul li:nth-child(2) button::before {
     font-size: 25px;
 }
 
-
-/* =====================================================
-   ÍCONE DE PERFIL
-   ===================================================== */
-
+/*ÍCONE DE PERFIL*/
 nav ul li:nth-child(3) button::before {
     content: "♟";
 
@@ -201,11 +162,7 @@ nav ul li:nth-child(3) button::before {
     font-size: 24px;
 }
 
-
-/* =====================================================
-   MENU LATERAL
-   ===================================================== */
-
+/*MENU LATERAL*/
 aside {
     position: fixed;
 
@@ -224,11 +181,7 @@ aside {
     z-index: 200;
 }
 
-
-/* =====================================================
-   BOTÃO HAMBURGUER
-   ===================================================== */
-
+/*BOTÃO HAMBURGUER*/
 aside button {
     width: 49px;
     height: 38px;
@@ -254,11 +207,7 @@ aside button::before {
     font-size: 23px;
 }
 
-
-/* =====================================================
-   LINKS DO MENU
-   ===================================================== */
-
+/*LINKS DO MENU*/
 aside a {
     width: 49px;
     height: 61px;
@@ -274,51 +223,37 @@ aside a {
     text-decoration: none;
 }
 
-
 /* Início */
-
 aside a:nth-of-type(1)::before {
     content: "⌂";
     font-size: 28px;
 }
 
-
 /* Gerenciar alunos */
-
 aside a:nth-of-type(2)::before {
     content: "♟";
     font-size: 25px;
 }
 
-
 /* Área de atividades */
-
 aside a:nth-of-type(3)::before {
     content: "▱";
     font-size: 29px;
 }
 
-
 /* Calendário */
-
 aside a:nth-of-type(4)::before {
     content: "▣";
     font-size: 27px;
 }
 
-
 /* Fórum */
-
 aside a:nth-of-type(5)::before {
     content: "☷";
     font-size: 28px;
 }
 
-
-/* =====================================================
-   TELA INICIAL
-   ===================================================== */
-
+/*TELA INICIAL*/
 .tela-inicial {
     position: absolute;
 
@@ -332,30 +267,17 @@ aside a:nth-of-type(5)::before {
 
     display: grid;
 
-    /*
-        3 COLUNAS
-
-        esquerda | centro | direita
-    */
-
+    /*3 COLUNAS*/
     grid-template-columns: 1.25fr 1fr 0.72fr;
 
-
-    /*
-        4 LINHAS
-    */
-
+    /*4 LINHAS*/
     grid-template-rows:
         68px
         137px
         128px
         1fr;
 
-
-    /*
-        POSIÇÃO DOS CARDS
-    */
-
+    /*POSIÇÃO DOS CARDS*/
     grid-template-areas:
 
         "saudacao saudacao calendario"
@@ -372,11 +294,7 @@ aside a:nth-of-type(5)::before {
     background-color: #ffffff;
 }
 
-
-/* =====================================================
-   CARDS
-   ===================================================== */
-
+/*CARDS*/
 section {
     background-color: #24282c;
 
@@ -397,11 +315,7 @@ section {
     min-height: 0;
 }
 
-
-/* =====================================================
-   TEXTO DOS CARDS
-   ===================================================== */
-
+/*TEXTO DOS CARDS*/
 section p {
     color: #ffffff;
 
@@ -414,11 +328,7 @@ section p {
     text-align: center;
 }
 
-
-/* =====================================================
-   ÁREAS DO GRID
-   ===================================================== */
-
+/*ÁREAS DO GRID*/
 .saudacao {
     grid-area: saudacao;
 }
