@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAberCampo | Início</title>
-    <link rel="stylesheet" href="../styles/portalProfessorRascunho.css">
-    <link rel="icon" href="../images/logo.png" alt="Logotipo da FSAberCampo">
+    <link rel="stylesheet" href="../../styles/inicialProfessor.css">
+    <link rel="icon" href="../../images/logo.png" alt="Logotipo da FSAberCampo">
 </head>
 <body>
     <header>
         <nav>
             <a href="" id="logo">FSAberCampo</a>
             
+            <label for="nav-pesquisar"> Input de pesquisa</label>
+            <div class="input-pesquisar">
+                <img src="../../icons/lupa.png" alt="">
+                <input id="nav-pesquisar" type="search" placeholder="Pesquisar">
+            </div>
 
-            <input type="search">
-            
             <ul>
                 <li><button type="button">
                     <p>Notificações</p>
-                    <img src="../icons/sino.png" alt="">
+                    <img src="../../icons/sino.png" alt="">
                 </button></li>
 
                 <li><button type="button">
                     <p>Configurações</p>
-                    <img src="../icons/configurações.png" alt="">
+                    <img src="../../icons/configurações.png" alt="">
                 </button></li>
                 
                 <li><button type="button">
                     <p>Perfil</p>
-                    <img src="../icons/perfil.png" alt="">
+                    <img src="../../icons/perfil.png" alt="">
                 </button></li>
             </ul>
 
@@ -37,41 +40,41 @@
 
     <aside>
         <button type="button">
-            <img src="../icons/bars.png" alt="">
+            <img src="../../icons/bars.png" alt="Icon do botão expandir">
         </button>
 
         <ul>
-            <li>
-            <a>
-                <img src="../icons/início.png" alt="ìcone de casa">
+            <li class="aside-inicio">
+            <a href="inicialProfessor.html">
+                <img src="../../icons/início.png" alt="ìcone de casa">
                 <p>Início</p>
             </a>
             </li>
             
-            <li>
-            <a>
-                <img src="../icons/alunos.png" alt="ìcone de casa">
+            <li class="aside-alunos">
+            <a href="gerenciar-alunos.html">
+                <img src="../../icons/alunos.png" alt="ìcone de casa">
                 <p>Gerenciar alunos</p>
             </a>
             </li>
             
-            <li>
-            <a>
-                <img src="../icons/atividades.png" alt="ìcone de casa">
+            <li class="aside-atividades">
+            <a href="area-atividades.html">
+                <img src="../../icons/atividades.png" alt="ìcone de casa">
                 <p>Área de atividades</p>
             </a>
             </li>
             
-            <li>
-            <a>
-                <img src="../icons/calendário.png" alt="ìcone de casa">
+            <li class="aside-calendario">
+            <a  href="calendario.html">
+                <img src="../../icons/calendário.png" alt="ìcone de casa">
                 <p>Calendário / lembretes</p>
             </a>
             </li>
             
-            <li>
-            <a>
-                <img src="../icons/fórum.png" alt="ìcone de casa">
+            <li class="aside-forum">
+            <a href="forum.html">
+                <img src="../../icons/fórum.png" alt="ìcone de casa">
                 <p>Fórum</p>
             </a>
             </li>
@@ -83,7 +86,8 @@
     
     <!--Módulo de saudação-->
     <section class="saudacao">
-        <p>Saudação</p>
+        <img id="profile-pic" src="../../images/cachorro na panela.jpg" alt="">
+        <p id="saudacao">Olá, <span id="user-name">[nome]</span>! </p>
     </section>
     
     <!--Módulo de total de alunos-->
@@ -94,10 +98,26 @@
     
     <!--Módulo de área de atividade-->
     <section class="area-atividades">
-        <p>Área de atividades</p>
-        
+        <h2>Área de atividades</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Atividade</th>
+                    <th style="width: 30%;">Auno</th>
+                    <th style="width: 30%;">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="nome-atividade">At. 1</td>
+                    <td id="nome-aluno">Maria</td>
+                    <td id="status-atividade">Concluído</td>
+                </tr>
+            </tbody>
+        </table>
+
     </section>
-    
     
     <!--Módulo de alunos e chat-->
     <section class="alunos-e-chat">

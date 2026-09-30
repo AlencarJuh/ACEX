@@ -5,7 +5,8 @@
 
 /*Variável da largura do aside*/
 :root{
-    --aside-width: 10rem;
+    --aside-width: 5rem;
+    --nav-height: 3rem;
 }
 
 /* CONFIGURAÇÕES GERAIS */
@@ -28,11 +29,11 @@ body {
     background-color: #f8f8f8;
 }
 
-/* BARRA SUPERIOR*/
+/*Barara de navegação superior*/
 nav {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     
     background-color: #042d5c;
@@ -42,7 +43,7 @@ nav {
     padding: 0.5rem 2rem;
 
     width: calc(100vw - var(--aside-width));
-    height: 3rem;
+    height: var(--nav-height);
 
     /*Logo na barra de navegação*/
     #logo{
@@ -57,13 +58,34 @@ nav {
         text-decoration: none;
     }
 
-    input{
-        height: 1.5rem;
-        width: 30rem;
+    label{
+        display: none;
+    }
 
-        border-radius: 10px;
-        border-style: none;
-        background-color: #07529a;
+    .input-pesquisar{
+        display: flex;
+        align-items: center;
+
+        img{
+            background-color: #24282c;
+            padding: 0.25rem;
+            border-radius: 10px 0 0 10px;
+        }
+     
+        input{
+            height: 1.5rem;
+            width: 30rem;
+
+            border-radius: 0 10px 10px 0;
+            border-style: none;
+            background-color: #07529a;
+            padding: 0 0.5rem;
+        }
+
+        input::placeholder{
+            color: rgba(248, 248, 248, 0.5);
+            font-weight: 450;
+        }
     }
 
     ul{
@@ -89,15 +111,15 @@ nav {
     }
 }
 
-/*MENU LATERAL*/
+/*Menu lateral*/
 aside {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 0.75rem 0;
+    padding: 0.75rem;
     
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     
@@ -106,16 +128,18 @@ aside {
     
     background-color: #07529a;  
     
+    /*Icons do menu lateral*/
     img{
         width: 1.75rem;
         height: auto;
     }
     
+    /*Lista de opções do menu lateral*/
     ul{
         display: flex;
         flex-direction: column;
         list-style: none;
-        align-items: start;
+        align-items: center; /*Centraliza os ícones do aside*/
         justify-content: center;
         gap: 2rem;
 
@@ -126,7 +150,7 @@ aside {
         text-decoration: none;
     }
 
-    li a {
+    .aside-inicio a {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -138,9 +162,9 @@ aside {
 
     }
     
-    /* a p{
+    a p{
         display: none;
-    } */
+    }
 
     button {
         color: #ffffff;
@@ -155,7 +179,7 @@ aside {
     left: var(--aside-width);
 
     width: calc(100vw - var(--aside-width));
-    height: calc(100vh - 3rem);
+    height: calc(100vh - var(--nav-height));
 
     padding: 0.5rem;    
 
@@ -180,24 +204,32 @@ section {
     align-items: center;
     justify-content: center;
     
-    background-color: #24282c;
+    background-color: #ffffff;
     border-radius: 10px;
 
-    color: #ffffff;
-    text-align: center;
-
     padding: 1rem;
-}
 
-/*TEXTO DOS CARDS*/
-section p {
-    color: #ffffff;
+    color: #000000;
     text-align: center;
+
 }
 
 /*ÁREAS DO GRID*/
 .saudacao {
     grid-area: saudacao;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+
+    p, p *{
+        font-size: 2rem;
+    }
+
+    img{
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 .total-alunos {
@@ -206,6 +238,16 @@ section p {
 
 .area-atividades {
     grid-area: area-atividades;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    table{
+        width: 100%;
+        border: 1px solid #24282c;
+    }
 }
 
 .alunos-e-chat {
