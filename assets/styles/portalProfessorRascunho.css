@@ -3,18 +3,16 @@
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
+/*Variável da largura do aside*/
+:root{
+    --aside-width: 10rem;
+}
+
 /* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    background-color: #f8f8f8;
 }
 
 body *{
@@ -24,22 +22,27 @@ body *{
     text-decoration: none;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
 /* BARRA SUPERIOR*/
 nav {
     display: flex;
     flex-direction: row;
-    
-    position: relative;
-    left: 3.5rem;
-    padding: 0.5rem 2rem;
-
-    width: calc(100vw - 3.5rem);
-
     align-content: center;
     justify-content: space-between;
     
-
     background-color: #042d5c;
+
+    position: relative;
+    left: var(--aside-width);
+    padding: 0.5rem 2rem;
+
+    width: calc(100vw - var(--aside-width));
+    height: 3rem;
 
     /*Logo na barra de navegação*/
     #logo{
@@ -57,13 +60,32 @@ nav {
     input{
         height: 1.5rem;
         width: 30rem;
+
+        border-radius: 10px;
+        border-style: none;
+        background-color: #07529a;
     }
 
     ul{
         display: flex;
         flex-direction: row;
         list-style: none;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    button{
+        background-color: transparent;
+        border-style: none;
+
+    }
+
+    button p {
+        display: none;
+    }
+
+    img{
+        width: 1.5rem;
+        height: auto;
     }
 }
 
@@ -73,22 +95,19 @@ aside {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     
     position: fixed;
-    
     top: 0;
     left: 0;
     
-    width: 3.5rem;
+    width: var(--aside-width);
     height: 100vh;
     
-    background-color: #07529a;
-    
-    z-index: 200;
+    background-color: #07529a;  
     
     img{
-        width: 1.5rem;
+        width: 1.75rem;
         height: auto;
     }
     
@@ -96,7 +115,7 @@ aside {
         display: flex;
         flex-direction: column;
         list-style: none;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         gap: 2rem;
 
@@ -106,10 +125,22 @@ aside {
 
         text-decoration: none;
     }
-    
-    a p{
-        display: none;
+
+    li a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.7rem;
+
+        background-color: #24282c;
+        padding: 0.5rem;
+        border-radius: 10px;
+
     }
+    
+    /* a p{
+        display: none;
+    } */
 
     button {
         color: #ffffff;
@@ -118,31 +149,20 @@ aside {
     }
 }
 
-/*TELA INICIAL*/
+/*Container com os cards*/
 .tela-inicial {
-    position: absolute;
+    position: relative;
+    left: var(--aside-width);
 
-    top: 38px;
-    left: 49px;
+    width: calc(100vw - var(--aside-width));
+    height: calc(100vh - 3rem);
 
-    width: calc(100vw - 49px);
-    height: calc(100vh - 38px);
+    padding: 0.5rem;    
 
-    padding: 16px 6px 5px 13px;
-
+    /*Grid dos cards*/
     display: grid;
-
-    /*3 COLUNAS*/
-    grid-template-columns: 1.25fr 1fr 0.72fr;
-
-    /*4 LINHAS*/
-    grid-template-rows:
-        68px
-        137px
-        128px
-        1fr;
-
-    /*POSIÇÃO DOS CARDS*/
+    grid-template-columns: 1fr 1fr 0.70fr;
+    grid-template-rows: 0.4fr repeat(3, 1fr);
     grid-template-areas:
         "saudacao saudacao calendario"
         "total-alunos area-atividades calendario"
@@ -150,42 +170,28 @@ aside {
         "alunos-chat biblioteca-atividades eventos-proximos"
         ;
 
-    gap: 8px;
-
-    background-color: #ffffff;
+    gap: 0.5rem;
+    background-color: #f8f8f8;
 }
 
-/*CARDS*/
+/*Cards*/
 section {
-    background-color: #24282c;
-
-    color: #ffffff;
-
-    border-radius: 12px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
+    
+    background-color: #24282c;
+    border-radius: 10px;
 
+    color: #ffffff;
     text-align: center;
 
-    padding: 10px;
-
-    min-width: 0;
-    min-height: 0;
+    padding: 1rem;
 }
 
 /*TEXTO DOS CARDS*/
 section p {
     color: #ffffff;
-
-    font-family: Montserrat, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.4;
-
     text-align: center;
 }
 
