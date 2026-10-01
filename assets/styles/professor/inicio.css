@@ -1,0 +1,55 @@
+/*Container com os cards*/
+.tela-inicial {
+    /*Grid dos cards*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.70fr;
+    grid-template-rows: 0.4fr repeat(3, 1fr);
+    grid-template-areas:
+        "saudacao saudacao calendario"
+        "total-alunos area-atividades calendario"
+        "alunos-chat biblioteca-conteudos calendario"
+        "alunos-chat biblioteca-atividades eventos-proximos"
+        ;
+}
+
+/*ÁREAS DO GRID*/
+.saudacao {
+    grid-area: saudacao;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+
+    img{
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.total-alunos {
+    grid-area: total-alunos;
+}
+
+.area-atividades {
+    grid-area: area-atividades;
+}
+
+.alunos-e-chat {
+    grid-area: alunos-chat;
+}
+
+.biblioteca-conteudos {
+    grid-area: biblioteca-conteudos;
+}
+
+.biblioteca-atividades {
+    grid-area: biblioteca-atividades;
+}
+
+.calendario {
+    grid-area: calendario;
+}
+
+.eventos-proximos {
+    grid-area: eventos-proximos;
+}

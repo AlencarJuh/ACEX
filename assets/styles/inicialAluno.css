@@ -5,7 +5,7 @@
 
 /*Variável da largura do aside*/
 :root{
-    --aside-width: 5rem;
+    --aside-width: 15rem;
     --nav-height: 3rem;
 }
 
@@ -80,11 +80,18 @@ nav {
             border-style: none;
             background-color: #07529a;
             padding: 0 0.5rem;
+
+            color: #ffffff;
         }
 
         input::placeholder{
             color: rgba(248, 248, 248, 0.5);
             font-weight: 450;
+        }
+
+        input:focus{
+            outline: none;
+            border: 1px #65fff2 solid;
         }
     }
 
@@ -130,7 +137,7 @@ aside {
     
     /*Icons do menu lateral*/
     img{
-        width: 1.75rem;
+        width: 1rem;
         height: auto;
     }
     
@@ -139,32 +146,32 @@ aside {
         display: flex;
         flex-direction: column;
         list-style: none;
-        align-items: center; /*Centraliza os ícones do aside*/
+        align-items: start; /*Centraliza os ícones do aside*/
         justify-content: center;
         gap: 2rem;
 
-        color: #ffffff;
-
+        
         font-size: 0;
-
+        
         text-decoration: none;
     }
-
+    
     .aside-inicio a {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 0.7rem;
-
+        
         background-color: #24282c;
         padding: 0.5rem;
         border-radius: 10px;
-
+        
+        color: #ffffff;
     }
     
-    a p{
+    /* a p{
         display: none;
-    }
+    } */
 
     button {
         color: #ffffff;

@@ -1,107 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAberCampo | Área de atividades</title>
-    <link rel="stylesheet" href="../../styles/inicialProfessor.css">
+    <link rel="stylesheet" href="../../styles/professor/areaProfessor.css">
     <link rel="icon" href="../../images/logo.png" alt="Logotipo da FSAberCampo">
+    <style>
+        .aside-atividades a{
+            background-color: #65fff2;
+            color: #000000;
+
+            img{
+                filter: invert();
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="" id="logo">FSAberCampo</a>
-            
-            <label for="nav-pesquisar"> Input de pesquisa</label>
+
+    <!-- Menu lateral -->
+    <aside>
+
+        <header>
+        <!-- Logotipo -->
+            <a href="inicialProfessor.html" id="logo">FSAberCampo</a>
+
+            <!-- Caixa de pesquisa -->
             <div class="input-pesquisar">
+                <label for="nav-pesquisar"> Input de pesquisa</label>
                 <img src="../../icons/lupa.png" alt="">
                 <input id="nav-pesquisar" type="search" placeholder="Pesquisar">
             </div>
+        </header>
 
-            <ul>
-                <li><button type="button">
-                    <p>Notificações</p>
-                    <img src="../../icons/sino.png" alt="">
-                </button></li>
-
-                <li><button type="button">
-                    <p>Configurações</p>
-                    <img src="../../icons/configurações.png" alt="">
-                </button></li>
-                
-                <li><button type="button">
-                    <p>Perfil</p>
-                    <img src="../../icons/perfil.png" alt="">
-                </button></li>
-            </ul>
-
-        </nav>
-    </header>
-
-    <aside>
-        <button type="button">
-            <img src="../../icons/bars.png" alt="Icon do botão expandir">
-        </button>
-
-        <ul>
+        <!-- Lista de links do menu lateral -->
+        <ul class="aside-lista-guias">
+            
+            <!-- Início -->
             <li class="aside-inicio">
-            <a>
-                <img src="../../icons/início.png" alt="ìcone de casa">
-                <p>Início</p>
-            </a>
+                <a href="inicialProfessor.html">
+                    <img src="../../icons/início.png" alt="ìcone de casa">
+                    <span>Início</span>
+                </a>
             </li>
-            
+
+            <!-- Gerenciar alunos -->
             <li class="aside-alunos">
-            <a>
-                <img src="../../icons/alunos.png" alt="ìcone de casa">
-                <p>Gerenciar alunos</p>
-            </a>
+                <a href="gerenciar-alunos.html">
+                    <img src="../../icons/alunos.png" alt="ìcone de casa">
+                    <span>Gerenciar alunos</span>
+                </a>
             </li>
-            
+
+            <!-- Área de atividades -->
             <li class="aside-atividades">
-            <a>
-                <img src="../../icons/atividades.png" alt="ìcone de casa">
-                <p>Área de atividades</p>
-            </a>
+                <a href="area-atividades.html">
+                    <img src="../../icons/atividades.png" alt="ìcone de casa">
+                    <span>Área de atividades</span>
+                </a>
             </li>
-            
+
+            <!-- Calendário / lembretes -->
             <li class="aside-calendario">
-            <a>
-                <img src="../../icons/calendário.png" alt="ìcone de casa">
-                <p>Calendário / lembretes</p>
-            </a>
+                <a href="calendario.html">
+                    <img src="../../icons/calendário.png" alt="ìcone de casa">
+                    <span>Calendário / lembretes</span>
+                </a>
             </li>
-            
+
+            <!-- Fórum -->
             <li class="aside-forum">
-            <a>
-                <img src="../../icons/fórum.png" alt="ìcone de casa">
-                <p>Fórum</p>
-            </a>
+                <a href="forum.html">
+                    <img src="../../icons/fórum.png" alt="ìcone de casa">
+                    <span>Fórum</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Notificações, configuração e perfil -->
+        <ul class="aside-lista-configs">
+            <li>
+                <button type="button">
+                    <img src="../../icons/sino.png" alt="">
+                    <p>Notificações</p>
+                </button>
+            </li>
+
+            <li>
+                <button type="button">
+                    <img src="../../icons/configurações.png" alt="">
+                    <p>Configurações</p>
+                </button>
+            </li>
+
+            <li>
+                <button type="button">
+                    <img src="../../icons/perfil.png" alt="">
+                    <p>Perfil</p>
+                </button>
             </li>
         </ul>
     </aside>
 
     <!--Página inicial-->
     <div class="tela-inicial">
-    
-    <!--Módulo de área de atividade-->
-    <section class="area-atividades">
-        <p>Área de atividades</p>
-        
-    </section>
-    
-    <!--Módulo de biblioteca e conteúdos-->
-    <section class="biblioteca-conteudos">
-        <p>Biblioteca e conteúdos</p>
-        
-    </section>
-    
-    <!--Módulo de biblioteca de atividades-->
-    <section class="biblioteca-atividades">
-        <p>Biblioteca de atividades</p>
 
-    </section>
+        <!--Card de área de atividade-->
+        <section class="area-atividades">
+            <p>Área de atividades</p>
+        </section>
+        
+        <!--Card de biblioteca e conteúdos-->
+        <section class="biblioteca-conteudos">
+            <p>Biblioteca e conteúdos</p>
+        </section>
+
+        <!--Card de biblioteca de atividades-->
+        <section class="biblioteca-atividades">
+            <p>Biblioteca de atividades</p>
+        </section>
 
     </div>
 </body>
-</html>>
+
+</html>
