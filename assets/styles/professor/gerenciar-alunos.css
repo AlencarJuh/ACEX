@@ -1,0 +1,21 @@
+/* Destaque da guia atual no menu lateral */
+.aside-alunos a{
+    background-color: #65fff2;
+    color: #000000;
+
+    img{
+        filter: invert();
+    }
+}
+
+/*Container com os cards*/
+.tela-inicial {
+    /*Grid dos cards*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+}
+
+.grade-alunos{
+    grid-row: span 3;
+}

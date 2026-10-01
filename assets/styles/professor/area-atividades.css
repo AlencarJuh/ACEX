@@ -1,0 +1,21 @@
+/* Destaque da guia atual no menu lateral */
+.aside-atividades a{
+    background-color: #65fff2;
+    color: #000000;
+
+    img{
+        filter: invert();
+    }
+}
+
+/*Container com os cards*/
+.tela-inicial {
+    /*Grid dos cards*/
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.area-atividades{
+    grid-row: span 2;
+}

@@ -1,0 +1,16 @@
+/* Destaque da guia atual no menu lateral */
+.aside-calendario a{
+    background-color: #65fff2;
+    color: #000000;
+
+    img{
+        filter: invert();
+    }
+}
+
+/*Container com os cards*/
+.tela-inicial {
+    /*Grid dos cards*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}

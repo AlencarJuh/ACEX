@@ -12,13 +12,13 @@
 .tela-inicial {
     /*Grid dos cards*/
     display: grid;
-    grid-template-columns: 1fr 1fr 0.75fr;
-    grid-template-rows: 0.5fr repeat(3, 1fr);
+    grid-template-columns: 2fr 0.75fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
     grid-template-areas:
-        "saudacao       saudacao                calendario"
-        "total-alunos   area-atividades         calendario"
-        "alunos-chat    biblioteca-conteudos    calendario"
-        "alunos-chat    biblioteca-atividades   eventos-proximos"
+        "saudacao           calendario"
+        "materias           calendario"
+        "area-atividades     eventos-proximos"
+        "area-atividades     professores-chat"
         ;
 }
 
@@ -35,24 +35,17 @@
     }
 }
 
-.total-alunos {
-    grid-area: total-alunos;
+.materias {
+    grid-area: materias;
+
 }
 
 .area-atividades {
     grid-area: area-atividades;
 }
 
-.alunos-e-chat {
-    grid-area: alunos-chat;
-}
-
-.biblioteca-conteudos {
-    grid-area: biblioteca-conteudos;
-}
-
-.biblioteca-atividades {
-    grid-area: biblioteca-atividades;
+.professores-e-chat {
+    grid-area: professores-chat;
 }
 
 .calendario {
