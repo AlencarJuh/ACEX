@@ -14,7 +14,7 @@ function fecharMenus() {
     container_menus.style.display = "none";
     container_notificacoes.style.display = "none";
     container_configuracoes.style.display = "none";
-    container_perfil.style.display = "none";
+     container_perfil.style.display = "none";
 }
 
 // Notificações
