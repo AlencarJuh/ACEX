@@ -153,3 +153,104 @@ section {
     gap: 0.5rem;
     background-color: #f8f8f8;
 }
+
+.container-menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.container-notificacoes, .container-perfil{
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 30vw;
+    height: 40vw;
+}
+
+.container-notificacoes{
+    display: none;
+}
+
+.container-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    /* Formatação das sessões de perfil, provacidade, segurança e sessão atual */
+    .perfil, .privacidade, .seguranca, .sessao{
+        display: flex;
+        align-items: start;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    hr{
+        width: 100%;
+        border-color: rgba(0, 0, 0, 0.2);
+
+    }
+
+    /* Sessão atual do perfil */
+    .sessao{
+        gap: 1rem;
+
+        #botao-desconectar-conta{
+            background-color: transparent;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            font-weight: 600;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        #botao-desativar-conta, #botao-excluir-conta{
+            background-color: transparent;
+            border-radius: 5px;
+            border: 2px solid red;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        #botao-desconectar-conta:active{
+            transform: scale(1.05);
+            
+        }
+        
+        #botao-desativar-conta{
+            color: red;
+            font-weight: 600;
+        }
+        
+        #botao-desativar-conta:active{
+            border: 2px solid grey;
+            color: grey;
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+        
+        #botao-excluir-conta{
+            background-color: red;
+            color: #ffffff;
+            font-weight: 600;
+            
+        }
+        
+        #botao-excluir-conta:active{
+            border: 2px solid grey;
+            background-color: grey;
+            color: #ffffff;
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+    }
+}
