@@ -173,70 +173,35 @@
         <!-- Contatos -->
         <section class="contatos" id="contatos">
             <h2>Contatos</h2>
-            <p>Entre em contato conosco!</p>
+            
+            <div class="contato-container">
+                <h3>Entre em contato conosco!</h3>
 
-            <div class="contatos-container">
-                <div class="youtube">
-                    <h3>Youtube</h3>
+                <form class="email">
 
-                    <div class="perfil">
-                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                        <b>FSAberCampo</b>
-                        <p>1,1 mi de inscritos</p>
-                        <button>Inscreva-se</button>
-                    </div>
+                    <label for="">
+                        Destinatário
+                        <input type="text" value="fsabercampo.contato@gmail.com" readonly disabled>
+                    </label>
 
-                    <!--Vídeos do Canal-->
-                    <div class="videos">
-                        <!--Vídeo 1-->
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/4Indeupd6cc?si=iCFzP56ypJzCaoqG"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <label for="">
+                        Nome
+                        <input type="text">
+                    </label>
 
-                        <!--Vídeo 2-->
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/dHgW9zHmW-E?si=5zW76Vh_MMWGjo1S"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
+                    <label for="">
+                        Assunto
+                        <input type="text">
+                    </label>
 
-                <div class="instagram">
-                    <h3>Instagram</h3>
-                    <div class="perfil">
-                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                        <b>@fsabercampo</b>
-                        <p>90,6 mil de seguidores</p>
-                        <button>Seguir</button>
+                    <label for="">
+                        Mensagem
+                        <textarea name="" id=""></textarea>
+                    </label>
 
-                    </div>
-                </div>
-
-                <div class="whatsapp">
-                    <h3>WhatsApp</h3>
-                    <div class="perfil">
-                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                        <b>Canal FSAber</b>
-                        <p>90,6 mil de seguidores</p>
-                        <button>Seguir</button>
-                    </div>
-                    <div class="numero">
-                        <img src="assets/images/logo.png" alt="Logotipo 'FSAberCampo'">
-                        <p>(11) 9999-99999</p>
-                        <button>Conversar</button>
-                    </div>
-                </div>
-
-                <div class="email">
-                    <h3>Email</h3>
-                    <div>
-                        <p>fsaber.campo@contato.com</p>
-                        <button>Enviar um Email</button>
-                    </div>
-                </div>
+                    <button type="submit">Enviar mensagem</button>
+                    
+                </form>
             </div>
         </section>
     </main>
@@ -273,5 +238,4 @@
         <p>© 2026 FSAberCampo. Todos os direitos reservados.</p>
     </footer>
 </body>
-
 </html>
