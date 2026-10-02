@@ -10,3 +10,8 @@ botao_perfil.addEventListener('click', () =>{
     container_menus.style.display = "flex";
     container_perfil.style.display = "flex";
 });
+
+container_menus.addEventListener('click', () =>{
+    container_menus.style.display = "none";
+    container_perfil.style.display = "none";
+});
