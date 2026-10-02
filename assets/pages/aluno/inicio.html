@@ -11,14 +11,14 @@
 </head>
 
 <body>
-
+    
     <!-- Menu lateral -->
     <aside>
-
+        
         <header>
-        <!-- Logotipo -->
+            <!-- Logotipo -->
             <a href="inicio.html" id="logo">FSAberCampo</a>
-
+            
             <!-- Caixa de pesquisa -->
             <div class="input-pesquisar">
                 <label for="nav-pesquisar"> Input de pesquisa</label>
@@ -26,7 +26,7 @@
                 <input id="nav-pesquisar" type="search" placeholder="Pesquisar">
             </div>
         </header>
-
+        
         <!-- Lista de links do menu lateral -->
         <ul class="aside-lista-guias">
             
@@ -37,7 +37,7 @@
                     <span>Início</span>
                 </a>
             </li>
-
+            
             <!-- Área de atividades -->
             <li class="aside-atividades">
                 <a href="area-atividades.html">
@@ -45,7 +45,7 @@
                     <span>Área de atividades</span>
                 </a>
             </li>
-
+            
             <!-- Calendário / lembretes -->
             <li class="aside-calendario">
                 <a href="calendario.html">
@@ -53,7 +53,7 @@
                     <span>Calendário / lembretes</span>
                 </a>
             </li>
-
+            
             <!-- Fórum -->
             <li class="aside-forum">
                 <a href="forum.html">
@@ -62,7 +62,7 @@
                 </a>
             </li>
         </ul>
-
+        
         <!-- Notificações, configuração e perfil -->
         <ul class="aside-lista-configs">
             <li>
@@ -71,14 +71,14 @@
                     <p>Notificações</p>
                 </button>
             </li>
-
+            
             <li>
                 <button type="button" id="botao-configuracoes">
                     <img src="../../icons/configurações.png" alt="">
                     <p>Configurações</p>
                 </button>
             </li>
-
+            
             <li>
                 <button type="button" id="botao-perfil">
                     <img src="../../icons/perfil.png" alt="">
@@ -87,16 +87,16 @@
             </li>
         </ul>
     </aside>
-
+    
     <!--Página inicial-->
     <div class="tela-inicial">
-
+        
         <!--Card de saudação-->
         <section class="saudacao">
             <img id="profile-pic" src="../../images/cachorro na panela.jpg" alt="">
             <p id="saudacao">Olá, <span id="user-name">[nome]</span>! </p>
         </section>
-
+        
         <!--Card de matérias-->
         <section class="materias">
             <p>Matérias</p>
@@ -106,7 +106,7 @@
         <section class="area-atividades">
             <p>Área de atividades</p>
         </section>
-
+        
         <!--Card de calendario-->
         <section class="calendario">
             <p>Calendário</p>
@@ -116,40 +116,38 @@
         <section class="eventos-proximos">
             <p>Eventos próximos</p>
         </section>
-
+        
         <!--Card de professores e chat-->
         <section class="professores-e-chat">
             <p>Professores e chat</p>
         </section>
     </div>
-
+    
     <!-- Container de menus (Notificações, configurações e perfil) -->
-    <div class="container-menus">
-
+    <div id="container-menus">
+        
         <!-- Container de notificações -->
-        <div class="container-notificacoes">
+        <div id="container-notificacoes">
             <button>Marcar todas como lida</button>
             <button>×</button>
         </div>
-
+        
         <!-- Container de configurações -->
-        <div class="container-configuracoes">
+        <div id="container-configuracoes">
             <h3>Notificações</h3>
             <h3>Preferências</h3>
             <h3>Ajuda</h3>
         </div>
         
         <!-- Container de perfil -->
-        <div class="container-perfil">
-
+        <div id="container-perfil">
             <h2>Perfil</h2>
-
             <section class="perfil">
                 <a>Nome</a>
                 <a>Foto de perfil</a>
                 <a>Bio</a>
             </section>
-
+            
             <hr>
             
             <section class="privacidade">
@@ -173,12 +171,13 @@
             
             <section class="sessao">
                 <h3>Sessão</h3>
-                    <button id="botao-desconectar-conta">Desconectar</button>
-                    <button id="botao-desativar-conta">Desativar conta</button>
-                    <button id="botao-excluir-conta">Excluir conta</button>
+                <button id="botao-desconectar-conta">Desconectar</button>
+                <button id="botao-desativar-conta">Desativar conta</button>
+                <button id="botao-excluir-conta">Excluir conta</button>
             </section>
         </div>
-
     </div>
+    
+    <script src="../../script/menu.js"></script>
 </body>
 </html>

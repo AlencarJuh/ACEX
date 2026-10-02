@@ -154,8 +154,9 @@ section {
     background-color: #f8f8f8;
 }
 
-.container-menus{
-    display: flex;
+/* Formatação dos containers de menu */
+#container-menus{
+    display: none;
     align-items: center;
     justify-content: center;
     
@@ -168,7 +169,7 @@ section {
     
 }
 
-.container-notificacoes, .container-perfil{
+#container-notificacoes, #container-configuracoes, #container-perfil{
     background-color: #f8f8f8;
     border-radius: 15px;
     padding: 2rem;
@@ -176,22 +177,25 @@ section {
     height: 40vw;
 }
 
-.container-notificacoes{
+#container-notificacoes{
     display: none;
 }
 
-.container-perfil{
-    display: flex;
+#container-configuracoes{
+    display: none;
+}
+
+#container-perfil{
+    display: none;
     flex-direction: column;
     align-items: start;
+    position: relative;
     
     /* Formatação das sessões de perfil, provacidade, segurança e sessão atual */
     .perfil, .privacidade, .seguranca, .sessao{
-        display: flex;
+        flex-direction: column;
         align-items: start;
         background-color: transparent;
-        display: flex;
-        flex-direction: column;
     }
     
     hr{
