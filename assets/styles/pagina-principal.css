@@ -122,6 +122,10 @@ aside {
         width: 1rem;
         height: max-content;
     }
+
+    .aside-lista-configs button{
+        cursor: pointer;
+    }
 }
 
 /*Cards*/
@@ -184,6 +188,8 @@ section {
         
         font-size: 1.5rem;
         font-weight: 700;
+
+        cursor: pointer;
     }
 
     .botao-fechar:hover, .botao-fechar:active{
@@ -280,8 +286,9 @@ section {
     /* Campo onde ficam as notificações */
     .campo-notificacoes{
         height: 100%;
+        width: 100%;
         justify-content: start;
-
+        
         /* Elemento: mensagens de notificações */
         label{
             display: flex;
@@ -292,7 +299,7 @@ section {
             border-radius: 5px;
         }
     }
-
+    
     /* Formatação para notificações não lidas */
     .notificacao-nao-lida{
         background-color: #24282c;
@@ -333,7 +340,7 @@ section {
     
     /* Elementos em configurações de notificações */
     /* Input checkbox + legenda de configuração */
-    label{
+    .notificacoes label{
         display: flex;
         align-items: center;
         gap: 0.2rem;
@@ -342,11 +349,23 @@ section {
 
     /* Formatação da lista de links "Ajuda e Feedback" */
     ul{
+        display:flex;
+        flex-direction: column;
         list-style: none;
+        gap: 0.5rem;
         
         a{
             color: #000000;
         }
+    }
+
+    select{
+        width: 50%;
+        height: 1.5rem;
+        background-color: transparent;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
     }
 
     button {
@@ -369,6 +388,35 @@ section {
     button:hover {
         transform: scale(1.05);
     }
+
+    span{
+        display: inline-flex;
+    }
+
+    #tamanho-fonte{
+        text-align: center;
+
+        border: solid #000000;
+        border-width: 1px 0;
+
+        width: 5rem;
+        height: 1.5rem;
+    }
+    
+    #aumentar-fonte, #diminuir-fonte{
+        height: 1.5rem;
+        width: 2rem;
+        padding: 0.5rem 0;
+        border: 1px solid #000000;
+    }
+
+    #aumentar-fonte{
+        border-radius: 0 10px 10px 0;
+    }
+    
+    #diminuir-fonte{
+        border-radius: 10px 0 0 10px;
+    }
 }
 
 /* Container do menu lateral de perfil */
@@ -390,6 +438,12 @@ section {
             padding: 0.5rem;
         }
 
+        #botao-desconectar-conta:hover, #botao-desconectar-conta:active{
+            border: 1px solid grey;
+            color: grey;
+            font-weight: 600;
+        }
+
         #botao-desativar-conta, #botao-excluir-conta{
             background-color: transparent;
             border-radius: 5px;
@@ -402,7 +456,7 @@ section {
             font-weight: 600;
         }
         
-        #botao-desativar-conta:active{
+        #botao-desativar-conta:hover, #botao-desativar-conta:active{
             border: 2px solid grey;
             color: grey;
             font-weight: 600;
@@ -414,7 +468,7 @@ section {
             font-weight: 600;
         }
         
-        #botao-excluir-conta:active{
+        #botao-excluir-conta:hover, #botao-excluir-conta:active{
             border: 2px solid grey;
             background-color: grey;
             color: #ffffff;

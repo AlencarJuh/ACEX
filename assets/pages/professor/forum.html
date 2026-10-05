@@ -73,23 +73,25 @@
 
         <!-- Notificações, configuração e perfil -->
         <ul class="aside-lista-configs">
+            <!-- Notificações -->
             <li>
-                <button type="button">
-                    <img src="../../icons/sino.png" alt="">
+                <button type="button" id="botao-notificacoes">
+                    <img src="../../icons/sino.png" alt="" >
                     <p>Notificações</p>
                 </button>
             </li>
 
+            <!-- Configurações -->
             <li>
-                <button type="button">
+                <button type="button" id="botao-configuracoes" >
                     <img src="../../icons/configurações.png" alt="">
                     <p>Configurações</p>
                 </button>
             </li>
 
+            <!-- Perfil -->
             <li>
-                <button type="button"
-                    id="botao-perfil">
+                <button type="button" id="botao-perfil">
                     <img src="../../icons/perfil.png" alt="">
                     <p>Perfil</p>
                 </button>
@@ -109,125 +111,149 @@
         <section class="destaques">
             <p>Destaques</p>
         </section>
-
     </div>
 
-       <!-- Container de menus -->
+    <!-- Container de menus (Notificações, configurações e perfil) -->
     <div id="container-menus">
-
 
         <!-- Container de notificações -->
         <div id="container-notificacoes">
+            <h2>Notificações</h2>
+            <button class="botao-fechar">x</button>
 
-            <button>
-                Marcar todas como lida
-            </button>
+            <div class="notificacoes-config-superior">
+                <button id="selecionar-tudo">Selecionar tudo</button>
+                <button id="marcar-como-lida">Marcar como lida</button>
+                <button id="excluir-notificacoes">Excluir</button>
+            </div>
 
-            <button>
-                ×
-            </button>
+            <hr>
 
+            <section class="campo-notificacoes">
+                <label class="notificacao-nao-lida">
+                    <input type="checkbox" name="" id="">
+                    Alerta: Novo dispositivo conectado!
+                </label>
+                <label class="notificacao-lida">
+                    <input type="checkbox" name="" id="">
+                    Bem vindo(a) ao FSAberCampo!
+                </label>
+            </section>
+
+            <hr>
+
+            <div class="notificacoes-config-inferior">
+                <button id="configuracoes-notificacoes-atalho">
+                    <img src="../../icons/configurações.png" alt="">
+                    Configurações
+                </button>
+
+                <button id="lixeira-notificacoes">
+                    <img src="../../icons/lixeira.png" alt="Ícone de uma lixeira">
+                    Lixeira
+                </button>
+            </div>
         </div>
-
 
         <!-- Container de configurações -->
         <div id="container-configuracoes">
+            <h2>Configurações</h2>
+            <button class="botao-fechar">x</button>
 
-            <h3>Notificações</h3>
+            <form action="">
+                <div class="notificacoes">
+                    <h3>Notificações</h3>
 
-            <h3>Preferências</h3>
+                    <label>
+                        <input type="checkbox">
+                        Notificações no aplicativo
+                    </label>
 
-            <h3>Ajuda</h3>
+                    <label>
+                        <input type="checkbox">
+                        Notificações de push
+                    </label>
 
+                    <label>
+                        <input type="checkbox">
+                        Notificações por E-mail
+                    </label>
+
+                </div>
+
+                <hr>
+
+                <div class="preferencias">
+                    <h3>Layout</h3>
+                    <label for="selecionar-temas">Tema</label>
+                        <select name="temas" id="seelcionar-temas">
+                            <option value="claro">Claro</option>
+                            <option value="escuro">Escuro</option>
+                            <option value="sistema">Padrão do Sistema</option>
+                        </select>
+
+                    <label for="tamanho-fonte">Tamanho da fonte</label>
+                    <span>
+                        <button type="button" aria-label="diminuir-fonte" id="diminuir-fonte">-</button>
+                        <input type="number" name="" id="tamanho-fonte" value="16">
+                        <button type="button" aria-label="aumentar-fonte" id="aumentar-fonte">+</button>
+                    </span>
+                </div>
+                
+                <hr>
+                
+                <div class="ajuda">
+                    <h3>Ajuda e feedback</h3>
+                    <ul>
+                        <li><a href="">Termos de Uso</a></li>
+                        <li><a href="">Política de Privacidade</a></li>
+                        <li><a href="">Sugerir melhoria</a></li>
+                    </ul>
+                </div>
+
+                <button>Salvar</button>
+            </form>
         </div>
-
 
         <!-- Container de perfil -->
         <div id="container-perfil">
-
             <h2>Perfil</h2>
-
+            <button class="botao-fechar">x</button>
 
             <section class="perfil">
-
                 <a>Nome</a>
-
                 <a>Foto de perfil</a>
-
                 <a>Bio</a>
-
             </section>
 
-
             <hr>
-
 
             <section class="privacidade">
-
                 <h3>Privacidade</h3>
-
-                <label>
-
-                    E-mail
-
-                    <input
-                        type="email"
-                        name=""
-                        id=""
-                        value="djsaikdjskajd"
-                    >
-
-                </label>
-
-                <a>Alterar senha</a>
-
+                <label>Confirmar E-mail</label>
+                <label>Alterar E-mail</label>
+                <label>Alterar senha</label>
             </section>
 
-
             <hr>
-
 
             <section class="seguranca">
-
                 <h3>Segurança</h3>
-
                 <a>Autenticação em dois fatores</a>
-
-                <a>Sessões/dispositivos conectados</a>
-
+                <a>Dispositivos conectados</a>
             </section>
-
 
             <hr>
 
-
             <section class="sessao">
-
                 <h3>Sessão</h3>
-
-                <button id="botao-desconectar-conta">
-                    Desconectar
-                </button>
-
-                <button id="botao-desativar-conta">
-                    Desativar conta
-                </button>
-
-                <button id="botao-excluir-conta">
-                    Excluir conta
-                </button>
-
+                <button id="botao-desconectar-conta">Desconectar</button>
+                <button id="botao-desativar-conta">Desativar conta</button>
+                <button id="botao-excluir-conta">Excluir conta</button>
             </section>
-
         </div>
-
     </div>
 
-
-    <!-- JavaScript -->
     <script src="../../script/menu.js"></script>
-
-
 </body>
-
 </html>

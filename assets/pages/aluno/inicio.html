@@ -140,6 +140,10 @@
             <hr>
 
             <section class="campo-notificacoes">
+                <label class="notificacao-nao-lida">
+                    <input type="checkbox" name="" id="">
+                    Alerta: Novo dispositivo conectado!
+                </label>
                 <label class="notificacao-lida">
                     <input type="checkbox" name="" id="">
                     Bem vindo(a) ao FSAberCampo!
@@ -182,7 +186,7 @@
 
                     <label>
                         <input type="checkbox">
-                        Notificações por e-mail
+                        Notificações por E-mail
                     </label>
 
                 </div>
@@ -191,8 +195,19 @@
 
                 <div class="preferencias">
                     <h3>Layout</h3>
-                    <label for="">Tema</label>
-                    <label for="">Tamanho da fonte </label>
+                    <label for="selecionar-temas">Tema</label>
+                        <select name="temas" id="seelcionar-temas">
+                            <option value="claro">Claro</option>
+                            <option value="escuro">Escuro</option>
+                            <option value="sistema">Padrão do Sistema</option>
+                        </select>
+
+                    <label for="tamanho-fonte">Tamanho da fonte</label>
+                    <span>
+                        <button type="button" aria-label="diminuir-fonte" id="diminuir-fonte">-</button>
+                        <input type="number" name="" id="tamanho-fonte" value="16">
+                        <button type="button" aria-label="aumentar-fonte" id="aumentar-fonte">+</button>
+                    </span>
                 </div>
                 
                 <hr>
