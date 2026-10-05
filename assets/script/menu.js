@@ -5,6 +5,7 @@ const container_configuracoes = document.getElementById("container-configuracoes
 const container_perfil = document.getElementById("container-perfil");
 
 // Botões
+const botoes_fechar = document.querySelectorAll(".botao-fechar");
 const botao_notificacoes = document.getElementById("botao-notificacoes");
 const botao_configuracoes = document.getElementById("botao-configuracoes");
 const botao_perfil = document.getElementById("botao-perfil");
@@ -14,7 +15,7 @@ function fecharMenus() {
     container_menus.style.display = "none";
     container_notificacoes.style.display = "none";
     container_configuracoes.style.display = "none";
-     container_perfil.style.display = "none";
+    container_perfil.style.display = "none";
 }
 
 // Notificações
@@ -40,4 +41,9 @@ container_menus.addEventListener("click", (event) => {
     if (event.target === container_menus) {
         fecharMenus();
     }
+});
+
+// Botão de Fechar
+botoes_fechar.forEach((botao) =>{
+    botao.addEventListener("click", fecharMenus)
 });

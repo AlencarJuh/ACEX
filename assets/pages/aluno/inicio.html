@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAberCampo | Início</title>
     <link rel="stylesheet" href="../../styles/pagina-principal.css">
-    <link rel="stylesheet" href="../../styles/alunos/inicio.css">
+    <link rel="stylesheet" href="../../styles/aluno/inicio.css">
     <link rel="icon" href="../../images/logo.png" alt="Logotipo da FSAberCampo">
 </head>
 
@@ -128,15 +128,39 @@
         
         <!-- Container de notificações -->
         <div id="container-notificacoes">
-            <button>Marcar todas como lida</button>
-            <button>×</button>
+            <h2>Notificações</h2>
+            <button class="botao-fechar">x</button>
+            
+            <div class="notificacoes-cabecaho">
+                <button id="selecionar-tudo">Selecionar tudo</button>
+                <button id="marcar-como-lida">Marcar como lida</button>
+                <button id="excluir-notificacoes">Excluir</button>
+            </div>
+
+            <hr>
+
+            <section>
+                <label class="notificacao-lida">
+                    <input type="checkbox" name="" id="">
+                    Bem vindo(a) ao FSAberCampo!
+                </label>
+            </section>
+
+            <hr>
+
+            <div class="notificacoes-gerenciamento">
+                <button id="configuracoes-notificacoes-atalho">Configurações</button>
+                <button id="lixeira-notificacoes">Lixeira</button>
+            </div>
         </div>
         
         <!-- Container de configurações -->
         <div id="container-configuracoes">
+                <h2>Configurações</h2>
+                <button class="botao-fechar">x</button>
+
             <section class="notificacoes">
                 <h3>Notificações</h3>
-                <h4>Categorias de notificação</h4>
 
                 <form action="">
                     <label>
@@ -153,29 +177,33 @@
                         <input type="checkbox">
                         Notificações por e-mail
                     </label>
-                <button>Salvar</button>
                 </form>
 
             </section>
             
-            <!-- <hr>
+            <hr>
             
             <section class="preferencias">
-                <h3>Preferências</h3>
-
+                <h3>Layout</h3>
+                <label for="">Tema</label>
+                <label for="">Tamanho da fonte </label>
             </section>
             
             <hr>
 
             <section class="ajuda">
-                <h3>Ajuda</h3>
-
-            </section> -->
+                <h3>Ajuda e feedback</h3>
+                <a href="">Termos de Uso</a>
+                <a href="">Política de Privacidade</a>
+                <a href="">Sugerir melhoria</a>
+            </section>
         </div>
         
         <!-- Container de perfil -->
         <div id="container-perfil">
             <h2>Perfil</h2>
+            <button class="botao-fechar">x</button>
+
             <section class="perfil">
                 <a>Nome</a>
                 <a>Foto de perfil</a>

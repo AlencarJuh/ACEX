@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAberCampo | Início</title>
     <link rel="stylesheet" href="../../styles/pagina-principal.css">
-    <link rel="stylesheet" href="../../styles/alunos/calendario.css">
+    <link rel="stylesheet" href="../../styles/aluno/calendario.css">
     <link rel="icon" href="../../images/logo.png" alt="Logotipo da FSAberCampo">
 </head>
 
@@ -66,21 +66,21 @@
         <!-- Notificações, configuração e perfil -->
         <ul class="aside-lista-configs">
             <li>
-                <button type="button">
+                <button type="button" id="botao-notificacoes">
                     <img src="../../icons/sino.png" alt="">
                     <p>Notificações</p>
                 </button>
             </li>
-
+            
             <li>
-                <button type="button">
+                <button type="button" id="botao-configuracoes">
                     <img src="../../icons/configurações.png" alt="">
                     <p>Configurações</p>
                 </button>
             </li>
-
+            
             <li>
-                <button type="button">
+                <button type="button" id="botao-perfil">
                     <img src="../../icons/perfil.png" alt="">
                     <p>Perfil</p>
                 </button>
@@ -102,5 +102,115 @@
         </section>
 
     </div>
+
+        <!-- Container de menus (Notificações, configurações e perfil) -->
+    <div id="container-menus">
+        
+        <!-- Container de notificações -->
+        <div id="container-notificacoes">
+            <h2>Notificações</h2>
+            <button class="botao-fechar">x</button>
+            
+            <div>
+                <button>Selecionar tudo</button>
+                <button>Marcar como lida</button>
+            </div>
+
+            <hr>
+
+            <section>
+                <label class="notificacao-lida">
+                    <input type="checkbox" name="" id="">
+                    Bem vindo(a) ao FSAberCampo!
+                </label>
+            </section>
+        </div>
+        
+        <!-- Container de configurações -->
+        <div id="container-configuracoes">
+                <h2>Configurações</h2>
+                <button class="botao-fechar">x</button>
+
+            <section class="notificacoes">
+                <h3>Notificações</h3>
+
+                <form action="">
+                    <label>
+                        <input type="checkbox">
+                        Notificações no aplicativo
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox">
+                        Notificações de push
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox">
+                        Notificações por e-mail
+                    </label>
+                </form>
+
+            </section>
+            
+            <hr>
+            
+            <section class="preferencias">
+                <h3>Layout</h3>
+                <label for="">Tema</label>
+                <label for="">Tamanho da fonte </label>
+            </section>
+            
+            <hr>
+
+            <section class="ajuda">
+                <h3>Ajuda e feedback</h3>
+                <a href="">Termos de Uso</a>
+                <a href="">Política de Privacidade</a>
+                <a href="">Sugerir melhoria</a>
+            </section>
+        </div>
+        
+        <!-- Container de perfil -->
+        <div id="container-perfil">
+            <h2>Perfil</h2>
+            <button class="botao-fechar">x</button>
+
+            <section class="perfil">
+                <a>Nome</a>
+                <a>Foto de perfil</a>
+                <a>Bio</a>
+            </section>
+            
+            <hr>
+            
+            <section class="privacidade">
+                <h3>Privacidade</h3>
+                <label>Confirmar E-mail</label>
+                <label>Alterar E-mail</label>
+                <label>Alterar senha</label>
+            </section>
+            
+            <hr>
+            
+            <section class="seguranca">
+                <h3>Segurança</h3>
+                <a>Autenticação em dois fatores</a>
+                <a>Dispositivos conectados</a>
+            </section>
+            
+            <hr>
+            
+            <section class="sessao">
+                <h3>Sessão</h3>
+                <button id="botao-desconectar-conta">Desconectar</button>
+                <button id="botao-desativar-conta">Desativar conta</button>
+                <button id="botao-excluir-conta">Excluir conta</button>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../../script/menu.js"></script>
+
 </body>
 </html>

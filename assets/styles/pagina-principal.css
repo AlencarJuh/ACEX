@@ -130,7 +130,7 @@ section {
     align-items: center;
     justify-content: center;
     
-    background-color: #706e6e;
+    background-color: #ffffff;
     border-radius: 10px;
 
     padding: 1rem;
@@ -171,15 +171,32 @@ section {
     hr{
         width: 100%;
         border-color: rgba(0, 0, 0, 0.2);
-
     }
 
-    button{
-        transition: transform 0.3s ease;
+    .botao-fechar{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        border: none;
+        background-color: transparent;
+        color: #24282c;
+        
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
-    button:active{
-        transform: scale(1.05);
+    .botao-fechar:hover, .botao-fechar:active{
+        color: grey;
+    }
+
+    button:hover, button:active{
+        color: grey;
+    }
+
+    img{
+        height: 1rem;
+        width: auto;
     }
 }
 
@@ -190,65 +207,176 @@ section {
     padding: 2rem;
     width: 30rem;
     height: 40rem;
+
+    /* Formatação das sessões dentro dos menus */
+    section{
+        flex-direction: column;
+        align-items: start;
+        background-color: transparent;
+        padding: 1rem 0.2rem;
+        gap: 0.5rem;
+    }
 }
 
-/* Container de notificações */
+/* Container do menu lateral de notificações */
 #container-notificacoes{
     display: none;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+
+    /* Container de configurações básicas de notificações*/
+    /* Marcar como lido, selecionar tudo, excluir, lixeira, configurações */
+    .notificacoes-config-superior, .notificacoes-config-inferior{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0.5rem 0;
+        gap: 1rem;
+
+        /* Botões das configurações básicas */
+        /* Marcar como lido, selecionar tudo, excluir, lixeira, configurações */
+        button{
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            background-color: transparent;
+            border-radius: 5px;
+            border: none;
+
+            font-weight: 600;
+            padding: 0.5rem;
+        }
+
+        button:hover, button:active{
+            color: grey;
+        }
+    }
+
+    /* Barra de configurações superior */
+    .notificacoes-config-superior{
+        justify-content: space-between;
+        
+        #excluir-notificacoes{
+            color: red;
+            font-weight: 600;
+        }
+        
+        #excluir-notificacoes:hover, #excluir-notificacoes:active{
+            color: grey;
+        }
+    }
+    
+    /* Barra de configurações inferior */
+    .notificacoes-config-inferior{
+        justify-content: space-evenly;
+        
+        #configuracoes-notificacoes-atalho img{
+            filter: invert();
+        }
+    }
+
+    /* Campo onde ficam as notificações */
+    .campo-notificacoes{
+        height: 100%;
+        justify-content: start;
+
+        /* Elemento: mensagens de notificações */
+        label{
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+    }
+
+    /* Formatação para notificações não lidas */
+    .notificacao-nao-lida{
+        background-color: #24282c;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    
+    /* Formatação para notificações lidas */
+    .notificacao-lida{
+        background-color: transparent;
+        color: #000000;
+        font-weight: normal;
+    }
 }
 
-/* Container de configurações */
+/* Container do menu lateral de configurações */
 #container-configuracoes{
     display: none;
     flex-direction: column;
     align-items: start;
     position: relative;
 
-    /* Formatação das sessões de notificação, provacidade, segurança e sessão atual */
-    section{
-        flex-direction: column;
-        align-items: start;
-        background-color: transparent;
-        gap: 0.5rem;
-    }
-    
-    a{
-        color: #000000;
-    }
-    
+    /* Formulário das configurações de notificações */
     form{
         display: flex;
         flex-direction: column;
-        align-items: start;
+        gap: 1rem;
+
+        width: 100%;
+    }
+
+    /* Divisão entre as sessões de configurações */
+    div{
+        display: flex;
+        flex-direction: column;
         gap: 0.5rem;
     }
-
-    button{
-        border: none;
-        background-color: #65fff2;
-        color: #24282c;
-        border-radius: 5px;
-        padding: 0.5rem;
-        font-size: 1rem;
-        font-weight: 700;
+    
+    /* Elementos em configurações de notificações */
+    /* Input checkbox + legenda de configuração */
+    label{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        width: 100%;
     }
 
+    /* Formatação da lista de links "Ajuda e Feedback" */
+    ul{
+        list-style: none;
+        
+        a{
+            color: #000000;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #65fff2;
+        border-style: none;
+        border-radius: 5px;
+
+        height: 2.5rem;
+
+        font-size: 1rem;
+        font-weight: bold;
+
+        transition: transform 0.3s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
 }
 
-/* Container de perfil */
+/* Container do menu lateral de perfil */
 #container-perfil{
     display: none;
     flex-direction: column;
     align-items: start;
     position: relative;
-    
-    /* Formatação das sessões de perfil, privacidade, preferências e ajuda */
-    section{
-        flex-direction: column;
-        align-items: start;
-        background-color: transparent;
-        gap: 0.5rem;
-    }
 
     /* Sessão atual do perfil */
     .sessao{
