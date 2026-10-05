@@ -9,33 +9,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Índice da etapa atual
     let etapaAtual = 0;
 
-
-    // ==============================
     // MOSTRAR APENAS UMA ETAPA
     function mostrarEtapa(indice) {
 
         etapas.forEach((etapa, index) => {
-
             if (index === indice) {
                 etapa.style.display = "";
             } else {
                 etapa.style.display = "none";
             }
-
         });
-
         etapaAtual = indice;
     }
 
     // TELA INICIAL
-
     // Inicialmente mostra somente a escolha do tipo de usuário
     mostrarEtapa(0);
 
     // CONFIRMAR TIPO DE USUÁRIO
-    const botaoConfirmar = document.querySelector(
-        "#confirmar-tipo-usuario"
-    );
+    const botaoConfirmar = document.querySelector("#confirmar-tipo-usuario");
 
     botaoConfirmar.addEventListener("click", (event) => {
 
@@ -58,47 +50,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // BOTÕES AVANÇAR
-    const botoesAvancar = form.querySelectorAll(
-        ".botao-avancar"
-    );
+    const botoesAvancar = form.querySelectorAll(".botao-avancar");
 
     botoesAvancar.forEach((botao) => {
-
         botao.addEventListener("click", (event) => {
-
             event.preventDefault();
 
             // Verifica se ainda existem etapas
             if (etapaAtual < etapas.length - 1) {
-
                 mostrarEtapa(etapaAtual + 1);
-
             }
-
         });
-
     });
 
     // BOTÕES VOLTAR
-    const botoesVoltar = form.querySelectorAll(
-        ".botao-voltar"
-    );
+    const botoesVoltar = form.querySelectorAll(".botao-voltar");
 
     botoesVoltar.forEach((botao) => {
-
         botao.addEventListener("click", (event) => {
-
             event.preventDefault();
 
             // Não permite voltar antes da tela inicial
             if (etapaAtual > 0) {
-
                 mostrarEtapa(etapaAtual - 1);
-
             }
-
         });
-
     });
-
 });
