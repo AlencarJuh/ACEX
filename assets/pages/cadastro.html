@@ -22,7 +22,6 @@
         </nav>
     </header>
 
-
     <form action="">
 
         <h2>Cadastro</h2>
@@ -82,7 +81,7 @@
                 <option value="brasil">Brasil</option>
             </select>
 
-            <label for="">Estado</label>
+            <label>Estado</label>
             <select id="estado" name="estado">
                 <option value="">Selecione um estado</option>
                 <option value="AC">Acre</option>
@@ -175,7 +174,29 @@
             <h3>Criar senha</h3>
 
             <label for="">Senha</label>
-            <input type="password">
+            <input type="password" id="campo-senha">
+
+            <div class="criterios-senha">
+                <span>
+                    <input type="checkbox" name="" id="criterio-senha-caracteres">
+                    <label for="criterio-senha-caracteres">Deve conter no mínimo 8 caracteres</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="" id="criterio-senha-maiuscula">
+                    <label for="criterio-senha-maiuscula">Deve conter letras maiúscula</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="" id="criterio-senha-numeros">
+                    <label for="criterio-senha-numeros">Deve conter números</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="" id="criterio-senha-caracteres-especiais">    
+                    <label for="criterio-senha-caracteres-especiais">Deve conter caracteres especiais</label>
+                </span>
+            </div>
 
             <label for="">Confirmar senha</label>
             <input type="password">
@@ -189,7 +210,7 @@
 
     </form>
 
-    <script src="../script/cadastro.js"></script>
+    <!-- <script src="../script/cadastro.js"></script> -->
 </body>
 
 </html>
