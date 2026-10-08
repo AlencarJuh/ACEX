@@ -22,8 +22,7 @@
         </nav>
     </header>
 
-
-    <form action="" method="post">
+    <form action="">
 
         <h2>Cadastro</h2>
 
@@ -82,7 +81,7 @@
                 <option value="brasil">Brasil</option>
             </select>
 
-            <label for="">Estado</label>
+            <label>Estado</label>
             <select id="estado" name="estado">
                 <option value="">Selecione um estado</option>
                 <option value="AC">Acre</option>
@@ -114,8 +113,8 @@
                 <option value="TO">Tocantins</option>
             </select>
 
-            <label for="">Cidade</label>
-            <input type="text" name="cidade">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade">
 
             <label for="input-rua" id="label-rua">Rua</label>
             <label for="input-casa" id="label-casa">N°</label>
@@ -177,6 +176,28 @@
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha">
 
+            <div class="criterios-senha">
+                <span>
+                    <input type="checkbox" name="criterio-senha-caracteres" id="criterio-senha-caracteres">
+                    <label for="criterio-senha-caracteres">Deve conter no mínimo 8 caracteres</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="criterio-senha-maiuscula" id="criterio-senha-maiuscula">
+                    <label for="criterio-senha-maiuscula">Deve conter letras maiúscula</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="riterio-senha-numeros" id="criterio-senha-numeros">
+                    <label for="criterio-senha-numeros">Deve conter números</label>
+                </span>
+                
+                <span>
+                    <input type="checkbox" name="criterio-senha-caracteres-especiais" id="criterio-senha-caracteres-especiais">    
+                    <label for="criterio-senha-caracteres-especiais">Deve conter caracteres especiais</label>
+                </span>
+            </div>
+
             <label for="confirmar-senha">Confirmar senha</label>
             <input type="password" id="confirmar-senha" name="confirmar-senha">
 
@@ -194,7 +215,7 @@
 
     </form>
 
-    <script src="../script/cadastro.js"></script>
+    <!-- <script src="../script/cadastro.js"></script> -->
 </body>
 
 </html>

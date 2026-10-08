@@ -281,14 +281,11 @@ fieldset {
 
     label:hover {
         border: 1px solid #65fff2;
-        transform: scale(1.05);
-
     }
 
     label:has(input:checked) {
         border: 1px solid #65fff2;
         box-shadow: 0 0 0.5rem #65fff2;
-        transform: scale(1.05);
     }
 
     button {grid-column: span 2;}
@@ -363,6 +360,34 @@ fieldset {
 
     .botao-voltar {grid-column: span 1;}
     .botao-cadastrar {grid-column: span 1;}
+
+    .criterios-senha{
+        display: none;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        span{
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            
+            label{
+                font-size: 0.95rem;
+                color: grey;
+            }
+        }
+    }
+
+    input{
+        margin: 0;
+    }
+}
+
+.criar-senha:has(#campo-senha:focus){
+    .criterios-senha{
+        display: flex;
+    }
 }
 
 .login{
