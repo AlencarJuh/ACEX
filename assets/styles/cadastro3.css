@@ -125,7 +125,7 @@ form {
 }
 
 fieldset {
-    width: 35%;
+    width: 30rem;
     background-color: #24282c;
     padding: 1rem;
     border: none;
@@ -224,14 +224,15 @@ select {
 
 input:focus,
 select:focus {
-    border-bottom: 2px solid #65fff2;
+    border: 1px solid #65fff2;
+    border-bottom: 3px solid #65fff2;
     outline: none;
 }
 
 /* Formatação de inputs checkbox */
 input[type="checkbox"]{
     appearance: unset;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 3px;
     background-color: transparent;
     
@@ -263,7 +264,6 @@ input[type="checkbox"]:checked{
         text-align: center;
     }
 }
-
 
 /* Formatação do campo de escolha de usuário */
 .tipo-usuario img{

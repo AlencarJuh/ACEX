@@ -12,10 +12,60 @@
 .tela-inicial {
     /*Grid dos cards*/
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-columns: 2fr 1fr;
+
+    hr{
+        width: 100%;
+        border-color: rgba(0, 0, 0, 0.2);
+    }
 }
 
 .grade-alunos{
-    grid-row: span 3;
+    grid-row: span 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 2rem;
+    gap: 1rem;
+    
+    .campo-principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: min-content min-content auto auto;
+        row-gap: 0.5rem;
+    }
+}
+
+.grupo-alunos{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 2rem;
+    gap: 1rem;
+    
+    .campo-principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        row-gap: 0.5rem;
+    }
+}
+
+.obs-alunos{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 2rem;
+    gap: 1rem;
+    
+    .campo-principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        row-gap: 0.5rem;
+    }
 }
