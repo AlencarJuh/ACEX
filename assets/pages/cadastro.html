@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAberCampo | Cadastro</title>
-    <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="stylesheet" href="../styles/cadastro3.css">
     <link rel="icon" href="../images/logo.png" alt="Logotipo da FSAberCampo">
 
 </head>
@@ -22,116 +22,153 @@
         </nav>
     </header>
 
-    <form action="">
+    <h2>Cadastro</h2>
 
-        <h2>Cadastro</h2>
+    <form action="" method="post">
 
         <!--Escolha de usuário-->
         <fieldset class="tipo-usuario">
             <legend>Selecione um tipo de usuário</legend>
             <h3>Selecione um tipo de usuário</h3>
 
-            <label>
-                <img src="../icons/tipo-aluno.png" alt="">
-                Sou aluno
-                <input type="radio" name="tipo-usuario" value="tipo-aluno">
-            </label>
+            <div>
+                <label>
+                    <img src="../icons/tipo-aluno.png" alt="Ícone do usuário tipo 'aluno'">
+                    Sou aluno
+                    <input type="radio" name="tipo-usuario" value="tipo-aluno">
+                </label>
 
-            <label>
-                <img src="../icons/tipo-professor.png" alt="">
-                Sou professor
-                <input type="radio" name="tipo-usuario" value="tipo-usuario">
-            </label>
+                <label>
+                    <img src="../icons/tipo-professor.png" alt="Ícone do usuário tipo 'professor'">
+                    Sou professor
+                    <input type="radio" name="tipo-usuario" value="tipo-professor">
+                </label>
+            </div>
 
-            <button type="button" id="confirmar-tipo-usuario">Confirmar</button>
+            <div class="botoes-inferiores">
+                <button type="button" id="confirmar-tipo-usuario" class="botao-confirmar">Confirmar</button>
+            </div>
         </fieldset>
 
         <!--Cadastro-->
         <!--Etapa 1: Dados pessoais-->
         <fieldset class="dados-pessoais">
             <legend>Etapa 1: Dados pessoais</legend>
-
             <h3>Dados pessoais</h3>
 
-            <label for="">Nome Completo</label>
-            <input type="text" name="nome-completo">
+            <label for="nome-completo">
+                Nome Completo
+                <input type="text" id="nome-completo" name="nome-completo">
+            </label>
 
-            <label for="">Email</label>
-            <input type="email" name="email">
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email">
+            </label>
 
-            <label for="">CPF</label>
-            <input type="number" name="cpf">
+            <label for="cpf">
+                CPF
+                <input type="number" id="cpf" name="cpf">
+            </label>
 
-            <label for="">Celular</label>
-            <input type="tel" name="celular">
+            <label for="celular">
+                Celular
+                <input type="tel" id="celular" name="celular">
+            </label>
 
-            <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
-            <button type="button" class="botao-avancar">Avançar</button>
-        </fieldset>
+            <span class="botoes-inferiores">
+                <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
+                <button type="button" class="botao-avancar">Avançar</button>
+            </span>
+        </fieldset> <!--Etapa 1: Dados pessoais-->
 
         <!--Etapa 2: Endereço-->
         <fieldset class="endereco">
             <legend>Etapa 2: Endereço</legend>
-
             <h3>Endereço</h3>
 
-            <label for="select-pais">País</label>
-            <select id="select-pais" name="pais">
-                <option value="">Selecione</option>
-                <option value="brasil">Brasil</option>
-            </select>
+            <div>
+                <label for="select-pais">
+                    País
+                    <select id="select-pais" name="pais">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="brasil">Brasil</option>
+                    </select>
+                </label>
 
-            <label>Estado</label>
-            <select id="estado" name="estado">
-                <option value="">Selecione um estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select>
+                <label>
+                    Estado
+                    <select id="estado" name="estado">
+                        <option value="" disabled selected>Selecione um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </label>
 
-            <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade">
+                <label for="cidade" class="cidade">
+                    Cidade
+                    <input type="text" id="cidade" name="cidade">
+                </label>
 
-            <label for="input-rua" id="label-rua">Rua</label>
-            <label for="input-casa" id="label-casa">N°</label>
+                <!-- <span class="rua-casa"> -->
+                    <label for="input-rua" class="label-rua">
+                        Rua
+                        <input type="text" id="input-rua" name="rua">
+                    </label>
 
-            <input type="text" id="input-rua" name="rua">
-            <input type="number" id="input-casa" name="num-casa">
+                    <label for="input-casa" class="label-casa">
+                        N°
+                        <input type="number" id="input-casa" name="num-casa">
+                    </label>
+                <!-- </span> -->
 
-            <label for="input-bloco" id="label-bloco">Bloco</label>
-            <label for="input-apartamento" id="label-apartamento">Apt.</label>
-            <label for="input-na" id="label-na">N/A</label>
+                <!-- <span class="bloco-apt-na"> -->
+                    <label for="input-bloco" class="label-bloco">
+                        Bloco
+                        <input type="text" id="input-bloco" name="apt-bloco">
+                    </label>
 
-            <input type="text" id="input-bloco" name="apt-bloco">
-            <input type="number" id="input-apartamento" name="apt-num">
-            <input type="checkbox" id="input-na" name="nao-aplica">
+                    <label for="input-apartamento" class="label-apt">
+                        Apt.
+                        <input type="number" id="input-apartamento" name="apt-num">
+                    </label>
 
-            <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
-            <button type="button" class="botao-avancar">Avançar</button>
+                    <label for="input-na" class="label-na">
+                        N/A
+                        <input type="checkbox" id="input-na" name="nao-aplica">
+                    </label>
+                <!-- </span> -->
+            </div>
+
+            <span class="botoes-inferiores">
+                <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
+                <button type="button" class="botao-avancar">Avançar</button>
+            </span>
         </fieldset>
 
         <!--Etapa 3: Formação acadêmica-->
@@ -140,30 +177,40 @@
 
             <h3>Formação acadêmica</h3>
 
-            <label for="nivel-formacao">Nível de formação</label>
-            <select id="nivel-formacao" name="nivel-formacao">
-                <option value="">Selecione</option>
-                <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
-                <option value="fundamental-completo">Ensino Fundamental Completo</option>
-                <option value="medio-incompleto">Ensino Médio Incompleto</option>
-                <option value="medio-completo">Ensino Médio Completo</option>
-                <option value="superior-incompleto">Ensino Superior Incompleto</option>
-                <option value="superior-completo">Ensino Superior Completo</option>
-            </select>
+            <label for="nivel-formacao">
+                Nível de formação
+                <select id="nivel-formacao" name="nivel-formacao">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+                    <option value="fundamental-completo">Ensino Fundamental Completo</option>
+                    <option value="medio-incompleto">Ensino Médio Incompleto</option>
+                    <option value="medio-completo">Ensino Médio Completo</option>
+                    <option value="superior-incompleto">Ensino Superior Incompleto</option>
+                    <option value="superior-completo">Ensino Superior Completo</option>
+                </select>
+            </label>
 
-            <label for="universidade">Universidade</label>
-            <input type="text" id="universidade" name="universidade">
+            <label for="universidade">
+                Universidade
+                <input type="text" id="universidade" name="universidade">
+            </label>
 
-            <label for="curso">Curso</label>
-            <input type="text" id="curso" name="curso">
+            <label for="curso">
+                Curso
+                <input type="text" id="curso" name="curso">
+            </label>
 
-            <label for="codigo-validacao-diploma">Código de validação (?)</label>
-            <input type="text" id="codigo-validacao-diploma" name="codigo-validacao-diploma">
+            <label for="codigo-validacao-diploma">
+                Código de validação (?)
+                <input type="text" id="codigo-validacao-diploma" name="codigo-validacao-diploma">
+            </label>
 
-            <button type="button" class="adicionar-curso">+ Adicionar curso</button>
+            <button type="button" id="adicionar-curso">+ Adicionar curso</button>
 
-            <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
-            <button type="button" class="botao-avancar">Avançar</button>
+            <span class="botoes-inferiores">
+                <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
+                <button type="button" class="botao-avancar">Avançar</button>
+            </span>
 
         </fieldset>
 
@@ -173,8 +220,10 @@
 
             <h3>Criar senha</h3>
 
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha">
+            <label for="senha">
+                Senha
+                <input type="password" id="senha" name="senha">
+            </label>
 
             <div class="criterios-senha">
                 <span>
@@ -186,36 +235,42 @@
                     <input type="checkbox" name="criterio-senha-maiuscula" id="criterio-senha-maiuscula">
                     <label for="criterio-senha-maiuscula">Deve conter letras maiúscula</label>
                 </span>
-                
+
                 <span>
                     <input type="checkbox" name="riterio-senha-numeros" id="criterio-senha-numeros">
                     <label for="criterio-senha-numeros">Deve conter números</label>
                 </span>
-                
+
                 <span>
-                    <input type="checkbox" name="criterio-senha-caracteres-especiais" id="criterio-senha-caracteres-especiais">    
+                    <input type="checkbox" name="criterio-senha-caracteres-especiais" id="criterio-senha-caracteres-especiais">
                     <label for="criterio-senha-caracteres-especiais">Deve conter caracteres especiais</label>
                 </span>
             </div>
 
-            <label for="confirmar-senha">Confirmar senha</label>
-            <input type="password" id="confirmar-senha" name="confirmar-senha">
+            <label for="confirmar-senha">
+                Confirmar senha
+                <input type="password" id="confirmar-senha" name="confirmar-senha">
+            </label>
 
-            <input type="checkbox" id="termos-politica" name="termos-politica">
-            <label for="termos-politica">Li e concordo com os</label>
-            <span>
-            <a href="">Termos de uso</a> 
-            e 
-            <a href="">Política de privacidade</a>.
+            <div class="termos-politica">
+                <label for="termos-politica" >
+                    <input type="checkbox" id="termos-politica" name="termos-politica">
+                    <span>
+                        Li e concordo com os <a href="" target="_blank">Termos de uso</a>
+                        e <a href="" target="_blank">Política de privacidade</a>.
+                    </span>
+                </label>
+            </div>
+
+            <span class="botoes-inferiores">
+                <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
+                <button type="submit" class="botao-cadastrar">Cadastrar</button>
             </span>
-
-            <button type="button" class="botao-voltar" aria-label="Voltar">←</button>
-            <button type="submit" class="botao-cadastrar">Cadastrar</button>
         </fieldset>
 
     </form>
 
-    <!-- <script src="../script/cadastro.js"></script> -->
+    <script src="../script/cadastro.js"></script>
 </body>
 
 </html>
