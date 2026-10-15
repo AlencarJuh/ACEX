@@ -12,5 +12,123 @@
 .tela-inicial {
     /*Grid dos cards*/
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* Linha horizontal */
+hr{
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* PROVISORIO !!!!!!!!!!!!!!!!!! */
+.calendario{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+
+    .campo-principal{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-calendario{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0.5rem;
+        place-items: center;
+    
+        .cabecalho{
+            grid-column: span 7;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            font-size: 1.3rem;
+            color: #042d5c;
+            
+        }
+
+        #mes-anterior, #mes-posterior{
+            width: 3rem;
+            border: none;
+        }
+
+        button{
+            height: 3rem;
+            width: 5rem;
+            font-size: 1.25rem;
+
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+
+        }
+
+        .hoje{
+            border: 1px solid #65fff2;
+            background-color: #65fff2;
+        }
+
+        .evento{
+            border: 2px solid #65fff2;
+        }
+
+    }
+}
+
+.eventos-proximos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+
+    .campo-principal{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 0.5rem;
+        place-items: center;
+
+        .lembrete{
+            width: 100%;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+        }
+    }
+}
+
+.config-superior{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#adicionar, #selecionar, #excluir{
+    background-color: transparent;
+    border: none;
+    font-weight:700;
+}
+
+#excluir{
+    border-radius: 5px;
+    color: red;
+
+}
+
+#adicionar:hover, #selecionar:hover, #excluir:hover{
+    color: grey;
 }
