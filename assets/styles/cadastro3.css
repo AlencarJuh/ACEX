@@ -158,7 +158,8 @@ fieldset {
 .botao-avancar,
 .botao-voltar,
 .botao-confirmar,
-.botao-cadastrar {
+.botao-cadastrar,
+.botao-entrar {
     background-color: #65fff2;
     border: none;
     border-radius: 5px;
@@ -255,7 +256,8 @@ input[type="checkbox"]:checked{
 .dados-pessoais,
 .endereco,
 .formacao-academica,
-.criar-senha{
+.criar-senha,
+.login{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -300,6 +302,10 @@ input[type="checkbox"]:checked{
 .tipo-usuario div{
     display: inline-flex;
     gap: 0.5rem;
+}
+
+.tipo-usuario legend{
+    display: none;
 }
 
 /* Formatação do campo de dados pessoais */
@@ -414,5 +420,29 @@ input[type="checkbox"]:checked{
 
     a:hover{
         text-decoration: underline;
+    }
+}
+
+/* Tela de login */
+.login{
+    justify-content: center;
+
+    label{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    p{
+        justify-self: center;
+        align-self: center;
+
+        a{
+            color: #65fff2;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
     }
 }

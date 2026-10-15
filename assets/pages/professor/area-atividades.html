@@ -98,26 +98,33 @@
         <section class="area-atividades">
             <h3>Área de atividades</h3>
 
+            <div class="config-superior-filtros">
+                <button>Língua Portuguesa</button>
+                <button>Matemática</button>
+                <button>Pendentes</button>
+                <button>Atrasadas</button>
+                <button>Concluídas</button>
+                <button>Limpar filtros</button>
+            </div>
+
             <hr>
 
-            <div class="campo-atividades">
-                <b>Atividade</b>
-                <b>Máteria</b>
-                <b>Aluno</b>
-                <b>Prazo</b>
-
-                <label for="">
-                    <input type="checkbox">
-                    Atividade 1
-                </label>
-                <p>Português</p>
-                <p>Maria</p>
-                <p>
-                    <b>Aberto:</b> sexta-feira, 9 out. 2026, 00:00 
-                    <br>
-                    <b>Vencimento:</b> terça-feira, 13 out. 2026, 23:00
-                </p>
-                
+            <div class="campo-principal">
+                <div class="atividade">
+                    <h4 class="nome-atividade">Operações Matemáticas Básicas</h4>
+                    <p class="disciplina-atividade cabecalho">Matemática | Mariana Alves Santos</p>
+                    <span class="pazo-atividade cabecalho">
+                        <b>Abre:</b> Segunda-feira, 12 out 2026, 08:00
+                         | 
+                        <b>Vence: </b> Sexta-feira, 23 out 2026, 23:59
+                    </span>
+                    <p class="status cabecalho"><b>Aluno: </b>Ana Beatriz Souza</p>
+                    <p class="status cabecalho"><b>Status: </b>Pendente</p>
+                    <hr>
+                    <p class="descricao-aividade">Resolva exercícios de adição, subtração, multiplicação e divisão para desenvolver o raciocínio lógico e fortalecer suas habilidades matemáticas.</p>
+                    <a href="" target="_blank">⨽ Questões de matemática</a>
+                    <button> ▴ Menos detalhes</button>
+                </div>
             </div>
             
         </section>
@@ -126,28 +133,26 @@
         <section class="biblioteca-conteudos">
             <h3>Biblioteca de conteúdos</h3>
 
-            <div class="atividades-config-superior">
-                <button type="button">Adicionar conteúdo</button>
-                <button type="button">Selecionar tudo</button>
-                <button type="button">Excluir</button>
+            <div class="config-superior">
+                <button type="button" id="adicionar">+ Adicionar conteúdo</button>
+                <button type="button" id="selecionar">Selecionar tudo</button>
+                <button type="button" id="excluir">Excluir</button>
+            </div>
+
+            <div class="config-superior-filtros">
+                <button>Língua Portuguesa</button>
+                <button>Matemática</button>
+                <button>Limpar filtros</button>
             </div>
 
             <hr>
 
-            <label>
-                <input type="checkbox">
-                Conteúdo da aula 1
-            </label>
-
-            <label>
-                <input type="checkbox">
-                Conteúdo da aula 2
-            </label>
-
-            <label>
-                <input type="checkbox">
-                Conteúdo da aula 3
-            </label>
+            <div class="campo-principal">
+                <span class="conteudo">
+                <input type="checkbox" name="" id="">
+                    Contúdo aula 1 | Matemática
+                </span>
+            </div>
             
         </section>
 
@@ -156,23 +161,20 @@
             <h3>Biblioteca de atividades</h3>
 
             <div class="config-superior">
-                <button type="button">Adicionar atividade</button>
-                <button type="button">Selecionar tudo</button>
-                <button type="button">Excluir</button>
+                <button type="button" id="adicionar">+ Adicionar atividade</button>
+                <button type="button" id="selecionar">Selecionar tudo</button>
+                <button type="button" id="excluir">Excluir</button>
             </div>
 
             <hr>
 
-            <div class="campo-atividades">
-                <b>Atividade</b>
-                <b>Conteúdo</b>
-
-                <label for="">
-                    <input type="checkbox">
-                    Atividade 1
-                </label>
-                <p>Português</p>
-                
+            <div class="campo-principal">
+                <div class="atividade">
+                    <h4 class="nome-atividade">Operações Matemáticas Básicas</h4>
+                    <p class="disciplina-atividade cabecalho">Matemática</p>
+                    <hr>
+                    <a href="" target="_blank">⨽ Questões de matemática</a>
+                </div>
             </div>
 
         </section>

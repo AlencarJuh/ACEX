@@ -88,23 +88,57 @@
         <section class="area-atividades">
             <h3>Área de atividades</h3>
 
+            <div class="config-superior-filtros">
+                <button>Língua Portuguesa</button>
+                <button>Matemática</button>
+                <button>Pendentes</button>
+                <button>Atrasadas</button>
+                <button>Concluídas</button>
+                <button>Limpar filtros</button>
+            </div>
+
             <hr>
 
-            <div class="campo-atividades">
-                <b>Atividade</b>
-                <b>Máteria</b>
-                <b>Prazo</b>
+            <div class="campo-principal">
 
-                <label for="">
-                    <input type="checkbox">
-                    Atividade 1
-                </label>
-                <p>Português</p>
-                <p>
-                    <b>Aberto:</b> sexta-feira, 9 out. 2026, 00:00 
-                    <br>
-                    <b>Vencimento:</b> terça-feira, 13 out. 2026, 23:00
-                </p>
+                <div class="sem-atividades">Oba, você não possui nenhuma atividade pendente!</div>
+
+                <div class="atividade">
+                    <h4 class="nome-atividade">Interpretação de Texto</h4>
+                    <p class="disciplina-atividade cabecalho">Língua portuguesa | Rafael Martins Costa</p>
+                    <span class="pazo-atividade cabecalho">
+                        <b>Abre:</b> Segunda-feira, 12 out 2026, 08:00
+                         | 
+                        <b>Vence: </b> Sexta-feira, 16 out 2026, 23:59
+                    </span>
+                    <p class="status cabecalho"><b>Status: </b>Pendente</p>
+                    <hr>
+                    <p class="descricao-aividade">Leia um texto curto e responda a perguntas sobre seu conteúdo, identificando as ideias principais e desenvolvendo suas habilidades de leitura e compreensão.</p>
+                    <a href="" target="_blank">⨽ Anexo 1 - Texto</a>
+                    <a href="" target="_blank">⨽ Anexo 2 - Questões</a>
+                    <label>Enviar arquivo
+                        <input type="file">
+                    </label>
+                    <button> ▴ Menos detalhes</button>
+                </div>
+
+                <div class="atividade">
+                    <h4 class="nome-atividade">Operações Matemáticas Básicas</h4>
+                    <p class="disciplina-atividade cabecalho">Matemática | Mariana Alves Santos</p>
+                    <span class="pazo-atividade cabecalho">
+                        <b>Abre:</b> Segunda-feira, 12 out 2026, 08:00
+                         | 
+                        <b>Vence: </b> Sexta-feira, 23 out 2026, 23:59
+                    </span>
+                    <p class="status cabecalho"><b>Status: </b>Pendente</p>
+                    <hr>
+                    <p class="descricao-aividade">Resolva exercícios de adição, subtração, multiplicação e divisão para desenvolver o raciocínio lógico e fortalecer suas habilidades matemáticas.</p>
+                    <a href="" target="_blank">⨽ Questões de matemática</a>
+                    <label>Enviar arquivo
+                        <input type="file">
+                    </label>
+                    <button> ▴ Menos detalhes</button>
+                </div>
                 
             </div>
 
@@ -112,25 +146,32 @@
 
         <!--Card de área de atividade-->
         <section class="biblioteca-conteudos">
-            <h3>Bilioteca de conteúdos</h3>
+            <h3>Biblioteca de conteúdos</h3>
 
             <div class="config-superior">
-                <button type="button">Adicionar atividade</button>
-                <button type="button">Selecionar tudo</button>
-                <button type="button">Excluir</button>
+                <button type="button" id="adicionar">+ Adicionar conteúdo</button>
+                <button type="button" id="selecionar">Selecionar tudo</button>
+                <button type="button" id="excluir">Excluir</button>
+            </div>
+
+            <div class="config-superior-filtros">
+                <button>Língua Portuguesa</button>
+                <button>Matemática</button>
+                <button>Limpar filtros</button>
             </div>
 
             <hr>
 
-            <div class="campo-atividades">
-                <b>Atividade</b>
-                <b>Conteúdo</b>
-
-                <label for="">
-                    <input type="checkbox">
-                    Atividade 1
-                </label>
-                <p>Português</p>
+            <div class="campo-principal">
+                <span class="conteudo">
+                <input type="checkbox" name="" id="">
+                    Contúdo aula 1 | Matemática
+                </span>
+                
+                <span class="conteudo">
+                    <input type="checkbox" name="" id="">
+                    Contúdo de fixação | Língua portuguesa
+                </span>
             </div>
         </section>
     </div>
