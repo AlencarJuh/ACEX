@@ -12,7 +12,7 @@
 .tela-inicial {
     /*Grid dos cards*/
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr; 
 }
 
 /* Linha horizontal */
@@ -21,7 +21,30 @@ hr{
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-/* PROVISORIO !!!!!!!!!!!!!!!!!! */
+/* Barra de configurações superior */
+/* .config-superior{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#adicionar, #selecionar, #excluir{
+    background-color: transparent;
+    border: none;
+    font-weight:700;
+}
+
+#excluir{
+    border-radius: 5px;
+    color: red;
+
+}
+
+#adicionar:hover, #selecionar:hover, #excluir:hover{
+    color: grey;
+} */
+
+/* Card calendário*/
 .calendario{
     display: flex;
     flex-direction: column;
@@ -29,62 +52,92 @@ hr{
     align-items: start;
     gap: 1rem;
 
+    /* Container do calendário */
     .campo-principal{
         display: flex;
+        flex-direction: column;
         width: 100%;
         height: 100%;
         justify-content: center;
         align-items: center;
+
     }
 
-    .container-calendario{
+    /* Área do calendário mesmo */
+    .bloco-calendario{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        width: 100%;
+    }
+
+    /* Itens do cabeçalho do calendário */
+    .cabecalho{
+        grid-column: span 7;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+
+        width: 100%;
+
+        font-size: 1.3rem;
+        color: #042d5c;  
+    }
+
+    #mes-anterior, #mes-posterior{
+        width: 3rem;
+        border: none;
+    }
+
+    /* Parte com os dias da semana + dias do mês */
+    .dias-mes, .dias-semanas{
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 0.5rem;
         place-items: center;
-    
-        .cabecalho{
+        width: 100%;
+
+        hr{
             grid-column: span 7;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-
-            font-size: 1.3rem;
-            color: #042d5c;
-            
         }
+    }
 
-        #mes-anterior, #mes-posterior{
-            width: 3rem;
-            border: none;
-        }
+    /* Botões: Mês anterior/posterior e dias do calendário */
+    button{
+        height: 3rem;
+        width: 100%;
+        font-size: 1.25rem;
 
-        button{
-            height: 3rem;
-            width: 5rem;
-            font-size: 1.25rem;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
 
-            background-color: transparent;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+    button:focus{
+        border: 2px solid #65fff2;
+    }
 
-        }
+    .hoje{
+        border: 2px solid #65fff2;
+        background-color: #65fff2;
+    }
 
-        .hoje{
-            border: 1px solid #65fff2;
-            background-color: #65fff2;
-        }
+    .evento{
+        border-top: 5px solid #65fff2;
+    }
 
-        .evento{
-            border: 2px solid #65fff2;
-        }
-
+    .evento:focus{
+        border: solid #65fff2;
+        border-width: 5px 2px 2px 2px;
     }
 }
 
 .eventos-proximos{
+    grid-row: span 2;
+
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -111,24 +164,3 @@ hr{
     }
 }
 
-.config-superior{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#adicionar, #selecionar, #excluir{
-    background-color: transparent;
-    border: none;
-    font-weight:700;
-}
-
-#excluir{
-    border-radius: 5px;
-    color: red;
-
-}
-
-#adicionar:hover, #selecionar:hover, #excluir:hover{
-    color: grey;
-}
