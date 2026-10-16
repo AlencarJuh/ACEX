@@ -96,7 +96,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: #07448a;
+        color: var(--cor-destaque2);
     }
 
     .mes-anterior{
@@ -106,6 +106,7 @@
     .hoje{
         background-color: #65fff2;
         border-radius: 50%;
+        color: #000000;
     }
 
     b, span{
@@ -195,7 +196,7 @@
         padding: 1rem;
 
         h4{
-            color: #07448a;
+            color: var(--cor-destaque2);
             font-size: 1.2rem;
         }
 

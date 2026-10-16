@@ -85,67 +85,70 @@
     <div class="tela-inicial">
         
         <!--Card de calendario-->
-        <section class="calendario"> <!-- mudar dps pra só "calendario"!!!!!!!!!!!! -->
-        
+        <section class="calendario">
             <h3>Calendário</h3>
-
+            
             <hr>
 
             <div class="campo-principal">
-                <!-- PROVISÓRIO!!!!!!!!!!!!!!! -->
-                <div class="tentativa-calendario">
+
+                <div class="bloco-calendario">
+                    
                     <div class="cabecalho">
-                        <b>◂</b>
-                        <b>Outubro de 2026</b>
-                        <b>▸</b>
+                        <button id="mes-anterior">◀</button>
+                        <b id="mes-ano-atual">Outubro de 2026</b>
+                        <button id="mes-posterior">▶</button>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="dias-semanas">
+                        <b class="dias-semana">D</b>
+                        <b class="dias-semana">S</b>
+                        <b class="dias-semana">T</b>
+                        <b class="dias-semana">Q</b>
+                        <b class="dias-semana">Q</b>
+                        <b class="dias-semana">S</b>
+                        <b class="dias-semana">S</b>
                     </div>
 
-                    <b class="dias-semana">D</b>
-                    <b class="dias-semana">S</b>
-                    <b class="dias-semana">T</b>
-                    <b class="dias-semana">Q</b>
-                    <b class="dias-semana">Q</b>
-                    <b class="dias-semana">S</b>
-                    <b class="dias-semana">S</b>
-
-                    <span class="mes-anterior">27</span>
-                    <span class="mes-anterior">28</span>
-                    <span class="mes-anterior">29</span>
-                    <span class="mes-anterior">30</span>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>6</span>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span class="hoje">10</span>
-                    <span>11</span>
-                    <span>12</span>
-                    <span>13</span>
-                    <span>14</span>
-                    <span class="evento">15</span>
-                    <span>16</span>
-                    <span>17</span>
-                    <span>18</span>
-                    <span>19</span>
-                    <span>20</span>
-                    <span>21</span>
-                    <span>22</span>
-                    <span class="evento">23</span>
-                    <span class="evento">24</span>
-                    <span>25</span>
-                    <span>26</span>
-                    <span>27</span>
-                    <span>28</span>
-                    <span>29</span>
-                    <span>30</span>
-                    <span>31</span>
+                    <div class="dias-mes">
+                        <button class="">1</button>
+                        <button class="">2</button>
+                        <button class="">3</button>
+                        <button class="">4</button>
+                        <button class="">5</button>
+                        <button class="">6</button>
+                        <button class="">7</button>
+                        <button class="">8</button>
+                        <button class="">9</button>
+                        <button class="">10</button>
+                        <button class="">11</button>
+                        <button class="">12</button>
+                        <button class="">13</button>
+                        <button class="">14</button>
+                        <button class="hoje">15</button>
+                        <button class="evento">16</button>
+                        <button class="">17</button>
+                        <button class="">18</button>
+                        <button class="">19</button>
+                        <button class="">20</button>
+                        <button class="">21</button>
+                        <button class="">22</button>
+                        <button class="">23</button>
+                        <button class="">24</button>
+                        <button class="">25</button>
+                        <button class="">26</button>
+                        <button class="">27</button>
+                        <button class="">28</button>
+                        <button class="">29</button>
+                        <button class="">30</button>
+                        <button class="">31</button>
+                    </div>
+                
                 </div>
-            </div>
 
+            </div>
         </section>
 
         <!--Card de eventos proximos-->
@@ -160,24 +163,36 @@
 
             <hr>
 
+            
             <div class="campo-principal">
+                <div class="sem-lembretes">
+                    <p>Você não possui nenhum evento próximo.</p>
+                </div>
+                
                 <div class="lembrete">
                     <b>Quinta-feira, 15 out. 2026</b>
+                    <hr>
                     <p>Aula de língua portuguesa</p>
                 </div>
 
                 <div class="lembrete">
                     <b>Sexta-feira, 23 out. 2026</b>
+                    <hr>
                     <p>Aula de matemática</p>
                 </div>
 
                 <div class="lembrete">
                     <b>Sábado, 24 out. 2026</b>
+                    <hr>
                     <p>Aula de reforço de língua portuguesa</p>
                 </div>
             </div>
         </section>
-
+        
+        <!-- Card de criação de eventos -->
+        <section class="criar-evento">
+            <h3>Criar evento</h3>
+        </section>
     </div>
 
     <!-- Container de menus (Notificações, configurações e perfil) -->

@@ -7,6 +7,23 @@
 :root{
     --aside-width: 17rem; /*Variável da largura do aside*/
     --nav-height: 3rem; /*Variável da altura da navbar*/
+    --fundo-body: #f8f8f8; 
+    --branco-preto: #ffffff;
+    --preto-branco: #000000;
+    --cinza-grafite: #24282c;
+    /* --cor-destaque1: #65fff2; */
+    --cor-destaque2: #07448a;
+}
+
+.tema-escuro{
+    --aside-width: 17rem; /*Variável da largura do aside*/
+    --nav-height: 3rem; /*Variável da altura da navbar*/
+    --fundo-body: #000000;
+    --branco-preto: #24282c;
+    --preto-branco: #ffffff;
+    --cinza-grafite: #161a1f;
+    /* --cor-destaque1: #65fff2; */
+    --cor-destaque2: #42d3c7;
 }
 
 /* Formatação geral */
@@ -25,7 +42,7 @@ body *{
 body {
     width: 100%;
     height: 100%;
-    background-color: #f8f8f8;
+    background-color: var(--fundo-body);
 }
 
 /*Logo*/
@@ -57,7 +74,7 @@ aside {
     width: var(--aside-width);
     height: 100vh;
     
-    background-color: #24282c;
+    background-color: var(--cinza-grafite);
     border-radius: 0 10px 10px 0;
 
     header{
@@ -134,12 +151,12 @@ section {
     align-items: center;
     justify-content: center;
     
-    background-color: #ffffff;
+    background-color: var(--branco-preto);
     border-radius: 10px;
 
     padding: 1rem;
 
-    color: #000000;
+    color: var(--preto-branco);
 
 }
 
@@ -154,7 +171,7 @@ section {
     padding: 0.5rem; 
 
     gap: 0.5rem;
-    background-color: #f8f8f8;
+    background-color: var(--fundo-body);
 }
 
 
@@ -184,7 +201,7 @@ section {
 
         border: none;
         background-color: transparent;
-        color: #24282c;
+        color: var(--cinza-grafite);
         
         font-size: 1.5rem;
         font-weight: 700;
@@ -208,7 +225,7 @@ section {
 
 /* Formatação dos containers de menu */
 #container-notificacoes, #container-configuracoes, #container-perfil{
-    background-color: #f8f8f8;
+    background-color: var(--fundo-body);
     border-radius: 15px;
     padding: 2rem;
     width: 30rem;
@@ -302,15 +319,15 @@ section {
     
     /* Formatação para notificações não lidas */
     .notificacao-nao-lida{
-        background-color: #24282c;
-        color: #ffffff;
+        background-color: var(--cinza-grafite);
+        color: var(--branco-preto);
         font-weight: 600;
     }
     
     /* Formatação para notificações lidas */
     .notificacao-lida{
         background-color: transparent;
-        color: #000000;
+        color: var(--preto-branco);
         font-weight: normal;
     }
 }
@@ -355,7 +372,7 @@ section {
         gap: 0.5rem;
         
         a{
-            color: #000000;
+            color: var(--preto-branco);
         }
     }
 
@@ -363,7 +380,7 @@ section {
         width: 50%;
         height: 1.5rem;
         background-color: transparent;
-        border: 1px solid #000000;
+        border: 1px solid var(--preto-branco);
         border-radius: 5px;
         margin-bottom: 0.5rem;
     }
@@ -396,7 +413,7 @@ section {
     #tamanho-fonte{
         text-align: center;
 
-        border: solid #000000;
+        border: solid var(--preto-branco);
         border-width: 1px 0;
 
         width: 5rem;
@@ -407,7 +424,7 @@ section {
         height: 1.5rem;
         width: 2rem;
         padding: 0.5rem 0;
-        border: 1px solid #000000;
+        border: 1px solid var(--preto-branco);
     }
 
     #aumentar-fonte{
@@ -433,7 +450,7 @@ section {
         #botao-desconectar-conta{
             background-color: transparent;
             border-radius: 5px;
-            border: 1px solid #000000;
+            border: 1px solid var(--preto-branco);
             font-weight: 600;
             padding: 0.5rem;
         }
@@ -464,14 +481,14 @@ section {
         
         #botao-excluir-conta{
             background-color: red;
-            color: #ffffff;
+            color: var(--branco-preto);
             font-weight: 600;
         }
         
         #botao-excluir-conta:hover, #botao-excluir-conta:active{
             border: 2px solid grey;
             background-color: grey;
-            color: #ffffff;
+            color: var(--branco-preto);
             font-weight: 600;
         }
     }
