@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../styles/pagina-principal.css">
     <link rel="stylesheet" href="../../styles/aluno/inicio.css">
     <link rel="icon" href="../../images/logo.png" alt="Logotipo da FSAberCampo">
+    <script src="../../script/menu.js" defer></script>
+    <script src="../../script/tema.js" defer></script>
 </head>
 
 <body>
@@ -120,8 +122,8 @@
                     <p class="status cabecalho"><b>Status: </b>Pendente</p>
                 </div>
 
-                <button id="tema">Tema</button>
-                <script src="../../script/tema.js"></script>
+                <!-- <button id="tema">Tema</button> -->
+
             </div>
         </section>
 
@@ -283,11 +285,11 @@
                 <div class="preferencias">
                     <h3>Layout</h3>
                     <label for="selecionar-temas">Tema</label>
-                        <select name="temas" id="seelcionar-temas">
-                            <option value="claro">Claro</option>
-                            <option value="escuro">Escuro</option>
-                            <option value="sistema">Padrão do Sistema</option>
-                        </select>
+                    <select id="seletor-tema">
+                        <option value="sistema">Padrão do sistema</option>
+                        <option value="claro">Claro</option>
+                        <option value="escuro">Escuro</option>
+                    </select>
 
                     <label for="tamanho-fonte">Tamanho da fonte</label>
                     <span>
@@ -351,6 +353,5 @@
         </div>
     </div>
 
-    <script src="../../script/menu.js"></script>
 </body>
 </html>

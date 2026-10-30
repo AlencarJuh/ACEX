@@ -3,8 +3,10 @@
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-/*Variáveis*/
-:root{
+/* Tema claro */
+:root {
+    color-scheme: light;
+    
     --aside-width: 17rem; /*Variável da largura do aside*/
     --nav-height: 3rem; /*Variável da altura da navbar*/
     --fundo-body: #f8f8f8; 
@@ -15,15 +17,30 @@
     --cor-destaque2: #07448a;
 }
 
-.tema-escuro{
-    --aside-width: 17rem; /*Variável da largura do aside*/
-    --nav-height: 3rem; /*Variável da altura da navbar*/
+/* Tema escuro */
+:root[data-tema="escuro"] {
+    color-scheme: dark;
+
     --fundo-body: #000000;
     --branco-preto: #24282c;
     --preto-branco: #ffffff;
     --cinza-grafite: #161a1f;
     /* --cor-destaque1: #65fff2; */
     --cor-destaque2: #42d3c7;
+}
+
+/* Tema definido pelo sistema operacional */
+@media (prefers-color-scheme: dark) {
+    :root[data-tema="sistema"] {
+        color-scheme: dark;
+
+        --fundo-body: #000000;
+        --branco-preto: #24282c;
+        --preto-branco: #ffffff;
+        --cinza-grafite: #161a1f;
+        /* --cor-destaque1: #65fff2; */
+        --cor-destaque2: #42d3c7;
+    }
 }
 
 /* Formatação geral */
@@ -319,8 +336,8 @@ section {
     
     /* Formatação para notificações não lidas */
     .notificacao-nao-lida{
-        background-color: var(--cinza-grafite);
-        color: var(--branco-preto);
+        background-color: var(--cor-destaque2);
+        color: #ffffff;
         font-weight: 600;
     }
     
@@ -376,7 +393,7 @@ section {
         }
     }
 
-    select{
+    select, option{
         width: 50%;
         height: 1.5rem;
         background-color: transparent;
