@@ -1,27 +1,41 @@
-
-const seletorTema = document.getElementById("seletor-tema");
 const elementoHTML = document.documentElement;
 
-// Recupera a preferência salva ou utiliza o sistema como padrão
+// Recupera a preferência salva
 const temaSalvo = localStorage.getItem("tema") || "sistema";
 
-// Aplica o tema selecionado
+// Valida a preferência
+const temasValidos = ["claro", "escuro", "sistema"];
+
+const temaInicial = temasValidos.includes(temaSalvo)
+    ? temaSalvo
+    : "sistema";
+
+// Aplica o tema
 function aplicarTema(tema) {
     elementoHTML.setAttribute("data-tema", tema);
+
     localStorage.setItem("tema", tema);
 }
 
-// Define a opção selecionada ao abrir a página
-if (["claro", "escuro", "sistema"].includes(temaSalvo)) {
-    seletorTema.value = temaSalvo;
-} else {
-    seletorTema.value = "sistema";
-}
+// Aplica a preferência ao carregar a página
+aplicarTema(temaInicial);
 
-// Aplica a preferência recuperada
-aplicarTema(seletorTema.value);
+// Configura os seletores de tema existentes na página
+const seletoresTema = document.querySelectorAll(".seletor-tema");
 
-// Detecta quando o usuário escolhe outra opção
-seletorTema.addEventListener("change", function () {
-    aplicarTema(seletorTema.value);
+seletoresTema.forEach(function (seletor) {
+
+    // Exibe a preferência atual
+    seletor.value = temaInicial;
+
+    // Detecta a mudança de opção
+    seletor.addEventListener("change", function () {
+        aplicarTema(seletor.value);
+
+        // Atualiza outros seletores da mesma página
+        seletoresTema.forEach(function (outroSeletor) {
+            outroSeletor.value = seletor.value;
+        });
+    });
+
 });
