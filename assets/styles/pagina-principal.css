@@ -13,7 +13,7 @@
     --branco-preto: #ffffff;
     --preto-branco: #000000;
     --cinza-grafite: #24282c;
-    /* --cor-destaque1: #65fff2; */
+    --cor-destaque1: #07448a;
     --cor-destaque2: #07448a;
 }
 
@@ -25,7 +25,7 @@
     --branco-preto: #24282c;
     --preto-branco: #ffffff;
     --cinza-grafite: #161a1f;
-    /* --cor-destaque1: #65fff2; */
+    --cor-destaque1: #36a4e0;
     --cor-destaque2: #42d3c7;
 }
 
@@ -38,7 +38,7 @@
         --branco-preto: #24282c;
         --preto-branco: #ffffff;
         --cinza-grafite: #161a1f;
-        /* --cor-destaque1: #65fff2; */
+        --cor-destaque1: #36a4e0;
         --cor-destaque2: #42d3c7;
     }
 }
@@ -218,7 +218,7 @@ section {
 
         border: none;
         background-color: transparent;
-        color: var(--cinza-grafite);
+        color: grey;
         
         font-size: 1.5rem;
         font-weight: 700;
@@ -337,7 +337,7 @@ section {
     /* Formatação para notificações não lidas */
     .notificacao-nao-lida{
         background-color: var(--cor-destaque2);
-        color: #ffffff;
+        color: var(--branco-preto);
         font-weight: 600;
     }
     
@@ -393,13 +393,17 @@ section {
         }
     }
 
-    select, option{
+    select{
         width: 50%;
         height: 1.5rem;
         background-color: transparent;
         border: 1px solid var(--preto-branco);
         border-radius: 5px;
         margin-bottom: 0.5rem;
+
+        option{
+            background-color: var(--branco-preto);
+        }
     }
 
     button {
@@ -413,6 +417,7 @@ section {
 
         height: 2.5rem;
 
+        color: #000000;
         font-size: 1rem;
         font-weight: bold;
 
@@ -498,7 +503,7 @@ section {
         
         #botao-excluir-conta{
             background-color: red;
-            color: var(--branco-preto);
+            color: #ffffff;
             font-weight: 600;
         }
         
