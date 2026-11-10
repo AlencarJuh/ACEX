@@ -106,7 +106,7 @@ hr{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: #07448a;
+        color: var(--cor-destaque2);
     }
 
     .mes-anterior{
@@ -116,6 +116,7 @@ hr{
     .hoje{
         background-color: #65fff2;
         border-radius: 50%;
+        color: #000000;
     }
 
     b, span{
@@ -205,7 +206,7 @@ hr{
         padding: 1rem;
 
         h4{
-            color: #07448a;
+            color: var(--cor-destaque2);
             font-size: 1.2rem;
         }
 
@@ -307,5 +308,9 @@ hr{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    a{
+        color: var(--cor-destaque1);
     }
 }
