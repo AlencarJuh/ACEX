@@ -32,28 +32,33 @@
     overflow-y:auto;
 }
 
+/* Filtros */
 .config-superior-filtros{
     display: flex;
     gap: 0.5rem;
 
-    button{
+    input{
+        display: none;
+    }
+
+    label, button{
         background-color: transparent;
         padding: 0.25rem;
         border: 1px solid black;
         border-radius: 5px;
+        font-size: 0.85rem;
 
     }
     
-    button:hover{
+    label:hover, button:hover{
         color: #ffffff;
         background-color: #07448a;
         border: 1px solid #07448a;
     }
     
-    button:focus{
+    label:has(input:checked){
         color: #ffffff;
         background-color: #07448a;
-
     }
 }
 

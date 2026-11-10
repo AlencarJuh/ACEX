@@ -47,8 +47,8 @@
 
 .area-atividades {
     grid-area: area-atividades;
-}
 
+}
 .professores-e-chat {
     grid-area: professores-chat;
 }
@@ -161,8 +161,9 @@
     justify-content: start;
 }
 .area-atividades .campo-principal{
-    display: flex;
-    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
     gap: 1rem;
     width: 100%;
     height: 100%;
