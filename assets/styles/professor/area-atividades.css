@@ -90,7 +90,7 @@
         padding: 1rem;
 
         h4{
-            color: #07448a;
+            color: var(--cor-destaque2);
             font-size: 1.2rem;
         }
 
@@ -114,6 +114,10 @@
         label:hover{
             background-color: grey;
             color: #ffffff;
+        }
+
+        a{
+            color: var(--cor-destaque1);
         }
 
         input[type='file']{
@@ -164,6 +168,10 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
+        a{
+            color: var(--cor-destaque1);
+        }
     }
 }
 
